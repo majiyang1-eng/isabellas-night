@@ -9,7 +9,32 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 奕莎贝拉惊魂夜 final.</tw-noscript></noscript></tw-story>
-<tw-storydata name="奕莎贝拉惊魂夜 final" startnode="6" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="808BE802-EBD9-4FDC-A6C3-6718734B3B28" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="-1" color="red"></tw-tag><tw-tag name="+1" color="green"></tw-tag><tw-passagedata pid="1" name="星期二" tags="" position="1325,1125" size="100,100">星期二　教室&lt;br&gt;&lt;br&gt;
+<tw-storydata name="奕莎贝拉惊魂夜 final" startnode="6" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="808BE802-EBD9-4FDC-A6C3-6718734B3B28" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link, .enchantlink {
+  color: darkred !important;
+}
+
+tw-link:hover, .enchantlink:hover {
+  color: red !important;
+}
+
+/* 如果有被访问过的链接也想变色，加这一句 */
+tw-link:visited {
+  color: darkred !important;
+}
+
+
+/* 只有带有 top-align 标签的页面才会执行这个顶部对齐 */
+tw-passage[tags~="top-align"] {
+    vertical-align: top !important;
+    margin-top: 0 !important;
+    padding-top: 10px; /* 这里你可以调整距离顶部的距离，比如 0 或 10px */
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="-1" color="red"></tw-tag><tw-tag name="+1" color="green"></tw-tag><tw-tag name="top-align" color="blue"></tw-tag><tw-passagedata pid="1" name="星期二" tags="" position="1325,1125" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;https://i.imgur.com/oTb9mCF.png&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+星期二　教室&lt;br&gt;&lt;br&gt;
 
 最近完全进入冬天了。
 
@@ -304,7 +329,12 @@
 
 冬天好像真的快到了。
 
-[[星期四]] </tw-passagedata><tw-passagedata pid="5" name="星期四" tags="" position="1900,1125" size="100,100">星期四　学校走廊&lt;br&gt;&lt;br&gt;
+[[星期四]] </tw-passagedata><tw-passagedata pid="5" name="星期四" tags="" position="1900,1125" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;https://i.imgur.com/RIIUeEo.png&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+星期四　学校走廊&lt;br&gt;&lt;br&gt;
 
 周末要去奕莎贝拉家，我脑子一直乱嗡嗡的。
 
@@ -350,31 +380,35 @@
     &lt;source src=&quot;opening.mp4&quot; type=&quot;video/mp4&quot;&gt;
 &lt;/video&gt;
 
-
 (set: $willing to 0)
+&lt;div style=&quot;text-align: center; color: darkred;&quot;&gt;
+  奕莎贝拉惊魂夜
+  &lt;bar&gt;
+  [[进入游戏-&gt;游玩警告]]
+  [[作者的话]]
+&lt;/div&gt;
+
+&lt;style&gt;
+  /* 强制让链接也变回深红色，且不改变字体大小 */
+  a {
+    color: darkred !important;
+  }
+&lt;/style&gt;
 
 
-奕莎贝拉惊魂夜
-
-[[[进入游戏-&gt;游玩警告]]]
-
-
-[[作者的话]] 
 
 
 
 
 
 
+</tw-passagedata><tw-passagedata pid="7" name="输入名字" tags="top-align" position="500,1125" size="100,100">&lt;script&gt;window.scrollTo(0, 0);&lt;/script&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;https://i.imgur.com/2x04IfN.gif&quot; style=&quot;width: 100%; max-width: 1200px;&quot;&gt;
+&lt;/div&gt;
+请输入你的名字
 
-
-</tw-passagedata><tw-passagedata pid="7" name="输入名字" tags="" position="500,1125" size="100,100">&lt;center&gt;
-&lt;img src=&quot;https://i.imgur.com/KR5aUbP.jpeg&quot; width=&quot;280&quot;&gt;
-&lt;/center&gt;
-
-请输入你的名字。
-
-奕莎贝拉会这样称呼你。
+奕莎贝拉会这样称呼你
 
 (input-box: bind $name, &quot;&quot;)
 
@@ -387,11 +421,13 @@
 
 “……请各位同学放学后结伴回家，不要单独接受他人邀请，不要食用来源不明的食物......如发现异常情况，请立即报告老师。“
 
-学校已经连续三个月传出女学生消失的新闻，而上个月正好是第三个。
+传说我们小镇被深深地诅咒过，每十年左右就会离奇消失一名少女，而从上个月开始，这个都市传说再次兴起，又到了一位少女‘该消失’的时候。
 
-大家都在讨论那几个女孩到底去了哪，被绑架？还是离家出走？
+大家都在讨论那几个女孩到底去了哪，被绑架？还是离家出走？最终的下场又是怎样？
 
-声音乱哄哄的，像一群麻雀围着一截枯树，校外在尽量压着消息，校内则处处透露着焦虑。
+声音乱哄哄的，像一群麻雀围着一截枯树。
+
+如果真是传说那么置之不理就好了，可偏偏校内最近开始播放安全广播，处处透露着焦虑。
 
 我听得烦。这些讨论远没有奕莎贝拉的一个眼神重要。
 
@@ -413,7 +449,7 @@
 
 走廊转角处，我撞到了一个人。
 
-我的手下意识地扶住对方的肩膀，却被重重地撞倒在地，如同撞上了一块凉透了的、坚硬的石膏。
+我的手下意识地扶住对方的肩膀，却被重重地撞倒在地，如同撞上了一块坚硬的石膏。
 
 那力道震得我手臂一阵发麻。
 
@@ -427,12 +463,14 @@
 
 “刚才...跟你说的事，考虑的怎么样了？你会来我家看电影吧？”
 
-我瞬间慌张了起来，不知作何反应。
+听到这么问，才想起来她上午突然的邀请，彼时我头昏脑胀，支支吾吾什么都没说出来。
+
+现在，我又慌张了起来，不知作何反应。
 
 [[当然想去-&gt;答应]]
 [[不知道为什么，有点不安。-&gt;犹豫]]
 
-</tw-passagedata><tw-passagedata pid="9" name="星期五" tags="" position="2475,1050" size="100,100">星期五&lt;br&gt;&lt;br&gt;
+</tw-passagedata><tw-passagedata pid="9" name="星期五" tags="" position="2475,1100" size="100,100">星期五&lt;br&gt;&lt;br&gt;
 
 今早上学路上，奕莎贝拉突然从背后抱住了我，把我吓了一跳。
 
@@ -538,9 +576,9 @@
 
 晚上回家之后，我还是用了她送我的沐浴露。
 
-牛奶味很淡，不是那种很甜很腻的香气，而是软软的，像刚热好的糖一样。
+牛奶味相当浓烈，像刚热好的奶糖一般。
 
-我洗完澡之后低头闻了闻自己的手腕。
+我洗完澡之后低头闻了闻自己的手腕，仿佛被淹入牛奶味了一般浓烈。
 
 ……总觉得有一点像奕莎贝拉身上的味道。
 
@@ -548,9 +586,9 @@
 
 我怎么会突然想到她。
 
-可是躺到床上的时候，那股味道还是一直黏在我身边。
+躺到床上的时候，那股味道仍一直萦绕在我身边。
 
-我甚至有点睡不着。
+甚至让我有些睡不着了。
 
 [[星期五]] 。</tw-passagedata><tw-passagedata pid="12" name="没用" tags="-1" position="2275,1300" size="100,100">(set: $willing to $willing - 1)
 
@@ -580,7 +618,7 @@
 
 (else:)[
 [[星期五-&gt;星期五]]
-]</tw-passagedata><tw-passagedata pid="13" name="犹豫" tags="-1" position="850,1275" size="100,100">(set: $willing to $willing - 1)
+]</tw-passagedata><tw-passagedata pid="13" name="犹豫" tags="-1" position="825,1300" size="100,100">(set: $willing to $willing - 1)
 
 我张了张嘴。
 
@@ -3562,7 +3600,7 @@
 
 ……奇怪。
 
-我总觉得，
+总感觉，
 
 这一周好像已经发生过一次了。
 
@@ -3901,7 +3939,7 @@ Email：majiyang1@gmail.com
 
 (if: $memory is &quot;voice&quot;)[
 [[圣诞夜之后-&gt;半梦声音]]
-]</tw-passagedata><tw-passagedata pid="63" name="答应" tags="" position="850,1000" size="100,100">(set: $willing to $willing + 1)
+]</tw-passagedata><tw-passagedata pid="63" name="答应" tags="" position="825,975" size="100,100">(set: $willing to $willing + 1)
 
 我撞得发懵，第一反应却是整理了一下衣领。
 
@@ -3909,27 +3947,23 @@ Email：majiyang1@gmail.com
 
 “好，好啊。”
 
-我的胃里突然一阵绞痛，仿佛有一群冰冷的蝴蝶正在里面疯狂扇动翅膀，撞击着我的五脏六腑。
+我的胃里一阵绞痛，仿佛有一群冰冷的蝴蝶正在里面疯狂扇动翅膀，撞击着我的五脏六腑。
 
-奕莎贝拉一下子泛起甜美可爱的笑容。
+奕莎贝拉顿时泛起甜美可爱的笑容。
 
 “太好啦！”
 
-我胃中的那只蝴蝶被这份笑容所震颤，终于安静了下来，化作一种粘稠的满足感。
+胃中的那只蝴蝶被这份笑容所震颤，堪堪安静了一些，化作一种粘稠的满足感。
 
 她抱了抱我，甩起书包，一蹦一跳地消失在走廊尽头。
 
-我蹲在原地，手死死按着胃口，靠在墙壁旁坐了下来，身体逐渐脱了力。
+我蹲在原地，手死死按着胃口，靠在墙壁旁慢慢坐了下来咀嚼着刚才发生的一切。
 
-这种痛感……简直要了我的命，可我却并不想让它停下来。
-
-那天晚上，我在床上翻来覆去，怎么也睡不着。
+到了晚上，我在床上翻来覆去，怎么也睡不着。
 
 胃中的蝴蝶没有离开，一下一下地挠着我的心尖。
 
-我把脸埋在枕头里，脸颊发烫，只要闭上眼睛，就能闻到她身上那股薄荷香，还能看到她笑着看我的样子。
-
-明明身体疼得发颤，可我满脑子想的，竟然全都是周末——
+我把脸埋进枕头里，脸颊发烫，只要闭上眼睛，就能闻到她身上那股香气，还能看到她笑着看我的样子。
 
 周末快点来吧。
 
@@ -4223,11 +4257,7 @@ Thank u for playing ♡
 
 🍓 RELATED WORK
 
-《奕莎贝拉惊魂夜》同时存在小说版。
-
-因为互动游戏更偏向“体验”与“选择”，
-很多更细腻、缓慢、甚至更痛苦的部分，
-在小说中则着墨更多
+《奕莎贝拉惊魂夜》同时存在小说版，两部作品可以当成两个独立作品来品尝。
 
 如果你想看：
 🩸更多奕莎贝拉的挣扎
@@ -4268,6 +4298,10 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 
 </tw-passagedata><tw-passagedata pid="70" name="游玩警告" tags="" position="300,1125" size="100,100"># ⚠ 游玩提醒 ⚠
 
+&lt;!-- 使用 font-size 调整字体大小 --&gt;
+&lt;span style=&quot;font-size: 1.5em; font-weight: bold;&quot;&gt;不建议15岁以下儿童游玩&lt;/span&gt;
+
+&lt;span style=&quot;font-size: 0.8em;&quot;&gt;
 《奕莎贝拉惊魂夜》包含：
 
 ♡ 轻微心理惊悚
@@ -4284,13 +4318,13 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 
 本游戏推荐：
 
-✓ 喜欢怪谈的人
+√ 喜欢怪谈的人
 
-✓ 喜欢少女漫画的人
+√ 喜欢少女漫画的人
 
-✓ 喜欢恐怖故事的人
+√ 喜欢恐怖故事的人
 
-✓ 喜欢奕莎贝拉的人
+√ 喜欢奕莎贝拉的人
 
 本游戏不推荐：
 
@@ -4301,11 +4335,12 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 ✗ 被奕莎贝拉盯着看三秒就脸红的人
 
 如果你已经准备好了——
+&lt;/span&gt;
 
 [[请进入游戏-&gt;输入名字]]</tw-passagedata><tw-passagedata pid="71" name="短信01" tags="phone" position="975,1125" size="100,100">
 奕莎贝拉：
 
-  你睡了吗？
+  $name，睡了吗？
 &lt;/div&gt;
 绣球花，玫瑰花和百合花，你更喜欢哪一个？
 
@@ -4936,8 +4971,11 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 
 我[[只是闻了闻-&gt;没用]]。</tw-passagedata><tw-passagedata pid="84" name="邀请函绣球1" tags="" position="2800,1050" size="100,100">我翻开一看，是一张精美无比的‘邀请函’，上面画着绣球花。
 
+&lt;center&gt;
 
+&lt;img src=&quot;https://i.imgur.com/BuiSOJ0.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
 
+&lt;/center&gt;
 
 
 (if: $willing is -4)[
@@ -4948,11 +4986,19 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 [[星期六-&gt;星期六]]
 ]</tw-passagedata><tw-passagedata pid="85" name="邀请函绣球2" tags="" position="2575,1425" size="100,100">我翻开一看，是一张精美无比的‘邀请函’，上面画着绣球花。
 
+&lt;center&gt;
 
+&lt;img src=&quot;https://i.imgur.com/rIK3GC0.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
 
 [[星期六-&gt;星期六]]</tw-passagedata><tw-passagedata pid="86" name="邀请函玫瑰1" tags="" position="2725,925" size="100,100">我翻开一看，是一张精美无比的‘邀请函’，上面画着玫瑰花。
 
+&lt;center&gt;
 
+&lt;img src=&quot;https://i.imgur.com/50jCrO3.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
 
 (if: $willing is -4)[
 [[继续调查-&gt;市图书馆]]
@@ -4962,13 +5008,37 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 [[星期六-&gt;星期六]]
 ]</tw-passagedata><tw-passagedata pid="87" name="邀请函玫瑰2" tags="" position="2750,1325" size="100,100">我翻开一看，是一张精美无比的‘邀请函’，上面画着玫瑰花。
 
+&lt;center&gt;
 
+&lt;img src=&quot;https://i.imgur.com/gsP8p8C.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
 
 [[星期六-&gt;星期六]]</tw-passagedata><tw-passagedata pid="88" name="邀请函百合1" tags="" position="2600,800" size="100,100">我翻开一看，是一张精美无比的‘邀请函’，上面画着百合花。
 
+&lt;center&gt;
 
+&lt;img src=&quot;https://i.imgur.com/A2JkTNx.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
 
+&lt;/center&gt;
 
+上面写着（中文大意）：
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）6:30
+
+请穿上最漂亮的礼服♡
 
 (if: $willing is -4)[
 [[继续调查-&gt;市图书馆]]
@@ -4978,7 +5048,11 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 [[星期六-&gt;星期六]]
 ]</tw-passagedata><tw-passagedata pid="89" name="邀请函百合2" tags="" position="2775,1175" size="100,100">我翻开一看，是一张精美无比的‘邀请函’，上面画着百合花。
 
+&lt;center&gt;
 
+&lt;img src=&quot;https://i.imgur.com/fED0ljf.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
 
 
 [[星期六-&gt;星期六]]</tw-passagedata><tw-passagedata pid="90" name="我深呼吸，跟着她走了进去。" tags="" position="3725,1300" size="100,100">古堡内部异常安静，我四下望去，几乎没有什么生活的痕迹。
