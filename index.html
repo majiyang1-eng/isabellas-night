@@ -30,7 +30,7 @@ tw-passage[tags~="top-align"] {
     padding-top: 10px; /* 这里你可以调整距离顶部的距离，比如 0 或 10px */
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="-1" color="red"></tw-tag><tw-tag name="+1" color="green"></tw-tag><tw-tag name="top-align" color="blue"></tw-tag><tw-passagedata pid="1" name="星期二" tags="" position="1350,1125" size="100,100">&lt;center&gt;
 &lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
-    &lt;img src=&quot;/isabellas-night/tue.jpgt=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;img src=&quot;tue.jpg&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
 &lt;/div&gt;
 &lt;/center&gt;
 
@@ -136,13 +136,12 @@ tw-passage[tags~="top-align"] {
 [[她第一次叫我名字的时候-&gt;名字]]
 [[她在教室里唱歌的时候-&gt;唱歌]]
 
-</tw-passagedata><tw-passagedata pid="2" name="星期三" tags="" position="1675,1125" size="100,100">&lt;center&gt;
+</tw-passagedata><tw-passagedata pid="2" name="星期三" tags="" position="1675,1125" size="100,100">
+&lt;center&gt;
 &lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
-    &lt;img src=&quot;pe.jpg=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;img src=&quot;pe.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
 &lt;/div&gt;
 &lt;/center&gt;
-
-
 
 星期三　体育馆&lt;br&gt;&lt;br&gt;
 
@@ -525,28 +524,28 @@ tw-passage[tags~="top-align"] {
 
 我注意到怀里被塞了张纸片。
 
-(if: $memory is &quot;绣球花_calm&quot;)[
+(if: $memory is &quot;绣球花_1&quot;)[
 [[看看是什么-&gt;邀请函绣球1]]
 ]
 
-(if: $memory is &quot;绣球花_exited&quot;)[
+(if: $memory is &quot;绣球花_2&quot;)[
 [[查看是什么-&gt;邀请函绣球2]]
 ]
 
-(if: $memory is &quot;玫瑰花_calm&quot;)[
+(if: $memory is &quot;玫瑰花_1&quot;)[
 [[咦？是什么？-&gt;邀请函玫瑰1]]
 ]
 
-(if: $memory is &quot;玫瑰花_exited&quot;)[
-[[查看-&gt;邀请函玫瑰2]]
+(if: $memory is &quot;玫瑰花_2&quot;)[
+[[查看是什么-&gt;邀请函玫瑰2]]
 ]
 
-(if: $memory is &quot;百合花_calm&quot;)[
-[[查看-&gt;邀请函百合1]]
+(if: $memory is &quot;百合花_1&quot;)[
+[[查看是什么-&gt;邀请函百合1]]
 ]
 
-(if: $memory is &quot;百合花_exited&quot;)[
-[[查看-&gt;邀请函百合2]]
+(if: $memory is &quot;百合花_2&quot;)[
+[[看看是什么-&gt;邀请函百合2]]
 ]
 </tw-passagedata><tw-passagedata pid="10" name="星期六" tags="" position="3100,950" size="100,100">
 &lt;center&gt;
@@ -4449,7 +4448,7 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="77" name="看奕莎贝拉" tags="+1" position="2025,925" size="100,100">(set: $willing to $willing + 1)
-(set: $memory to $memory + &quot;_excited&quot;)
+(set: $memory to $memory + &quot;_2&quot;)
 
 我抬起头。
 
@@ -4484,7 +4483,7 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 
 
 </tw-passagedata><tw-passagedata pid="78" name="看瓶子" tags="-1" position="2025,1300" size="100,100">(set: $willing to $willing - 1)
-(set: $memory to $memory + &quot;_calm&quot;)
+(set: $memory to $memory + &quot;_1&quot;)
 
 我把瓶子拿到眼前。
 
@@ -4585,7 +4584,6 @@ Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
 &lt;img src=&quot;lily1.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
 
 &lt;/center&gt;
-
 
 
 (if: $willing is -4)[
