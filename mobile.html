@@ -45,6 +45,11 @@ tw-passage[tags~="top-align"] {
         margin: 6px 0 !important;
         padding: 4px 2px;
     }
+}
+
+/* 强制全局（包括手机端）使用复古好看的衬线/宋体风格 */
+tw-story, tw-passage, input, textarea, button {
+    font-family: "STSong", "Songti SC", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif !important;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
 $(document).ready(function() {
     if (!$("meta[name='viewport']").length) {
