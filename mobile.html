@@ -50,7 +50,28 @@ tw-passage[tags~="top-align"] {
 tw-story, tw-passage, tw-link {
     font-family: "Songti SC", "STSong", "Hiragino Mincho ProN", serif !important;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
+
+/* 针对手机端的排版优化，增加呼吸感 */
+@media screen and (max-width: 768px) {
+    tw-story {
+        /* 核心代码：调整行高，推荐值在 1.6 到 1.8 之间，字越多行距要越宽 */
+        line-height: 1.8 !important; 
+        
+        /* 调整段落间距，让段落之间有明显的分隔 */
+        margin-bottom: 1.5em !important; 
+    }
+    
+    /* 稍微调大字号，配合宽行距，保护眼睛 */
+    tw-passage {
+        font-size: 17px !important;
+    }
+
+    /* 针对图片和正文的间距调整，防止图片贴着文字 */
+    tw-image {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
 $(document).ready(function() {
     if (!$("meta[name='viewport']").length) {
         $('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">').appendTo('head');
