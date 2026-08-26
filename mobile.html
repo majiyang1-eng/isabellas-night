@@ -46,9 +46,35 @@ tw-passage[tags~="top-align"] {
         padding: 4px 2px;
     }
 }
+@media screen and (max-width: 768px) {
+    tw-story {
+        /* 终极高兼容性衬线组合：从苹果官方宋体，到日系明朝体（全字库极其完美），再到通用衬线 */
+        font-family: "Hiragino Mincho ProN", "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", "Times New Roman", serif !important;
+        
+        line-height: 2.0 !important;
+        font-size: 18px !important;
+        padding: 25px 20px !important;
+    }
 
-tw-story, tw-passage, tw-link {
-    font-family: "Songti SC", "STSong", "Hiragino Mincho ProN", serif !important;
+    tw-passage {
+        margin-bottom: 2.5em !important;
+    }
+
+    tw-link, .link {
+        display: block !important;
+        margin: 15px 0 !important;
+        padding: 12px 15px !important;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        text-align: center;
+    }
+    
+    input {
+        font-size: 20px !important;
+        font-family: inherit !important;
+        padding: 10px !important;
+        text-align: center;
+    }
 }
 
 /* 针对手机端的排版优化，增加呼吸感 */
