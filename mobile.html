@@ -3,634 +3,519 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>奕莎贝拉惊魂夜 mobile</title>
+<title>奕莎贝拉惊魂夜 final mobile</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 50%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0.25) 0%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 奕莎贝拉惊魂夜 mobile.</tw-noscript></noscript></tw-story>
-<tw-storydata name="奕莎贝拉惊魂夜 mobile" startnode="6" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="7fdb125d-3678-45f8-8d0d-ecc013fe8b3f" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 手机端优化版：奕莎贝拉惊魂夜 */
-
-tw-story {
-  background: #050505;
-  color: #f7f1ea;
-  font-family: "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  font-size: 18px;
-  line-height: 1.85;
-  padding: 7vh 7vw;
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 奕莎贝拉惊魂夜 final mobile.</tw-noscript></noscript></tw-story>
+<tw-storydata name="奕莎贝拉惊魂夜 final mobile" startnode="6" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="1a3941db-cf1e-4418-8044-9c56e5882624" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link, .enchantlink {
+  color: darkred !important;
 }
 
-/* 正文区域 */
-tw-passage {
-  max-width: 100%;
-  margin: 0 auto;
+tw-link:hover, .enchantlink:hover {
+  color: red !important;
 }
 
-/* 段落不要太挤 */
-tw-passage br {
-  line-height: 1.8;
+/* 如果有被访问过的链接也想变色，加这一句 */
+tw-link:visited {
+  color: darkred !important;
 }
 
-/* 链接/选项 */
-tw-link,
-.enchantment-link {
-  color: #d94a5d;
-  font-weight: normal;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(217, 74, 93, 0.5);
+
+/* 只有带有 top-align 标签的页面才会执行这个顶部对齐 */
+tw-passage[tags~="top-align"] {
+    vertical-align: top !important;
+    margin-top: 0 !important;
+    padding-top: 10px; /* 这里你可以调整距离顶部的距离，比如 0 或 10px */
 }
+/* 针对手机端小屏幕的优化 */
+@media screen and (max-width: 768px) {
+    /* 调整整个游戏区域在手机上的边距，防止字贴着手机屏幕边缘 */
+    tw-story {
+        font-size: 17px !important; /* 让手机上的字稍微大一点点，看得更清楚 */
+        line-height: 1.6 !important;
+        padding: 15px !important;   /* 留出安全的四周留白 */
+        max-width: 100% !important; /* 宽度撑满手机屏幕 */
+    }
 
-tw-link:hover,
-.enchantment-link:hover {
-  color: #ff8aa1;
-}
+    /* 让 Harlowe 的链接选项在手机上更好点，增加上下间距防误触 */
+    tw-link, .link {
+        display: inline-block;
+        margin: 6px 0 !important;
+        padding: 4px 2px;
+    }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
+$(document).ready(function() {
+    if (!$("meta[name='viewport']").length) {
+        $('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">').appendTo('head');
+    }
+});</script><tw-tag name="-1" color="red"></tw-tag><tw-tag name="+1" color="green"></tw-tag><tw-tag name="top-align" color="blue"></tw-tag><tw-passagedata pid="1" name="星期二" tags="" position="1325,1125" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+&lt;img src=&quot;tue.jpg&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-/* 图片适配手机 */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-/* 居中图片不要太窄 */
-center {
-  width: 100%;
-}
+星期二　教室&lt;br&gt;&lt;br&gt;
 
-/* 输入框 */
-input,
-textarea {
-  max-width: 100%;
-  color: #f7f1ea;
-  border-bottom: 1px solid #d94a5d !important;
-}
+最近俨然已进入冬天。
 
-/* 标题 */
-h1, h2, h3 {
-  color: #f7f1ea;
-  line-height: 1.3;
-}
+无论室内外都冷飕飕的，窗外的玻璃上也慢慢开始结雾。
 
-/* 小屏幕专用 */
-@media screen and (max-width: 600px) {
-  tw-story {
-    font-size: 17px;
-    line-height: 1.9;
-    padding: 6vh 6vw;
-  }
+放学之后，广播里又开始循环播放那段尖锐的警告：
 
-  tw-passage {
-    max-width: 100%;
-  }
+“请全体同学放学后直接回家，切勿在校外逗留，不要接受陌生人提供的食物，也不要随意接听陌生来电……”
 
-  tw-link,
-  .enchantment-link {
-    display: inline-block;
-    margin: 0.25em 0;
-  }
+那是学校为了安抚人心而做的努力。
 
-  img {
-    max-width: 92%;
-  }
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="星期二" tags="" position="650,325" size="100,100">星期二　天气 晴&lt;br&gt;&lt;br&gt;
+十年一次，消失的少女，少女的消失。
 
-最近越来越像冬天了。
+我看向前面的奕莎贝拉时，心中油然升起一股不安。
 
-放学之后，教室里的灯总开得很早，窗外灰蒙蒙的，玻璃上也慢慢开始结雾。
+听说她自己一个人住，父母也不知去向，她真的安全吗？
 
-不知道为什么，这种天气总让人特别容易胡思乱想。
+如果......如果是奕莎贝拉消失了....
 
-快放学的时候，奕莎贝拉忽然转过来敲了敲我的桌子。
+她会举行葬礼吗？我会在她的葬礼上哭泣吗？也许我会寝食难安，所以我该去表白？
 
-“等一下不要先走哦。”
+不，她本就不应该消失，所以要不要陪她一起回家...？
 
-她说这句话的时候眼睛弯弯的，像已经藏好了什么秘密。
+......
 
-我一下子就开始紧张了。
+“喂，再想什么啦？”
 
-放学之后，教室里的人慢慢走光，窗外的天也有点暗了下来。奕莎贝拉这才把书包抱到腿上，低着头翻了半天，最后小心翼翼地拿出一个盒子。
+一个响指打断了我的思绪，奕莎贝拉的脸近在咫尺。
+
+我吓了一跳，这才回过神来，原来教室里的人早已走得干干净净。
+
+只剩我和她。
+
+奕莎贝拉把书包抱到腿上，低头从书包中翻找出一个可爱的盒子。
 
 “给你。”
 
-我本来以为是随便买的点心，结果她打开的时候，我才发现居然是自己做的草莓大福。
+我以为是买来的点心，打开盒子，里面居然是用手绢包着草莓大福。
 
-白白的一层糯米皮，包得很圆，中间透出一点点红色。
+白糯米皮圆圆的，中间透出一抹鲜艳诱人的红色。
 
-“还没完全定型呢。”
+“是我亲手做的......还没完全定型呢。” 她用手指轻轻按了一下。
 
-然后她用手指轻轻按了一下。
+大福的外皮软软地陷进去一点。
 
-软软地陷进去一点。
+奕莎贝拉盯着那个凹陷，指腹暧昧地摩挲着，眼神竟有一丝恍惚。
 
-奕莎贝拉盯着那个小小的凹陷，忽然很轻地笑了。
+“软软的，像不像……皮肤？”
 
-“好可爱。”
+她说完便轻轻戳了戳我的手背，一边抬头看我的反应，眼睛弯成了两道漂亮的月牙。
 
-她说完才像意识到什么一样抬头看我，眼睛弯弯的。
+我被这暧昧的肢体接触揶揄得满脸通红，只能低下头看那个盒子。
 
-“……我是说大福。”
+她把大福递到我的嘴边，我不好意思用嘴接，便用双手接了过来。
 
-我一下子不知道该说什么，只能低下头假装看盒子。
+余光瞟到她不情愿地努了努嘴。
 
-“你吃吃看。”
-
-她把大福递给我的时候，手指不小心碰到了我的指尖。
 (if: $willing &gt; 0)[
-奕莎贝拉看起来特别期待。
+她撑着脸颊坐在我旁边，视线黏在我脸上。
 
-“你昨天答应我的时候，我就开始开心了。”
+“昨晚你答应我的时候，我高兴得一整晚都没睡着。”
 
-她抱着膝盖坐在我旁边，眼睛亮亮的。
-
-“我还以为你不会答应呢。”
+“一边想着你一边做的......“
 ]
 (if: $willing is 0)[
-她忽然轻轻问：
+她忽然倾身凑近，呼吸拂在我的侧脸。
 
-“你今天不会又拒绝我吧？”
+“你今天应该不会又要犹豫吧？”
 
-她明明是笑着说的。
-
-可我还是一下子紧张了起来。
+她的眼睫毛随着瞳孔的颤抖而跟着抖动，轻微地撅起嘴唇以表达抗议，令人无法拒绝。
 ]
-她的指尖很凉。
+听到这话，我的耳朵一定红到了耳根，立刻低头咬了一口。
 
-但不知道为什么，我却觉得耳朵一下子热了起来。
+草莓与奶油的甜腻瞬间爆开，那一刻，广播里关于“失踪”与“防范”的警告声变得极其遥远，仿佛是另一个世界的事情。
 
-我低头咬了一口。
+奕莎贝拉忽然伸出手，指尖抹掉我嘴角的一点奶油。
 
-里面是草莓和奶油，很甜。草莓的汁水一下子在嘴里爆开来，我有点慌乱地低下头，总觉得自己的吃相肯定很糟糕。
+“沾到啦。”
 
-奕莎贝拉忽然伸出手，用指尖轻轻抹掉了我嘴角沾到的一点奶油。
+“啊……” 我僵住了。
 
-“啊……”
+她没有立刻收回手，而是低下头，伸出舌尖，优雅地将那点奶油舔舐干净。
 
-我一下子僵住了。
+“怎么样？”她问。
 
-“抱歉。”
+“很...很好吃。” 我嗓音干涩，却忍不住看着她一张一合的嘴唇，那两瓣唇肉嘟嘟的，泛着一层水润的光泽，像极了两片刚剖开的、肥美多汁的生蚝肉。
 
-她嘴上这么说，却没有立刻把手收回去。
+我只在很小的时候吃过生蚝，味道已经记不清了。
 
-然后她低下头，轻轻舔掉了自己指尖上的奶油。
+只记得那软滑、冰凉、带着微腥的湿润触感滑过舌根，我的嘴巴太小，又不太掌握技巧，几乎是迫不及待地生吞进喉咙深处，险些窒息。
 
-我脑子一下子空白了。
+奕莎贝拉似乎察觉到了我的走神，她歪了歪头，指尖凉凉地划过我的嘴角。
 
-她却只是抬起眼睛看着我。
+‘在想什么？’她轻声问，‘......是在想我的事吗？
 
-“怎么样？”
+我开始胡思乱想，到底是从什么时候开始，我变得如此在乎她？
 
-我点点头，小声说很好吃。
+[[她在车库里捡到流浪猫的时候-&gt;流浪猫]]
+[[她饰演王子时叫我名字的时候-&gt;名字]]
+[[她在教室里唱歌的时候-&gt;唱歌]]
 
-“草莓味很香……”
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="星期三" tags="" position="1675,1125" size="100,100">
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+&lt;img src=&quot;pe.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-奕莎贝拉忽然笑了。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-笑得特别明媚。
-
-“我就知道你会喜欢。”
-
-她说这句话的时候，声音轻轻的，尾音黏黏的。
-
-我忽然觉得后颈热得不行。
-
-不知道为什么，我总觉得她现在很高兴。
-
-我忽然开始想。
-
-自己到底是从什么时候开始喜欢奕莎贝拉的？
-
-[[她在便利店喂流浪狗的时候-&gt;流浪狗]]
-[[她第一次叫我名字的时候-&gt;名字]]
-[[她在音乐课唱歌的时候-&gt;唱歌]]
-</tw-passagedata><tw-passagedata pid="2" name="星期三" tags="" position="1025,325" size="100,100">星期三　天气 晴&lt;br&gt;&lt;br&gt;
+星期三　体育馆&lt;br&gt;&lt;br&gt;
 
 今天是周三。
 
-体育课结束之后，老师照例让我们两个人一组拉伸。
+体育馆里闷热得厉害，空气中弥漫着汗水和廉价运动饮料的味道。
 
-我本来已经准备去找芊芊了。
+在最后的拉伸环节，原本和我一组的朋友被奕莎贝拉叫了去。
 
-结果芊芊才刚抱着垫子走过来，奕莎贝拉就忽然从后面冒出来，很自然地拍了拍她的脑袋。
+两人笑眼盈盈地商量了几句，朋友便露出了然神色，甚至还促狭地冲我单边眨眼，抱着垫子跑远了。
 
-“芊芊，你今天去和别人一组好不好？”
+“什么嘛……” 我手足无措，还没反应过来，奕莎贝拉已经在我身侧铺好了垫子。
 
-她说话的时候还是笑眯眯的。
+“今天和我一组。”
 
-像撒娇一样。
+她抬头看着我，神情自然得仿佛这本来就是天经地义的事。
 
-芊芊却一下子露出了那种“我懂了”的表情。
+这时，旁边有个男生抱着篮球横冲直撞跑过，眼看就要撞上来。
 
-她看看我，又看看奕莎贝拉，最后居然真的抱着垫子跑走了。
+“小心！” 奕莎贝拉反应极快，一把扣住我的手腕，用力将我拽进她的怀里。
 
-“重色轻友——！”
+奕莎贝拉恶狠狠地朝着那个男生说些责问的话，我却听不太清，因为此时此刻，她的指尖正抵在我的腕脉上。
 
-她还故意拖长声音喊了一句。
+人类通常不会感觉到自己的脉搏跳动，平日里安安静静的血管，此刻却在她的指端底下突突地跳了起来。
 
-“什么嘛！”
+”幸好没有受伤！“
 
-我一下子连手都不知道该往哪里放。
+她从上到下摸着我的身体，着急地检查每一处。
 
-奕莎贝拉却像完全没听见一样，很自然地在我旁边蹲下来，把垫子铺好。
+指尖若有似无地刮过我腰上的皮肤，凉津津的，她的身体却又带着活人的热气。
 
-然后抬头看我。
-
-“今天和我一组嘛。”
-
-她说得特别自然。
-
-好像这本来就是理所当然的事情。
-
-我刚想说话，旁边忽然有个男生抱着球从我们旁边跑过去，差点撞到我。
-
-奕莎贝拉一下子伸手，把我拉到了她那边。
-
-“看路啦。”
-
-她皱起眉。
-
-语气很温柔，可手却一直没有松开。
-
-我一下子连呼吸都乱了。
-
-她却像根本没意识到一样，只是低头帮我整理歪掉的垫子。
-
-“快点。”
-
-她抬头冲我笑。
-
-“再磨蹭的话身体会变硬掉哦。”
-
-她说完，又很轻地拍了一下我膝盖。
-
-“我会帮你好好拉开的。”
-
-我心脏忽然跳得特别快。
-
-我[[答应了-&gt;答应了]]。
-
-我[[犹豫了-&gt;犹豫了]]。
+“来拉伸吧？不然身体就会变得硬硬的。”
 
 
+我……
 
-</tw-passagedata><tw-passagedata pid="3" name="犹豫了" tags="" position="1150,475" size="100,100">(set: $like to $like - 1)
+[[害羞地点点头-&gt;答应了]]
 
-我下意识犹豫了一下。
+[[犹豫着盯着她看-&gt;观察]]
 
-“可是……”
 
-奕莎贝拉歪着头看我。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="观察" tags="-1" position="1775,1300" size="100,100">(set: $willing to $willing - 1)
 
-“嗯？”
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-她还是笑着的。
+我下意识地往后缩了缩，舌尖有些发干。
 
-可不知道为什么，我忽然有点紧张。
+“可是……我身体太硬了，怕拉伤。” 
 
-“我、我身体很硬的……”
-
-我胡乱找了个借口。
+我胡乱扯了个借口，眼神飘忽。
 
 奕莎贝拉安静地看了我两秒。
 
-脸上的笑好像淡下去了一点点。
+她眼底的笑意退去了一分，像一层薄薄的冰霜覆在最底下。
 
-很轻。
-
-轻到我甚至怀疑是不是自己看错了。
-
-旁边有人开始起哄。
+那样的安静持续得太久，久到空气都开始发沉，叫人后背发毛。
 
 “哦～～”
 
-“奕莎贝拉你怎么只找她啊！”
+旁边不知趣的起哄声突然起起伏伏：
 
-我耳朵一下子热了起来，连头都不敢抬。
+“奕莎贝拉，你怎么老盯着她不放啊！”
 
-奕莎贝拉却没有像平时一样立刻接话。
+这句调笑像一根针，刺破了诡异的死寂。我耳朵根瞬间烧了起来，只能盯着自己的脚看。
 
-她只是抱着膝盖坐在那里，眼睛安安静静地看着我。
+可奕莎贝拉没有笑。她不紧不慢地收回视线，重新朝我伸出手。
 
-过了一会儿，她才忽然朝我伸出手。
+那只手白得似玉，指腹带着一丝凉意。
 
 “来嘛。”
 
-声音还是软软的。
+她压低了声音，像是在哄一个不听话的宠物。
 
-“我会很轻的。”
+“我会很轻的……不会弄疼你。”
 
-她说完，指尖很轻地勾了一下我的手腕。
+她纤细的指尖极轻地勾了一下我的腕骨，像带刺的藤蔓缠上来。
 
-动作小小的。
+那一瞬间，我心头重重一跳，脑子里莫名闪过一个荒诞的念头：
 
-却让我一下子呼吸乱掉了。
+如果我今晚再敢拒绝她……大概会被她当成不合格的次品，当场剥开、揉碎吧。
 
-我忽然有一种很奇怪的感觉。
+那股莫名的恐惧像毒汁一样渗进四肢百骸，逼得我双腿发软，鬼使神差般地，顺从地膝行着朝她挪了过去。
 
-好像如果我现在还是拒绝她的话。
-
-她会不开心。
-
-最后我还是乖乖坐到了她旁边。
-
-奕莎贝拉一下子笑了。
-
-像刚刚那一点点安静从来没有出现过一样。
+奕莎贝拉的眼睛里重新浮起笑意，仿佛刚才那股让人窒息的阴冷只是我的错觉。
 
 “这才对嘛。”
 
-她开心地往我这边靠近了一点。
+她满意地往我身边贴近，几乎能闻到她身上那种冷藏柜里刚拿出来的冻肉的甜腥气。
 
-“不要紧张哦。”
+冰凉的手掌精准地按在我的后腰上，力道极大。
 
-她的手轻轻按在我的后腰上。
+“不要紧张哦……”
 
-“我会慢慢帮你变软的。”
+她贴在我耳边，吐出的气息冷热交织：
 
-...
+“我会慢慢把你这一身硬骨头……全部揉软的。”
 
-回家的路上已经很冷了。
+……
 
-我把围巾往上拉了一点，耳朵却还是热得不行。
+回家的路冷得刺骨。
 
-路边便利店的灯亮着，热饮柜发出嗡嗡的声音。
+我把厚厚的围巾往上拉了拉，遮住大半张脸，可耳廓和脖颈却像被烙铁烫过一般热络。
 
-我低着头走路。
+路边便利店的霓虹灯在夜色里发出滋滋的电流声。
 
-脑子里却一直是奕莎贝拉今天靠近我时的样子。
+我低头踩着自己的影子，脑子里全是她方才按在我腰上的触感。
 
-怎么都忘不掉。
+黏腻、湿冷，像要把我拆吃入腹的牡蛎。
 
-[[星期四]] 
-</tw-passagedata><tw-passagedata pid="4" name="答应了" tags="" position="1150,175" size="100,100">(set: $like to $like + 1)
-(set: $willing to $willing + 1)
+而我被津液润泽的沙砾。
 
-我几乎没有犹豫。
 
-“好啊。”
 
-话说出口之后，我自己都愣了一下。
+[[星期四]]
 
-因为我答应得实在太快了。
 
-奕莎贝拉一下子笑起来。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="答应了" tags="+1" position="1775,925" size="100,100">(set: $willing to $willing + 1)
 
-“太好啦。”
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-她看起来真的很开心。
+“好......”
 
-连眼睛都亮亮的。
+我垂下眼，耳根滚烫地点了点头。
 
-她立刻抱着垫子坐到我旁边，还很自然地拍了拍地面。
+才刚在垫子上坐定，她便不容分说地倾身过来。
 
-“快点坐过来。”
+那双手骨节匀称，像揉捏一块刚从冰箱里拿出来的生面团，精准而强硬地扳正我的膝盖。
 
-我刚坐下，她就伸手帮我把腿摆正。
+“这样硬邦邦的，可不行。”
 
-“你这样不对啦。”
+她低低地笑，掌心覆上我的小腿。
 
-她一边说，一边低着头帮我调整动作。
+皮肤相触的地方，连骨带肉地激起一阵细密的战栗。
 
-头发垂下来一点点。
+我有些吃痛，却不敢抗议，她顺着我的腰线一路向下按压，力道极重，像是在检验这具躯壳的韧性与新鲜程度。
 
-离我特别近。
+每一个关节被她强行推开时，都又酸又麻。
 
-我紧张得根本不敢动。
+“放松点呀。”
 
-“放松一点呀。”
+她的指尖毫无预兆地戳了戳我的膝弯，语气亲昵得像在挑拣一块上好的肉。
 
-奕莎贝拉笑着戳了戳我的膝盖。
+“怎么这么僵……真是不听话的骨头。”
 
-“你怎么这么硬。”
+我霎时窘迫起来，偏她半点不觉过分，温热的手掌直接环住我的腰肢，将我整个人死死向下压。
 
-我一下子脸红了。
+平日里柔柔弱弱的贝拉，待人疏离有分寸，这个时候却越过亲密距离，要把我抻胀成她满意的形状。
 
-她却好像完全没觉得这句话有什么不对，还笑眯眯地扶住我的腰，慢慢帮我往下压。
+“对嘛……”
 
-“对嘛。”
+她贴在我耳边厮磨：
 
-“软软的才好。”
+“这样软绵绵、有弹性的才好……”
 
-...
+……
 
-晚上洗澡的时候，我抬起手，肩膀那里忽然还有一点酸。
+夜里洗澡时，我褪下衣服，借着水雾去揉捏发酸的肩膀。
 
-不知道为什么。
+指尖刚一触到皮肤，白天那种被她死死按压、生生揉开的痛感和热度仿佛又活了过来。
 
-我一下子又想起了奕莎贝拉贴近我时的呼吸。
+我一下子想起她贴在耳边说话时的呼吸。
 
-热热的。
+我心慌意乱地滑进浴缸里，任由温水没过头顶。
 
-落在耳边的时候有点痒。
+水面晃动，漾开一圈圈的波纹。
 
-我整个人一下子缩进了浴缸里。
+窗外的寒风刮过玻璃，发出钝刀割肉般的嘶鸣。
 
-水面轻轻晃了一下。
+冬天的确是到了。
 
-窗外的风吹得玻璃也跟着发出一点很轻的声音。
 
-冬天好像真的快到了。
 
-[[星期四]] </tw-passagedata><tw-passagedata pid="5" name="星期四" tags="" position="1275,325" size="100,100">星期四　天气 阴&lt;br&gt;&lt;br&gt;
 
-我一整天都在想周末的事情。
+[[星期四]]
 
-奕莎贝拉家到底会是什么样子呢？
+</tw-passagedata><tw-passagedata pid="5" name="星期四" tags="" position="1900,1125" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;thur.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-她从来没说过自己住在哪里。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-是只去一天吗？
+星期四　学校走廊&lt;br&gt;&lt;br&gt;
 
-还是……要过夜？
+周末要去奕莎贝拉家，我脑子一直乱嗡嗡的。
 
-每次想到这里，我就会莫名其妙开始紧张。
+她家到底在哪？她从来没有提过，晚上要回家，还是……要留宿？
 
-连课都听不进去。
+我盯着课本，一个字都看不进去，心里像揣着只小鹿，雀跃又焦躁。
 
-下午课间的时候，我实在有点受不了，跑去洗手台用冷水洗了把脸。
+下课铃一响，我便去洗手台洗脸。
 
-冰凉的水拍在脸上，我刚低下头，就忽然感觉背后有人轻轻戳了我一下。
+冷水激得我一哆嗦，刚低下头，背后有人戳了我一下。
 
-我一回头。
+一回头，奕莎贝拉站在身后。
 
-是奕莎贝拉。
+她双手背后，头发乖顺地垂着，皮肤白得像刚剥壳的荔枝，透着一股饱满的水润感。
 
-她今天穿了一身白色。
+我心里莫名一阵发虚，为自己满脑子乱七八糟的猜测感到羞耻，不太敢直视她那双清澈的眼睛。
 
-头发也软软地垂在肩膀旁边。
+“发烧了吗？” 她倾过身，冰凉的手心直接贴上我的额头。
 
-不知道为什么，我一下子不太敢看她。
+那份凉意顺着皮肤直渗进骨头里，激得我一颤。
 
-“是发烧了吗？”
+“脸怎么这么红。”
 
-奕莎贝拉伸手摸了摸我湿漉漉的额头。
-
-“怎么脸这么红呀？”
-
-她手还是凉凉的。
-
-我一下子连呼吸都乱了。
-
-奕莎贝拉却像什么都没发现一样，低头从怀里拿出一个扎着蝴蝶结的小礼物袋。
+她轻声念叨着，像是在纵容我那些不敢言说的小九九，随后变戏法似地拿出一个扎着蝴蝶结的小礼物袋递给我。
 
 “给你。”
 
-我愣了一下。
+我接过袋子，有些诧异道：“怎么突然送我礼物？”
 
-“怎么突然送我礼物？”
+“因为喜...想送就送咯。” 她顿了顿，笑意盈盈地看着我。
 
-“因为想送呀。”
+我打开袋子，一股浓郁得化不开的牛奶味直冲鼻尖。
 
-她说得特别理所当然。
+瓶身通体雪白，没有任何商标，像刚挤出来不久的新鲜乳汁。
 
-我低头打开袋子，发现里面居然是一瓶牛奶味的沐浴露。
 
-瓶子也是白白的。
+我选择：
 
-“你可以试试看这个。”
+[[抬头看向她-&gt;看奕莎贝拉]]
+[[把瓶子拿近看了看-&gt;看瓶子]]
 
-奕莎贝拉说这句话的时候，一直在看着我。
 
-眼睛亮亮的。
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="6" name="标题页" tags="" position="125,1125" size="100,100">&lt;video autoplay loop muted playsinline width=&quot;100%&quot;&gt;
+&lt;source src=&quot;opening.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
 
-“会更好。”
-
-我一下子愣了一下。
-
-“更好……？”
-
-奕莎贝拉却没有立刻回答。
-
-她只是安安静静看着我。
-
-过了一会儿，忽然很轻地笑了一下。
-
-“嗯。”
-
-“会变得香香的。”
-
-她说这句话的时候，尾音软软的。
-
-像在哄小朋友。
-
-我耳朵一下子热了起来。
-
-奕莎贝拉忽然又往前靠近了一点。
-
-然后很轻地吸了下鼻子。
-
-“不过现在也很好闻。”
-
-她笑眯眯地说。
-
-我一下子连视线都不知道该往哪里放。
-
-奕莎贝拉却像完全没觉得这句话有什么不对一样，低头用指尖轻轻点了一下瓶盖。
-
-“要每天用哦。”
-
-她说“每天”的时候，声音特别轻。
-
-我心脏忽然很重地跳了一下。
-
-奕莎贝拉这才往后退了一步。
-
-可就在转身之前，她忽然很轻地舔了一下嘴角。
-
-动作特别快。
-
-快到像只是无意识的小习惯。
-
-然后她就那样抱着书包跑掉了。
-
-我一个人站在洗手台前。
-
-低头看着怀里的沐浴露。
-
-空气里好像都变成了淡淡的牛奶味。
-
-晚上回家以后，我站在洗手台前，看着这份‘礼物’。
-
-最后还是慢慢打开了那个礼物袋。
-
-我[[用了沐浴露-&gt;用了]]。
-
-我[[只是闻了闻-&gt;没用]]。
-</tw-passagedata><tw-passagedata pid="6" name="标题页" tags="" position="75,325" size="100,100">(set: $marked to false)
 (set: $willing to 0)
-(set: $like to 0)
 
-&#39;&#39;奕莎贝拉惊魂夜&#39;&#39;
+&lt;center&gt;
+&lt;div style=&quot;color: darkred;&quot;&gt;
+[[进入游戏-&gt;游玩警告]]
 
-(text-colour:red)[[[进入游戏-&gt;进入游戏]]]
-
-
-
-
-
-
-
-</tw-passagedata><tw-passagedata pid="7" name="进入游戏" tags="" position="225,325" size="100,100">&lt;center&gt;
-&lt;img src=&quot;https://i.imgur.com/KR5aUbP.jpeg&quot; width=&quot;280&quot;&gt;
+[[作者的话]]
+&lt;/div&gt;
 &lt;/center&gt;
 
-请输入你的名字。
 
-奕莎贝拉会这样叫你。
+
+</tw-passagedata><tw-passagedata pid="7" name="输入名字" tags="top-align" position="500,1125" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+&lt;script&gt;window.scrollTo(0, 0);&lt;/script&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;idcard-ezgif.com-optimize.gif&quot; style=&quot;width: 100%; max-width: 1200px;&quot;&gt;
+&lt;/div&gt;
+请输入你的名字
+
+奕莎贝拉会这样称呼你
 
 (input-box: bind $name, &quot;&quot;)
 
-[[开始-&gt;星期一]]
 
-</tw-passagedata><tw-passagedata pid="8" name="星期一" tags="" position="375,325" size="100,100">星期一　天气 晴&lt;br&gt;&lt;br&gt;
+[[打开日记-&gt;星期一]]
 
-奕莎贝拉是我的同学。
+(set: $diaryOpen to true)
 
-她漂亮，大方，温柔。我几乎是在和她成为同学的那一刻，就喜欢上了她。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="星期一" tags="" position="675,1125" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-她就坐在我的前面。
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;mon.jpg&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-有时候我会盯着她的后颈发呆。那里很白，头发扎起来的时候会露出一小截；有时候我又会看她的珍珠发卡，在灯下有一点点反光。
+星期一　学校走廊
 
-我知道这样看人不太礼貌，但我有时候真的控制不住。
+广播又在放送：
 
-偶尔会有外班的人来问：“诶，你们班是不是有个女孩叫奕莎贝拉？”
+“……请各位同学放学后结伴回家，不要单独接受他人邀请，不要食用来源不明的食物......如发现异常情况，请立即报告老师......”
+
+传说我们小镇被深深地诅咒过，每十年左右就会离奇消失一名少女，尸骨全无。
+
+而从上个月开始，这个都市传说再次兴起，又到了一位少女‘该消失’的时候。
+
+大家都在讨论那几个女孩到底去了哪，被绑架？还是离家出走？最终的下场又是怎样？
+
+四下里嗡嗡价响，像麻雀啄着枯木。
+
+如果真是传说那么置之不理就好了，可偏偏校内最近开始播放安全广播，处处透露着焦虑。
+
+我听得烦。这些讨论远没有奕莎贝拉的一个眼神重要。
+
+只要看她一眼，我的心脏就会在胸腔里剧烈地跳动——她真的是这个世界上最完美的存在。
+
+显然，并不是只有我这样认为。
+
+隔三差五地总有外班的人来问：“诶，你们班是不是有个女孩叫奕莎贝拉？”
 
 我总会有些诡异的自豪，连带着一点装腔作势的轻慢，轻飘飘地说：
 
 “是啊，是我们班的。”
 
-在众人感叹、羡慕的时候，我会有一瞬间的满足，好像她真的和我有什么关系。
+那一瞬间，我竟会生出一种荒唐的满足，好像只因为我们在同一个班，她便和我有了某种微妙的联系。
 
-但很快又会心虚地把视线移开。
+可等那些人露出羡慕的神情，我又会莫名心虚，慌忙把视线移开，像偷藏了什么见不得人的秘密。
 
-说实话，我觉得很多人都喜欢她。
+确实是同班同学，可也只是同班同学。
 
-她总是甜甜地对每个人都很好。
+......
 
-所以我从来没有想过，她会忽然转过头来，对我说：
+走廊转角处，一个人影与我迎面相撞。
 
-“这个周末要来我家看电影吗？”
+我的手下意识地扶住对方的肩膀，却被重重地撞倒在地，如同撞上了一块坚硬的石膏。
 
-我愣了一下，下意识地指了指自己。
+那力道震得我手臂一阵发麻。
 
-“我吗？”
+抬头一看，竟然是奕莎贝拉！
 
-“嗯，你。”
+我瞬间脱力跌坐在地上。
 
-我一下子有点慌。
+“抱歉，没撞疼你吧？” 
 
-[[立刻答应她-&gt;答应]]
-[[有点犹豫-&gt;犹豫]]
+她在我面前蹲下来，与我平视，轻轻扯了扯我的袖口。
 
-</tw-passagedata><tw-passagedata pid="9" name="星期五" tags="" position="1525,300" size="100,100">星期五&lt;br&gt;&lt;br&gt;
+“那会儿...跟你说的事，考虑的怎么样了？你会来我家看电影吧？”
+
+眼下她近在咫尺地盯着，我喉头发紧：
+
+经她这么一提醒，才想起来她上午突然发出的邀请，彼时我头昏脑胀，支支吾吾什么都没说出来。
+
+眼下她近在咫尺地盯着，我喉头发紧：
+
+[[当然想去-&gt;答应]]
+[[不知道为什么，有点不安。-&gt;犹豫]]
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="9" name="星期五" tags="" position="2450,1075" size="100,100">
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;fri.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+星期五&lt;br&gt;&lt;br&gt;
 
 今早上学路上，奕莎贝拉突然从背后抱住了我，把我吓了一跳。
 
 她整个人贴得很近，下巴轻轻靠在我肩膀上。
 
-“你好香啊。”
+“早上好。”
 
-她声音闷闷的，像在笑。
+她声音闷闷的，像在哧哧笑。
 (if: $marked is true)[
 她低头在我肩膀旁边轻轻闻了一下，眼睛一下子弯起来。
 
@@ -638,1215 +523,1086 @@ h1, h2, h3 {
 
 我点点头。
 
-她看起来很开心。
+她看起来十分开心。
 
 “好乖。”
 
-她说这句话的时候，手指轻轻勾了一下我的手腕。
+奕莎贝拉用手指轻轻勾了一下我的手腕。
 
-我一下子有点脸热。
+习惯了她这些天越界的亲密后，我反倒不再像最初那样大惊小怪，只是任由她将我整个人裹挟进去。
+
+又凑近闻了闻。
 ]
 (else:)[
-她忽然安静了一下。
+她把脸埋入我的颈侧，呼吸声在耳畔停滞了一瞬。
 
-“……你没有用我送你的那个吗？”
+“……你没用我送你的礼物吗？”
 
-她还是笑着的。
+她依然弯着眼睛，唇角的弧度完美得挑不出半点错。
 
-但不知道为什么，我忽然有点紧张。
+可落在我背上的手臂却微微收紧了些，隔着衣料传来让人头皮发麻的温度。
 
-我小声说昨天太晚了，还没来得及。
+我支支吾吾，随口扯了个昨天太晚、还没来得及的借口。
 
-她看着我，好一会儿没说话。
+她没有立刻接话。
 
-然后才轻轻“嗯”了一声。
+空气在那一秒凝结。她就这么一瞬不瞬地看着我，好一会儿，才慢悠悠回了一句
 
-“今晚要记得用哦。”
+“这样啊……”
 
+那声音轻飘飘的，像风筝的牵引线，一点点勒紧。
+
+她微微凑到我耳边，温热的气息混杂着她身上护肤品的香味洒在颈侧：
+
+“那可不行。”
+
+“今晚……一定要用喔。”
 ]
 她这才慢慢松开我。
 
-然后像忽然想起什么一样，从书包里翻出两张票。
+我注意到怀里被塞了张纸片。
 
-“周六我们先去游乐园！”
+(if: $memory is &quot;绣球花_1&quot;)[
+[[看看是什么-&gt;邀请函绣球1]]
+]
 
-她把票举到我面前晃了晃，看起来特别开心。
+(if: $memory is &quot;绣球花_2&quot;)[
+[[查看是什么-&gt;邀请函绣球2]]
+]
 
-“晚上再回我家看电影。”
+(if: $memory is &quot;玫瑰花_1&quot;)[
+[[咦？是什么？-&gt;邀请函玫瑰1]]
+]
 
-说完，她忽然低头看了我一眼。
+(if: $memory is &quot;玫瑰花_2&quot;)[
+[[查看是什么-&gt;邀请函玫瑰2]]
+]
 
-“你周六要穿裙子。”
+(if: $memory is &quot;百合花_1&quot;)[
+[[查看是什么-&gt;邀请函百合1]]
+]
 
-我愣了一下。
+(if: $memory is &quot;百合花_2&quot;)[
+[[看看是什么-&gt;邀请函百合2]]
+]
 
-“裙子？”
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="星期六" tags="" position="3100,950" size="100,100">
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;sat.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-她点头。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-“白色的会很好看。”
-
-我不知道为什么，耳朵一下子有点热。
-
-她却像很满意一样笑了起来。
-
-“那就这么说好啦。”
-
-晚上，我躺在床上翻来覆去。
-
-手机亮了又灭。
-
-灭了又亮。
-
-明明已经很晚了，我却还是忍不住偷偷搜索：
-
-“第一次去喜欢的人家里要注意什么？”
-
-搜完之后我又立刻把手机扣过去。
-
-一个人闷在被子里脸红了半天。
-
-窗外的风吹得树影一直轻轻晃。
-
-我却第一次觉得。
-
-冬天原来也可以让人这么开心。
-
-
-[[星期六]]会是什么样的呢。</tw-passagedata><tw-passagedata pid="10" name="星期六" tags="" position="1675,300" size="100,100">星期六　平安夜&lt;br&gt;&lt;br&gt;
+星期六　平安夜&lt;br&gt;&lt;br&gt;
 
 今天简直是我人生中最快乐的一天。
 
-我早上很早就醒了。
+早上天才刚亮我就醒了，站在衣柜前翻了个底朝天。
 
-明明昨天晚上因为紧张根本没怎么睡着，可今天还是一下子就爬了起来。
+我在卧室里跳来跳去，一会儿穿上裙子转圈，一会儿又在五条围巾中犹豫，衣服在关键时刻总是缺少最合适的那一件。
 
-换衣服的时候，我对着镜子看了很久。
+匆匆忙忙赶到时，奕莎贝拉已经先一步等在游乐园的门廊下了。
 
-最后还是偷偷涂了一点点唇膏。
+她今天穿着一件上半身毛茸茸的白色短外套，下搭一条蓬松的白色短裙，踩着一双长靴。
 
-奕莎贝拉是在游乐园门口等我的。
+修长的双腿就这样毫无遮挡地露在冬日冰冷的空气里，整个人精致得像个从橱窗里走出来的洋娃娃。
 
-她今天戴了一顶毛茸茸的白色帽子。
+我一到地方，抬眼就撞进她望过来的视线里。
 
-看见我的时候，眼睛一下子亮了。
+“你今天真可爱！”
 
-“你好漂亮！”
+她几乎扑过来撞进我怀里，我被撞得踉跄了一下，差点连站都站不稳，只能下意识地伸手揽住她的腰。
 
-她扑过来抱住我的时候，我差点连站都站不稳。
+四周的音响里循环播放着欢快的圣诞歌。
 
-圣诞歌一直在放。
+空气里到处都是热红酒的香气、爆米花的甜腻。
 
-空气里到处都是甜甜的糖果味。
+奕莎贝拉自然而然地牵起我的手，拉着我在巨幅的游乐园地图前转来转去，眼神中难掩兴奋。
 
-奕莎贝拉拉着我在地图前转来转去。
+“今天时间还早呢，” 她转过头冲我弯起眼睛，“先玩哪个呢？”
 
-“先玩哪个？”
 
-[[摩天轮-&gt;摩天轮]]
-[[鬼屋-&gt;鬼屋]]
-[[旋转木马-&gt;旋转木马]]</tw-passagedata><tw-passagedata pid="11" name="用了" tags="" position="1400,475" size="100,100">(set: $marked to true)
-(set: $willing to $willing + 1)
 
-晚上回家之后，我还是用了她送我的沐浴露。
+[[先玩摩天轮！-&gt;摩天轮]]
+[[想尝试一下鬼屋！-&gt;鬼屋]]
+[[去坐旋转木马吧！-&gt;旋转木马]]
 
-牛奶味很淡，不是那种很甜很腻的香气，而是软软的，像刚热好的糖一样。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="用了" tags="+1" position="2275,925" size="100,100">(set: $willing to $willing + 1)
 
-我洗完澡之后低头闻了闻自己的手腕。
+(set: $marked to true)
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-……总觉得有一点像奕莎贝拉身上的味道。
+我到底还是用了她的礼物。
 
-这个念头冒出来的时候，我一下子脸热了。
+乳白色的液体淌在掌心，温热的水流一冲，浓郁的牛奶香气瞬间在浴室里弥漫。
 
-我怎么会突然想到她。
+我从头到脚细细地冲洗干净，等换上睡衣走出浴室时，整个人已经被这股气味包裹得严严实实。
 
-可是躺到床上的时候，那股味道还是一直黏在我身边。
+我抬起手腕凑近鼻尖闻了闻。
 
-我甚至有点睡不着。
+太浓了。
 
-[[星期五]] 。</tw-passagedata><tw-passagedata pid="12" name="没用" tags="" position="1400,175" size="100,100">(set: $marked to false)
+简直就像整个人被泡在浓缩的乳汁里反反复复揉捏过，从头发丝到皮肤理理外外都被彻底“腌入味”了。
+
+……这味道，怎么和奕莎贝拉身上的气息一模一样。
+
+这个念头刚一冒出来，我浑身的血液就猛地往脸上涌。
+
+我怎么会满脑子都是她。
+
+我慌乱地钻进被窝，本以为洗个热水澡能早点休息，可鼻端那股甜得发闷的奶香却像有实体一样挥之不去。
+
+它丝丝缕缕地钻进呼吸里，浓烈得让我想要咳嗽。
+
+四周静悄悄的，我翻来覆去，被这股过于甜腻的气味熏得头晕脑胀，无法合眼。
+
+
+
+[[星期五]] 。
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="没用" tags="-1" position="2275,1300" size="100,100">(set: $willing to $willing - 1)
+
+(set: $marked to false)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
 我最后还是没有用。
 
-只是坐在床边，把那瓶沐浴露打开闻了闻。
+只是凑近闻了闻。
 
-牛奶味很轻。
+牛奶味变淡了，并不像白天在走廊里那样浓烈得化不开，反而透着一种冷牛奶的清甜。
 
-不知道为什么，我忽然想起奕莎贝拉靠近我说话的时候。
+我忽然想起白天她靠在我耳边、带着点小委屈说话的样子。
 
-……也是这种味道吗？
+……她身上也是这种味道吗？
 
-我有点记不清了。
+我有些记不清了，脑子里却全都是她当时专注而无辜的眼睛。
 
-但我最后还是把瓶盖重新拧好，放到了一边。
+我有些心虚地晃了晃神，最后还是把瓶盖重新拧紧，像藏着什么秘密似地把它推到了桌角。
 
-躺下之后，我又忍不住朝那边看了一眼。
+夜深了，房间里一片寂静。
 
-月光照在瓶子上，白白的。
+躺下之后，我却怎么也睡不着，视线总是不受控制地飘向桌子那边。
 
-好像有人在看着我。
+月光透过窗帘的缝隙洒进来，正好照在那个通体雪白的瓶子上，白森森的，泛着一层幽幽的光。
 
-[[星期五]] 。</tw-passagedata><tw-passagedata pid="13" name="答应" tags="" position="525,475" size="100,100">(set: $like to $like + 1)
-(set: $willing to $willing + 1)
-
-我装作轻松的样子点了点头。
-
-“好，好啊。”
-
-其实心里已经慌得不得了。
-
-奕莎贝拉一下子笑了。
-
-她看起来特别开心，连眼睛都亮亮的。
-
-“太好啦。”
-
-她轻轻说。
-
-……我不知道为什么，忽然也有点开心。
-
-她舔了舔嘴唇，好像在想什么。
-
-奕莎贝拉倒是看起来很开心的样子，甩起她靓丽的书包，一蹦一跳地离开了。
-
-那天晚上，我很久都没有睡着。
-
-闭上眼睛的时候，还是会想起她转过头来的样子。
+在安静的深夜里，那瓶子静静地立在那里，直挺挺的，倒莫名像是一个缩小的、正安安静静看着我的影子。
 
 
-我进入了梦乡，期待着[[星期二]] 的到来。
-</tw-passagedata><tw-passagedata pid="14" name="犹豫" tags="" position="525,175" size="100,100">(set: $like to $like - 1)
 
-我张了张嘴。
+(if: $willing is -4)[
+[[星期五 档案室-&gt;调查线星期五]]
+]
 
-“可是周末……”
+(else:)[
+[[星期五-&gt;星期五]]
+]
 
-其实我也不知道自己在犹豫什么。
 
-只是突然有点紧张。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="犹豫" tags="-1" position="850,1300" size="100,100">(set: $willing to $willing - 1)
 
-奕莎贝拉安静地看着我。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-她没有立刻说话。
+“我……”
 
-过了一会儿，她忽然往前靠近了一点。
+我张了张嘴，舌头却像打了结。
+
+广播里那些字眼不合时宜地扎进脑海：
+
+“……不要单独接受他人邀请。”
+
+也许是最近学校每天都在播放这些内容，又或许是那几个女孩失踪的传说已经听得太多。
+
+一瞬间，我竟真的迟疑了。
+
+奕莎贝拉也不言语，只是安静地看着我。
+
+广播停了，四周的人声也不知道什么时候散去，只剩下她望着我。
+
+走廊忽然变得十分安静。
+
+她身体微微向前倾，缩短了我们之间的距离。
 
 “你不想来吗？”
 
-她声音很轻。
-
-像在撒娇。
-
-可是不知道为什么，我心脏一下子缩紧了。
+她嘟了嘟嘴巴，带着一点撒娇似的鼻音。
 
 “也、也不是……”
 
-奕莎贝拉垂下眼睛，慢慢“哦”了一声。
+我慌里慌张道。
 
-她的手指轻轻勾住自己的书包带，嘴巴也抿起来一点，看起来居然有点委屈。
+奕莎贝拉垂下眼，轻轻地“哦”了一声。
 
-“我还准备了很多东西。”
+“为了邀请你......我真的准备了好多东西。”
 
-她小声说。
+她勾着书包带，手指一点点收紧，指节泛出苍白的颜色。
 
-“电影、零食、还有睡裙……”
+“电影、零食……还有睡裙。”
 
-说到最后，她自己先笑了一下。
-
-然后抬起眼睛看我。
+她重新抬起眼，那双水盈盈的眼睛一眨不眨地望着我。
 
 “真的不来吗？”
 
-她说这句话的时候，舌尖轻轻舔了一下嘴唇。
-
-我忽然有点呼吸不过来。
-
-最后还是低下头，小声说：
+她轻轻舔了一下嘴唇。
 
 “……好，我去。”
 
-奕莎贝拉一下子笑了。
+我小声说。兴许是鬼迷心窍，我倏地忘记刚才自己为何要迟疑。
 
-那种笑很甜。
+奕莎贝拉顿时眉开眼笑，“太好啦！”
 
-甜得让我忽然有一点头晕。
+那神情倒像终于等到了一个早已知道的答案。
 
-“太好啦。”
+她抱了抱我，背起书包，裙摆一晃一晃地消失在了走廊尽头。
 
-她轻轻说。
+......
 
-好像从一开始，她就知道我一定会答应。
+晚上，我久久无法入睡。
 
-奕莎贝拉看起来很开心的样子，甩起她靓丽的书包，一蹦一跳地离开了。
+一闭上眼睛，奕莎贝拉漂亮的脸庞就会出现在我眼前。
 
-那天晚上，我很久都没有睡着。
+还有她那句——
 
-闭上眼睛的时候，还是会想起她转过头来的样子。
+&quot;真的不来吗？&quot;
+
+我对自己的犹豫感到不解，进而便开始质疑自己对奕莎贝拉的喜爱。
+
+我想，人对美都是趋之若鹜的。
+
+而我，则是美丽最忠实的奴隶。
+
+没有人可以拒绝奕莎贝拉，正如没有人可以拒绝美丽。
 
 
-我进入了梦乡，期待着[[星期二]] 的到来。
-</tw-passagedata><tw-passagedata pid="15" name="流浪狗" tags="" position="825,150" size="100,100">那天下雨。
 
-我放学去便利店的时候，看见奕莎贝拉蹲在后门。
+&lt;div class=&quot;phone-notice&quot;&gt;
+  📱 奕莎贝拉发来一条消息
+&lt;/div&gt;
 
-她面前有一只脏兮兮的流浪狗。
+[[查看消息-&gt;短信01]]
 
-白色的。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="流浪猫" tags="" position="1500,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-毛被雨淋得一缕一缕的，看起来很小。
+那天下大暴雨。
 
-奕莎贝拉一点也不嫌脏，就那样蹲在那里，低着头很认真地看它。
+路面汪洋恣肆，学校组织大家从地下车库坐货梯有序离开。
 
-她手里还拿着半根火腿肠，一点一点掰碎喂给它。
+我因为值日，比平时迟了半步，从空荡荡的教学楼里踱出来。
 
-那只小狗居然真的敢靠近她。
+走到湿冷的车库深处时，我看见了奕莎贝拉。
 
-我本来想直接走过去，结果却莫名停住了。
+她蹲在一个背光的角落里，白色的裙裾垂在积水微泛的水泥地上，竟没有沾上一点污泥。
 
-因为奕莎贝拉看它的眼神很奇怪。
+她面前缩瑟着一只脏得辨不出颜色的狸花猫，毛发湿漉漉地贴在骨瘦如柴的躯干上，狼狈不堪。
 
-特别专注。
+可她就那样安安静静地蹲着，手里捏着半根火腿肠，剥开，一点一点地喂给它。
 
-像很喜欢。
+那只流浪惯了、向来对人充满戒备的野猫，此刻却温顺得像个幻觉，毫无防备地贴着她的指尖。
 
-又像在研究什么。
+学校的保洁奶奶正推着清洁车路过，看见这一幕，笑着放慢了脚步，慈祥地念叨着：
 
-她忽然伸出手，轻轻摸了摸小狗湿漉漉的鼻尖。
+“哎哟，这小猫怪可怜的，在这里转悠好几天了。我平时也偶尔拿点剩饭喂它，就是一直抓不住……同学要是喜欢，就把它捉回去养吧，是个有灵性的小家伙。”
 
-“鼻子怎么没有水啊。”
+奕莎贝拉抬起头，冲奶奶弯了弯眼睛，认真地点了点头：
 
-她皱起眉。
+“我要养它。”
 
-“不行，要湿润的才健康。”
+保洁奶奶笑呵呵地摆了摆手，推着车渐行渐远了。
 
-她说这句话的时候特别认真。
+直到拐角处只剩下车库顶上昏黄幽暗的灯泡，奕莎贝拉才仿佛终于察觉到我的存在。
 
-那只小狗就那样乖乖站着，一动不动地让她摸。
-
-奕莎贝拉这时候才发现我站在旁边。
-
-她抬起头，看着我笑了一下。
+她缓缓直起腰，回过头来看向我。水雾弥漫的空气里，她笑意盈盈地开口：
 
 “它好乖。”
 
-我那时候不知道为什么，忽然有点羡慕那只小狗。
+我隔着几步远的雨幕站着，心脏莫名漏跳了一拍。
 
-那天晚上，我躺在床上很久都没有睡着。
+那一刻，我望着她，竟然荒谬地生出一种隐秘的、卑微的嫉妒。
 
-闭上眼睛的时候，脑子里还是她蹲在雨里的样子。
+我居然会去羡慕一只被她垂怜、被她纳入掌心里的猫。
 
-[[星期三]]</tw-passagedata><tw-passagedata pid="16" name="名字" tags="" position="825,325" size="100,100">有一天早上，我差点迟到。
+那天晚上，我躺在逼仄的宿舍床上，听着窗外连绵不绝的暴雨，辗转难眠。
 
-冲进教室的时候预备铃已经响了，我头发乱糟糟的，气喘吁吁地跑回座位，刚坐下，就看见奕莎贝拉已经抱着一摞作业本站在我旁边了。
+闭上眼睛的瞬间，脑子里全都是她蹲在潮湿阴暗的车库里，用那样专注而怜惜的眼神，抚摸着一个小生命的模样。
 
-“快点交哦。”
 
-她笑眯眯地看着我。
 
-我一下子更慌了，赶紧低头从书包里翻作业。
+[[星期三]]
 
-手忙脚乱翻了半天，差点把笔袋碰掉。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="名字" tags="" position="1500,1125" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-奕莎贝拉就站在旁边低头看我，也不催。
+彼时高一刚开学，大家都不熟络，那一年的校园祭，我们班差一点就完蛋了。
 
-我终于把作业抽出来的时候，耳朵已经有点热了。
+班里决定演舞台剧，一切都顺利进行着，但就在开演前一天，公主和王子一起倒下了。
 
-“给……”
+据说是两个人排练到太晚，回去以后双双发烧，文艺委员急得团团转，一边翻着演员名单，一边问：
 
-我小声说。
+“怎么办……公主没有就算了，王子也没有……”
 
-她伸手接过去，很自然地放在了最上面。
+“这个童话还演什么啊？”
 
-后来我偷偷抬头的时候，发现她把自己的作业也放了上来。
+正当她焦躁不堪时，目光与饰演一棵树的我相遇，文艺委员如获至宝。
 
-就压在我的上面。
+测量过后，我的身高和原本的公主演员最接近，所以我被临时抓来顶替公主。
 
-两本作业本紧紧贴在一起。
+但是王子怎么办？
 
-不知道为什么，我盯着那个地方看了好久。
+整个戏剧社男生本来就少。
 
-下午发作业的时候，奕莎贝拉站在讲台旁边帮老师整理。
+更何况，王子这个角色需要穿礼服、拿剑，还要有传说中的“王子的气质”。
 
-她一边发，一边慢吞吞念名字。
+大家面面相觑，都不知如何是好。
 
-教室里闹哄哄的，我本来还趴在桌子上发呆。
+正当文艺委员急得快要哭出来时，一个声音从旁边传来。
 
-直到奕莎贝拉忽然抬起头。
+“我来吧。”
 
-“$name ——”
+所有人都朝着声源的方向看去。
 
-教室里已经没什么声音了。
+转过头。
 
-老师好像正在低头整理讲台上的东西，剩下几个还没走的同学也下意识朝这边看了过来。
+负责道具的奕莎贝拉站在那里。
 
-不知道为什么，我耳朵一下子热了起来。
+“……你？” 文艺委员愣住了。
 
-她念我名字的时候总是很轻。
+奕莎贝拉点点头。
 
-尾音软软的。
+“嗯，我来演王子吧。”
 
-像故意拖长了一点。
+奕莎贝拉穿上了专门为王子准备的戏服。
 
-我赶紧站起来过去拿作业。
+金色的肩章，笔挺的骑士制服，长长的军靴，还有一把帅气的装饰剑。
 
-其实按平时来说，她都会直接发到大家桌子上的。
+她站在镜子前，低头整理袖口。
 
-旁边有人小声“哦——”了一下。
+“怎么样？好看吗？” 她问。
 
-我一下子更慌了，连头都不敢抬。
+我一边不自在地整理着公主裙有些略低的胸口，一边支支吾吾地，不知怎么回答她。
 
-奕莎贝拉却像完全没察觉一样，还是笑眯眯地看着我。
+“嗯...感觉你真的像王子。”
 
-可等我伸手去接的时候，她却没有立刻松手。
+我看到镜子中的奕莎贝拉挑了下眉又调皮地笑了笑。
 
-我动作一下子僵在那里。
+“那当然了。”
 
-……她怎么还不放开？
+“王子怎么可以不像王子？”
 
-我甚至开始觉得周围的人是不是都在看我。
+我迅速转移视线，料想自己一定脸红了。
 
-低头的时候，我才发现我的作业本下面还压着她自己的那一本。
+“那...那你怎么会想来演王子？” 
 
-两本本子紧紧贴在一起。
+我好奇问她，我发誓，绝不是因为在自己演公主后奕莎贝拉就要说演王子而觉得心动才问的。
 
-奕莎贝拉这时候才抬起眼睛看我。
+“虽然假发很痛，但是演王子很好啊，帅气。”
 
-忽然弯着眼睛笑了一下。
+带着一份莫名其妙地小失落，我冲她笑笑，“嗯，帅气。”
 
-“最后两个啦。”
+正式排练开始以后，一切都变了。
 
-她说得特别自然。
+聚光灯亮起，奕莎贝拉站在舞台中央。
 
-好像只是因为顺手。
+成为了故事里温柔，坚定，又有一点孤独的王子。
 
-可我还是觉得心脏跳得乱七八糟。
+轮到她的台词时，她一手配剑，另一手拿着花束走向我。
 
-最后几乎是逃一样回到了座位。
+她按照剧本上的内容问我：
 
-那天下午剩下的时间里，我都没办法认真听课。
+“美丽的公主殿下，请告诉我你的名字。”
 
-脑子里一直是她叫我名字时候的声音。
+我看着她俊俏的脸庞，突然忘记了角色的名字。
 
-“$name。”
+我慌张地吞了吞口水。
 
-[[星期三]]</tw-passagedata><tw-passagedata pid="17" name="唱歌" tags="" position="825,475" size="100,100">那天全校大扫除。
+“我的名字是——”
 
-天气特别热。
+后台有人翻动剧本。
 
-走廊的窗户全部开着，风一阵一阵吹进来，远远能听见操场上踢球的声音，还有人在楼下小卖部喊“给我带瓶冰水——”。
+所有人都为我捏一把汗，等着我说出那个角色原本的名字。
 
-教室里的人早就四散各处，或许打闹，或许。
+“是$name公主吗？”
 
-只剩下我一个人留在最后排擦窗户。
+众人哈哈大笑，我顺着话头接过，按照后面的剧情演了下去。
 
-阳光把玻璃晒得发烫，我擦到一半就有点头晕，额头上全是汗。
+奕莎贝拉替我解了围，冲我眨了眨眼。
 
-就在这个时候，我忽然听见走廊外面有人在唱歌。
+彩排结束后，我和她以及其他角色都在后台卸妆中。
 
-声音很轻。
+奕莎贝拉走过来，在我旁边的镜子前摘下了王子假发。
 
-慢悠悠的。
+她甩了甩自己长发，原本的长发变得蓬松和卷曲，垂到她的胸口。
 
-像夏天里忽然吹进来的一阵凉风。
+像个真正的公主。
 
-我下意识停下动作。
+“演的真好啊，$name。”
 
-下一秒，奕莎贝拉抱着水桶从后门走了进来。
+我不好意思地笑笑：“可是我又不是真的公主。”
 
-她明显也没想到教室里还有人。
+她看着镜子里的我说：
 
-我们两个对视了一眼。
+“王子也不是真的王子啦。”
 
-奕莎贝拉一下子笑了。
 
-可是歌声却没有停。
 
-她就那样一边轻轻唱着，一边慢吞吞走到窗边擦玻璃。
+[[星期三]]
 
-外面的风把她的头发吹起来一点。
 
-阳光落在她侧脸上。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="唱歌" tags="" position="1500,1300" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-我其实已经完全不记得她唱的是什么了。
+那天是全校的大扫除。
 
-只记得很好听。
+燥热的空气像一层化不开的蜜糖，黏糊糊地裹在皮肤上。
 
-像冰块掉进汽水里的声音。
+走廊的窗户大敞着，灌进来的风带着盛夏草木被烤焦的味道。
 
-让人心里也跟着轻轻发凉。
+远远能听见操场上皮球砸地的闷响，还有男生在楼下小卖部扯着嗓子喊：“——老板，来瓶冰水！”
 
-整个空教室里都是她的歌声。
+教室里的人早就三三两两散了去，有的在敷衍地挥着扫帚，有的跑去隔壁班串门。
 
-我后来甚至开始希望时间能不能过得慢一点。
+只剩下我一个人，孤零零地留在大扫除的尾巴里，慢吞吞地擦着最后一扇窗户。
 
-哪怕一点点也好。
+下午的太阳毒辣得厉害，把玻璃晒得滚烫。
 
-奕莎贝拉擦到我旁边的时候，忽然侧过头看了我一眼。
+我擦到一半便有些头晕目眩，额前碎发被汗水浸透，黏在皮肤上。
 
-“干嘛一直看我呀？”
+就在我有些气喘吁吁时，寂静的走廊里，忽然飘进了一缕歌声。
 
-她笑眯眯地问。
+很轻，很软，像是不经意踩碎了夏日的阳光。
 
-我一下子慌了，赶紧低头假装继续擦窗户。
+我下意识地停下手里的动作，呼吸都放轻了。
 
-结果差点把水桶碰倒。
+下一秒，身后传一阵细碎的脚步声。
 
-奕莎贝拉一下子笑出了声。
+奕莎贝拉抱着半满的水桶，从后门轻盈地走了进来。
 
-“你好容易害羞哦。”
+她大概也没料到空无一人的教室里还藏着我。
 
-她说。
+四目相对的瞬间，她先是一愣，随即眉眼弯弯地笑了起来。
 
-我耳朵一下子热了起来。
+可那首歌却断断续续地没有停。
 
-可就在这个时候，走廊外面忽然传来一阵乱七八糟的脚步声。
+她就那样一边哼着不成调的轻歌，一边慢吞吞地走到我隔壁的窗台边，拿起抹布擦拭起来。
+
+风把她耳边的碎发吹得微微扬起，阳光毫无保留地吻着她白皙的侧脸，竟有些炫目得让人不敢直视。
+
+我其实早就记不清她哼的是哪一段调子了。
+
+只记得那声音清脆，像是不小心掉进玻璃杯里的冰块，发出清脆的撞击声。
+
+隔着热浪，连我的心跳也跟着一下一下地、冰凉而剧烈地震颤起来。
+
+整个空荡喧热的教室里，仿佛只剩下她湿润的呼吸声。
+
+我脑子里甚至荒谬地闪过一个念头。
+
+希望时间就停在这一秒吧，哪怕慢一点，再慢一点点也好。
+
+“——干嘛一直看我呀？”
+
+她擦完一块玻璃，忽然毫无预兆地侧过头，似笑非笑地撞进我的视线里。
+
+我像做坏事被抓包的小孩，慌乱地别开眼，手忙脚乱地继续抹玻璃。
+
+结果用力过猛，差点把手边的水桶直接撞翻。
+
+奕莎贝拉看着我这副狼狈又局促的样子，噗嗤一声笑出了声。
+
+那笑声清脆得像夏天的风。
+
+“哎呀，” 她歪着头，眼底盛满了恶作剧得逞的促狭与温柔，“怎么这么容易害羞。”
+
+轰的一下，我的耳根连带着脖颈，瞬间烧成了一片滚烫。
+
+可还没等我找出一句结结巴巴的话来辩解，走廊外突然由远及近地传来了喧闹的嬉笑声。
 
 “奕莎贝拉——！”
 
-“你怎么跑这儿来了！”
+“你怎么躲到这儿来了！”
 
-“快点啦！！”
+“快点啦，大家都等着去买冰棍呢！！”
 
-一下子冲进来好几个人。
+几个人影风风火火地撞进后门，原本安安静静、只属于我俩的私密空气瞬间被外面的喧嚣撕得粉碎。
 
-刚刚安安静静的教室一下子变得乱糟糟的。
+奕莎贝拉被她们簇拥在中央。
 
-奕莎贝拉被她们围在中间，笑得十分开心，聊着。
+她回过头时，目光刚好撞上我呆傻发直的眼神。
 
-临走之前，她忽然回过头。
+她微微一顿，像是突然意识到自己刚才旁若无人地哼了歌，白皙的脸颊上飞快地掠过一丝极淡的红晕。
 
-“$name。”
+她有些不好意思地抿了抿唇，隔着人群，轻声向我确认：
 
-“帮我把水桶放回去好不好？”
+“……我是不是唱得太大声了？吵到你了吧？”
 
-我愣了一下。
+我慌乱地摇着头，心脏在胸口狂乱地撞击着，却一句话也说不出来。
 
-然后赶紧点头。
+见我摇头，她像是松了一口气，眼睛里重新漾起清甜的笑意。
 
-“好……”
+她有些羞涩地弯了弯唇角，小声嘟囔了一句：
 
-奕莎贝拉这才笑起来。
+“要是觉得好听的话，我下次再唱给你听呀。”
 
-“谢谢你啦。”
+说完，她便飞快地转过身，被那群欢声笑语的女孩簇拥着，像一阵风似地跑远了。
 
-她很快就被那群人拉走了。
+走廊上的嬉闹声一点点融化在蝉鸣里，直至彻底听不见。
 
-走廊上的声音也一点点远掉。
+教室里重新恢复了死甚至是寂静。
 
-教室重新安静下来。
+只有窗帘被热风高高卷起，又无力地垂下。
 
-只有风还在吹窗帘。
+我站在原地缓了好一会儿，才慢慢走到她刚才擦过的窗台边。
 
-我低头的时候，才发现她刚刚放在窗边的水桶里，还有一点没化掉的冰。
+低头一看。
 
-[[星期三]]</tw-passagedata><tw-passagedata pid="18" name="摩天轮" tags="" position="1825,475" size="100,100">我们最后还是去了摩天轮。
+她留在水桶里的半盆清水中，赫然还浮着几块没来得及化掉的碎冰，正随着水波轻轻晃动。
 
-排到我们的时候，天已经彻底黑了。
+凉意顺着指尖，一直钻进心里。
 
-整个游乐园的灯一点一点亮起来，远远看过去像撒在雪地里的糖。
 
-广播里的圣诞音乐被风吹得断断续续的。
+[[星期三]]
 
-前面排队的情侣不知道在聊什么，忽然一起笑了起来。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="摩天轮" tags="" position="3250,1025" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-其中一个女生指了指正在升高的摩天轮。
+我们最后还是去了摩天轮。
 
-“听说到最高点的时候接吻的话，就会永远在一起欸。”
+排到我们的时候，天已经彻底黑透了。
 
-我一下子把脸转开了。
+整个游乐园的灯一盏接一盏地亮起来，远远望去，像一把碎金撒在了深蓝色的雪地里。
 
-假装去看旁边的圣诞树。
+广播里的圣诞轻音乐被夜风吹得断断续续，空气里飘着淡淡的烤栗子香。
 
-结果耳边却忽然传来奕莎贝拉很轻的笑声。
+前面排队的情侣不知道聊到了什么，并肩笑了起来。
 
-“你刚刚是不是偷偷听到了？”
+其中一个女生指了指头顶缓缓转动的庞然大物。
 
-她歪着头看我。
+“听说在最高点接吻的话，就会永远在一起欸。”
 
-我一下子更不敢看她了。
+我听得心头一跳，慌乱地把脸转开，装作对旁边塑料圣诞树上的彩灯极其感兴趣的模样。
 
-舱门关上的时候，整个空间轻轻晃了一下。
+耳边却冷不丁传来奕莎贝拉极轻的笑声。
 
-外面的声音忽然一下子全都变远了。
+“你在偷听吗？”
 
-只剩下机器缓慢转动的声音。
+她微微偏过头，眼睫眨了眨，似笑非笑地看着我。
 
-还有我们两个人的呼吸。
+我被抓了个正着，脸颊瞬间烧了起来，更不敢和她对视了。
 
-摩天轮慢慢升高。
+舱门合上的那一刻，金属碰撞发出一声轻响。
 
-下面的灯光也越来越远。
+整个世界被按下了静音键，外面的喧嚣喧闹瞬间退潮，只剩舱内缓慢运转的机械声，和彼此清晰可闻的呼吸。
 
-亮晶晶的一大片，像漂在黑夜里的海。
+摩天轮载着我们一点点升高。
 
-奕莎贝拉忽然托着脸，很认真地看着我。
+脚下的地面越发遥远，游乐园的灯火汇聚成一片璀璨流动的星海。
 
-我本来还想假装低头整理围巾。
+奕莎贝拉双手托着腮，安安静静地看着我。
 
-结果下一秒，她却忽然朝我凑近了一点。
+我有些不自在地摘下脖子上的围巾，拿在手里胡乱折叠着。
 
-距离一下子变得很近。
+在这样密闭又安静的环境里，几乎能清晰地感觉到她一眨不眨的目光正落在自己身上。
 
-近到我甚至能闻到她身上香气。
+我越发不敢抬头去看她的眼睛，心跳乱得像敲错的鼓点。
 
-我脑子一下子空白了。
+视线慌不择路地往下垂，不知怎么的，竟然直直落在了她微敞的领口处。
 
-结果奕莎贝拉却忽然笑了。
+就在我恨不得找个地缝钻进去的时候，头顶忽然响起她含着笑意的、低低的嗓音：
 
-“你今天真的好漂亮。”
+“好看吗？”
 
-她轻轻说。
+我猛地一愣，大脑“嗡”的一声。
 
-我一下子愣住。
+还没等我开口辩解，她勾着衣领，手指利落地勾着衣领往下扯了一寸。
 
-这才发现——
+“要不要看这个？” 语气里带着捉弄的狡黠。
 
-她刚刚好像根本不是想亲我。
+“我的胸口处有一颗痣。”
 
-摩天轮还在慢慢升高。
+我整个人从脖子红到耳根，彻底窘迫得连一句话也说不出。
 
-我却已经完全不敢抬头看她了。
+她纯粹是在拿我寻开心！
 
-等升到最高点的时候，奕莎贝拉忽然凑近玻璃，很轻地“哇”了一声。
+幸好轿厢此时稳稳停在了最高点。
 
-玻璃上映出她亮亮的眼睛。
+奕莎贝拉轻轻“哇”了一声，直起身子贴向玻璃窗。
 
-还有一点被灯光照得发白的侧脸。
+玻璃上映出她亮晶晶的眼睛，以及被下方万家灯火映得明明灭灭的侧脸。
 
 “你看。”
 
-她小声说。
+“从这个高度看下去，整个世界都变得好小，像不像一个装在水晶球里的玩具？”
 
-“好像整个世界都变得很小。”
+我顺着她的视线往下望。
 
-我顺着她指的方向往下看。
+灯火、人群、圣诞树，全变成了微不足道的色块，星星点点地闪烁在大地上。
 
-雪。
+我偏过头去看她，心中涌起一阵说不出的酸涩。
 
-灯光。
+她站在高处，俯瞰着人间的烟火，眼神里却不见半点热闹。
 
-圣诞树。
+兴许是荒谬的错觉吧。
 
-整个游乐园都安安静静地缩在夜色里面。
+对于奕莎贝拉而言，这漫长的人生和喧嚣的世界，是否从来都只是悬在半空中、永远无法真正触及的风景呢。
 
-不知道为什么。
+她回头看着我，下一句话便打断了我的思绪。
 
-我忽然有一种很奇怪的感觉。
+“不过，” 她弯起唇角，“到底是谁在水晶球里呢？他们还是我们？”
 
-好像现在这个小小的舱里，才是真正的世界。
 
-而外面的东西，都已经离我们很远很远了。
 
-[[继续-&gt;游乐园食物]]</tw-passagedata><tw-passagedata pid="19" name="鬼屋" tags="" position="1825,300" size="100,100">我们最后先进了鬼屋。
+[[去看看游乐园里有什么好吃的吧-&gt;游乐园食物]]
 
-里面比我想象得还黑。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="鬼屋" tags="" position="3250,900" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-走廊窄得几乎只能两个人并排，头顶的红灯一闪一闪的，空气里还有一股潮湿发霉的味道。
 
-我本来就有些紧张。
+我们最后先进了鬼屋。
 
-结果刚转过一个拐角，旁边忽然“砰”地一下弹出来一个人影。
+里面比我想象得还要昏暗，空气里弥漫着陈旧潮湿的霉味。
 
-我还没反应过来，奕莎贝拉已经一下子抱住了我。
+窄小的走廊逼仄得几乎只能两人侧身通行，头顶的应急红灯一明一暗地闪着强光。
 
-整个人几乎直接撞进我怀里。
+我本来就悬着一颗心，神经紧绷。
 
-我脑子“嗡”地空了一下。
+偏偏刚转过一个死角，墙角处阴恻恻地“砰”一声弹出一个摇晃的白影。
 
-她抓着我袖子的手特别紧，呼吸也乱乱的，头发蹭在我脖子旁边，弄得我一下子连站都快站不稳了。
+“呀——！”
+
+我还没来得及尖叫，身旁的人几乎是直接撞进了我怀里。
+
+力道大得有些失控，奕莎贝拉双手死死攥住了我的衣袖。
+
+我双腿都软了。
+
+她急促滚烫的呼吸直往我脖颈里钻，长发扫过锁骨，带起一阵细密的战栗。
 
 “……吓死我了。”
 
-她小声说。
+她声音软乎乎的，带着点被吓出来的哭腔，哪里还有平时在学校里那副游刃有余的架势。
 
-声音闷闷地埋在我肩膀旁边。
+我双腿都软了。
 
-我本来其实也很害怕。
+我原本同样被吓得不轻，可当她温热的体温毫无防备地贴上来时，那些张牙舞爪的纸扎鬼怪瞬间退到了世界之外。
 
-可不知道为什么。
+只剩下她隔着衣料传来的心跳。
 
-她抱住我的瞬间，我反而开始顾不上那些鬼了。
+还没等我们顺过气，头顶忽然“哗啦”一声，一颗沾着血的假人头毫无预兆地迎面甩了下来！
 
-后来工作人员又突然从旁边冲出来的时候，奕莎贝拉甚至直接躲到了我身后。
+“呀！”
 
-我下意识伸手挡了她一下。
+我吓得本能地瑟缩着往后退，几乎是同一秒，奕莎贝拉也惊呼着一把扯住我的袖子。
 
-结果下一秒，她却忽然从后面轻轻抱住了我的腰。
+我们在极度慌乱中撞成一团，她顺势慌不迭地往我身后一缩，手臂从后面死死环住了我的腰。
 
-我整个人一下子僵住。
+头顶的人头还在晃晃悠悠地滴着假血，粘稠地如同我此刻兵荒马乱的心。
 
-差点连路都不会走了。
+直到好不容易逃出生天，重新跌进外面清冽的夜风里，摸了摸自己脸，热得已经烧起来了。
 
-等终于从鬼屋出来的时候，外面的风一下子吹过来，我才发现自己脸热得不行。
+鬼屋还是不能随便玩的。
 
-奕莎贝拉却像完全没察觉一样，很自然地晃了晃我的手。
+反观奕莎贝拉倒像是个没事人一样，松开手，很自然地挽住我的胳膊，笑意盈盈地晃了晃：
 
-“还好有你陪我。”
+“好啦，还好有你陪我。”
 
-她笑嘻嘻地说。
+她侧过脸冲我眨眨眼，语气里还带着点恶作剧得逞的得意。
 
-“感觉一下子就没那么可怕了。”
+“感觉也没那么可怕嘛。”
 
-[[继续-&gt;游乐园食物]]</tw-passagedata><tw-passagedata pid="20" name="旋转木马" tags="" position="1825,125" size="100,100">我们最后先去了旋转木马。
 
-圣诞音乐一直在响，空气里全是亮晶晶的灯和热红酒甜甜的味道。
+[[去看看游乐园里的好吃的吧-&gt;游乐园食物]]
 
-奕莎贝拉几乎是拽着我跑过去的。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="旋转木马" tags="" position="3250,775" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-工作人员刚把门打开，她就一下子钻进去，最后挑了一匹白色的木马。
+我们先去了旋转木马。
 
-裙摆轻轻垂下来。
+游乐园的空气里混着热红酒和焦糖杏仁的香气，夜色中的灯光闪闪发亮。
 
-整个人亮得像童话里的人。
+走到围栏前，奕莎贝拉很自然地先一步拉开了铁栅。
 
-旋转木马慢慢转起来的时候，我忽然有一种很奇怪的感觉。
+她侧过身，极其‘绅士’地朝我伸出手，稳稳地牵住我的手，看着我先踩上踏板、坐稳在一匹白色的木马上。
 
-好像整个世界都变慢了。
+“抓紧了。” 她弯起眼睛笑。
 
-灯光一圈一圈晃过去。
+随后，她自己则轻盈地一跃，挑中了挨着我、但位于更里侧的那一匹木马。
 
-奕莎贝拉的头发也被风轻轻吹起来一点。
+伴随着老旧而欢快的音乐声，旋转木马缓缓启动了。
 
-她本来背对着我。
+一开始只是慢吞吞的摇晃，可紧接着，随着齿轮的加速，我才发现由于内外圈的半径不同，她所在的里层转速明显比我更快。
 
-可转到一半的时候，却忽然回过头。
+每一次当木马起伏交错时，她总是会先一步转到我前方。
 
-“$name！”
+我下意识地抬头望去。
 
-她隔着音乐声喊我。
+在斑驳迷离的灯光里，一个完全卸下防备、笑得极其肆意快乐的奕莎贝拉。
 
-眼睛亮亮的。
+她随着木马的旋转高高低低起伏着，长发在风里肆意飞扬，眼角的亮片闪烁着夺目的光。
 
-“你真的很适合这里欸！”
+那是和平日里截然不同的模样。鲜活同一团火焰。
 
-我一下子愣住了。
+“你知道我为什么最喜欢这个吗？”
 
-“为什么？”
+在音乐与风声的间隙里，她隔着两圈的距离朝我大声喊道，眼里闪烁着孩子气的亮光。
 
-奕莎贝拉却只是趴在木马上笑。
+“为什么——？”我迎着风问。
 
-“因为很可爱呀！”
+奕莎贝拉趴在木马上，任由离心力将她带向前方，笑得眼睛弯成了月牙。
 
-她说完之后，旋转木马刚好又慢慢转远了。
+“因为这里一直在旋转，永远不会停。在这里，没有人会老去，也没有人能离开。”
 
-我却还是一直看着她。
+她回过头，冲我笑得灿烂又纯粹。
 
-直到下一圈，她重新转回我面前的时候，我才发现——
+音乐声在这个瞬间被无限拉长。
 
-自己居然已经开始期待她下一次回头了。
+她乘着里圈更快的木马，转着圈从我眼前掠过，又一次次毫无疲惫地转回来。
 
-[[继续-&gt;游乐园食物]]
+我坐在原地，望着她毫无阴霾的笑容，周围的喧嚣好像都在这一刻退潮。
 
-</tw-passagedata><tw-passagedata pid="21" name="游乐园食物" tags="" position="2000,300" size="100,100">后来我们一起去买吃的。
+那就不要停下。
 
-冬天晚上的风吹得人脸有点发冷，游乐园里的小摊却一个比一个亮，空气里全是糖浆、奶油和热红酒混在一起的甜味。
+在这个斑斓的圆圈里，我竟然生出了一丝贪心，只想多留恋她哪怕一圈的笑容。
 
-奕莎贝拉站在摊位前纠结了半天。
 
-一会儿看看这个。
 
-一会儿又看看那个。
+[[去看看游乐园里有什么好吃的吧-&gt;游乐园食物]]
 
-最后转过头问我：
 
-“你想吃哪个呀？”
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="游乐园食物" tags="" position="3425,900" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
+折腾了这么一圈下来，寒风加上接连不断的心跳加速，让我后知后觉地感到了一阵饥饿。
 
-[[草莓糖-&gt;草莓糖]]
-[[苹果糖-&gt;苹果糖]]
-[[热红酒-&gt;热红酒]]</tw-passagedata><tw-passagedata pid="22" name="草莓糖" tags="" position="2150,475" size="100,100">奕莎贝拉最后买了一串草莓糖。
+路过街角的小吃摊时，我的视线便不由自主地黏在了那些冒着腾腾热气的摊位上。
 
-外面的糖衣亮晶晶的，草莓却已经被热气熏得有点软了。
+烤玉米、炒栗子、热红酒、苹果糖......
 
-她低头咬了一颗。
+正悄悄咽口水呢，身旁的人忽然停下了脚步。
 
-结果下一秒，糖浆居然一下子沾到了嘴角。
+奕莎贝拉顺着我的目光看过去似笑非笑地问我：
 
-我一下子愣住了。
+“怎么啦？你想吃东西？”
 
-奕莎贝拉自己却完全没发现，还在那里很认真地继续吃第二颗。
+我有些不好意思地收回视线，点了点头：“嗯……有一点。”
 
-“……等一下。”
+随即又忍不住问她，“那你呢，不饿吗？”
 
-我忍不住开口。
+她耸耸肩道：“我还好。”
 
-奕莎贝拉这才抬头看我。
+还没等我开口，她自然地拉住我的手腕，带着我径直朝那家香气扑鼻的摊位走去。
 
-“嗯？”
+“走吧。” 她眨了眨眼，语气理所当然。
 
-我指了指自己的嘴角。
+“今天是我提议的约会，既然是本小姐做东，当然由我来买单。”
 
-她一下子停住了。
+话音刚落，她已经站在琳琅满目的摊位前，大手一挥：
 
-然后忽然笑了。
+“说吧，想吃哪个？”
 
-“你帮我擦掉嘛。”
 
-她说得特别自然。
 
-我脑子一下子空白了。
+[[热红酒-&gt;热红酒]]
 
-周围全是游乐园乱糟糟的音乐和说话声，可我却忽然什么都听不清了。
+[[苹果糖-&gt;苹果糖]]</tw-passagedata><tw-passagedata pid="21" name="苹果糖" tags="" position="3575,1075" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-最后我还是低下头，拿纸巾很轻地碰了一下她嘴角。
+奕莎贝拉抢在我前面结了账，我不好意思地朝她道谢。
 
-离得太近了。
+夜里的风裹挟着一点凉意，我有些嘴馋，想吃点甜的，于是便选择了一串苹果糖。
 
-近到我甚至能闻到草莓糖甜甜的味道。
+外面的糖衣裹得极匀，在灯光下亮晶晶的，透着一层诱人的光泽。 
 
-奕莎贝拉却一直没有动。
+咬下去的瞬间，外壳发出“咔嚓”一声脆响，里面冰凉酥脆的果肉溢出清甜的汁水。
 
-只是很安静地看着我。
+糖衣的甜与苹果的酸脆完美地交织在一起，好吃得让人忍不住眯起眼睛。 
 
-等我终于慌慌张张退开的时候，她却忽然低头笑了一下。
+我有些惊喜地尝着，真心觉得这味道实在难得，几乎没怎么多想，便顺手将咬过的那串苹果糖递到了奕莎贝拉面前： 
 
-“你好会照顾人哦。”
+“这个真的蛮好吃的，你尝尝？” 
 
-她轻轻说。
+递过去的那一秒，奕莎贝拉微微一怔。 
 
-然后低下头，把刚刚那颗草莓重新咬进嘴里。
+她盯着那串苹果糖，眼睫垂了垂，似乎极其短暂地迟疑了一秒钟。 
 
-“怎么办。”
+我以为她嫌弃或是不太喜欢吃这种甜腻的东西，心里刚泛起一丝尴尬，下意识地想把手收回来。
 
-“感觉更喜欢你了。”
+可就在指尖刚要动弹的瞬间，奕莎贝拉却忽然抬起眼，就着我递过去的姿势，微微倾身地在刚才我咬过的那个缺口处，轻轻咬了一口。 
 
-[[继续-&gt;奇怪问题]]</tw-passagedata><tw-passagedata pid="23" name="苹果糖" tags="" position="2150,300" size="100,100">苹果糖外面的糖壳亮晶晶的。
+“咔嚓。”
 
-灯光一照，几乎像裹了一层透明的玻璃。
+清脆的咬合声钻进耳朵里，连带着她温热的呼吸也一同拂过我的指节。
 
-奕莎贝拉盯着看了半天，最后才终于低头咬了一口。
+我看着她唇瓣擦过我刚才咬过的地方，握着竹签的手指猛地一抖，差点将整串苹果糖摔在地上。
 
-“咔嚓”一声。
 
-我甚至能看见糖壳碎掉时裂开的细小反光。
 
-她一下子眯起眼睛。
+[[奕莎贝拉想问问你-&gt;奇怪问题]]
 
-像终于吃到了特别喜欢的东西一样。
 
-“好甜。”
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="热红酒" tags="" position="3575,725" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-她声音都轻快了起来。
+寒风中，我们呵出的每一口呼吸都化成了细碎的白雾。
 
-结果下一秒，奕莎贝拉却忽然把苹果糖举到我面前。
+我最后选了两杯热红酒。
 
-“你也尝一口。”
+纸杯捧在手里还透着灼人的温度，闻起来有浓郁的水果果香与肉桂、丁香的暖调香料味。
 
-我一下子愣住了。
+我低头抿了一口，酸甜的酒液滑入喉咙，带着后知后觉的微辛，暖暖的液体直抵心尖。
 
-因为她递过来的位置，刚好就是她刚刚咬过的地方。
+奕莎贝拉侧身站在我身旁，她捧着杯子的双手因为寒冷而微微蜷着，鼻尖被冻得微微发红。
 
-糖壳已经裂开了一小块。
+就在我沉浸在暖意里时，她忽然毫无预兆地凑了过来，闭上眼在我脸庞暧昧地闻嗅了一下。
 
-边缘还亮亮的。
+“……你闻起来暖融融的。”
 
-我低头的时候，甚至能闻到一点很甜的苹果香气。
+她低声呢喃，嗓音被热气蒸得有些沙哑。
 
-还有她身上那种淡淡的牛奶味。
+说完她像是觉得还不够，又靠近了我一些，鼻尖几乎要贴到我的脸颊。
 
-我一下子连呼吸都乱了。
+香气与酒气纠缠在一起，我手一抖，差点把纸杯里的酒撒掉。
 
-可奕莎贝拉却完全没有催我。
+还没等人从这阵酥麻的悸动中缓过神，她却捏着自己的纸杯，轻快地转过身，向着光影流转的游乐园深处蹦蹦跳跳。
 
-只是站在灯下面，很安静地看着我。
+奕莎贝拉的发丝被冷风吹得在空中划出一道轻盈的弧度，她回眸看我，游乐园斑斓的灯光碎影落在她眼里。
 
-像在期待什么。
 
-最后我还是低头轻轻咬了一口。
 
-糖壳碎开的声音一下子离得特别近。
+[[奕莎贝拉问道：-&gt;奇怪问题]]
 
-奕莎贝拉忽然笑了。
+</tw-passagedata><tw-passagedata pid="23" name="奇怪问题" tags="" position="3750,900" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+&lt;img src=&quot;memory.jpg&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-不是那种恶作剧得逞的笑。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-更像某种很单纯的开心。
+游乐园在夜色里沸腾，巨大的圣诞树下，却是另一方静谧天地。 
 
-“是不是很好吃？”
+奕莎贝拉仰头看着顶端的星灯，眼里的光影明明灭灭。
 
-她轻轻问我。
+“可以问你个有点奇怪的问题吗？” 她偏过头来看我。
 
-我低着头“嗯”了一声。
-
-却根本不敢告诉她——
-
-刚刚让我发晕的，好像根本不是苹果糖。
-
-[[继续-&gt;奇怪问题]]</tw-passagedata><tw-passagedata pid="24" name="热红酒" tags="" position="2150,125" size="100,100">天气太冷了，人们说话的时候，已经能看见一点白白的雾气。
-
-奕莎贝拉最后买了两杯热红酒。
-
-纸杯刚递过来的时候还是烫的，热气一直慢慢往上飘，里面有很浓的水果和香料味。
-
-我低头喝了一口。
-
-舌尖一下子暖了起来。
-
-甜甜的。
-
-还有一点后知后觉的辣。
-
-奕莎贝拉捧着杯子站在我旁边，小口小口喝着，鼻尖被风吹得有点红。
-
-游乐园的灯落在她脸上。
-
-亮晶晶的。
-
-她忽然低下头，很轻地闻了一下我的围巾。
-
-我一下子僵住了。
-
-“你闻起来暖暖的。”
-
-她小声说。
-
-说完之后，她居然还真的又靠近了一点。
-
-像在认真确认什么一样。
-
-我脑子一下子空白了。
-
-手里的纸杯都差点没拿稳。
-
-奕莎贝拉却忽然笑了。
-
-然后抱着自己的热红酒，很开心地往前跑了两步。
-
-风把她的头发轻轻吹起来。
-
-我站在原地愣了半天。
-
-直到热气慢慢扑到脸上，我才发现——
-
-自己的脸好像比刚刚那杯热红酒还要烫。
-
-[[继续-&gt;奇怪问题]]
-
-</tw-passagedata><tw-passagedata pid="25" name="奇怪问题" tags="" position="2300,300" size="100,100">天彻底黑下来之后，整个游乐园反而变得更热闹了。
-
-到处都是灯。
-
-圣诞音乐、说话声、机器运转的声音混在一起，空气里充斥着甜奶油和糖浆味。
-
-有人在排队拍照。
-
-有人举着气球从旁边跑过去。
-
-远处的旋转木马还在一圈一圈慢慢转。
-
-我和奕莎贝拉一起站在圣诞树下面。
-
-巨大的灯光从头顶落下来。
-
-她安安静静看了一会儿那些亮晶晶的装饰。
-
-不知道为什么。
-
-明明周围那么热闹。
-
-可她忽然开口的时候，我却感觉整个世界一下子安静了。
-
-“你有没有想过。”
-
-她轻轻问我。
+我点点头。
 
 “人如果突然消失的话，会留下什么呢？”
 
-我一下子愣住了。
-
-奕莎贝拉却还在看着那棵树。
-
-像只是随口聊天一样。
+她仰头注视着那些闪烁的装饰。
 
 “有的人会留下照片。”
 
 “有的人会留下味道。”
 
-“还有的人，就算已经很久不见了，声音也还是会一直留在脑子里。”
+“还有的人，就算已经很久不见了，声音也还是会一直留在脑中。”
 
 圣诞树上的灯慢慢闪了一下。
 
-奕莎贝拉这才忽然转过头。
-
-很认真地看着我。
+奕莎贝拉这才转过头，给予我十足认真的注视。
 
 “如果是你的话。”
 
-“你最想被别人怎么记住呀？”
+“你最想被别人怎么记住呢？”
 
 [[照片-&gt;照片]]
 [[气味-&gt;气味]]
-[[声音-&gt;声音]]</tw-passagedata><tw-passagedata pid="26" name="照片" tags="" position="2475,150" size="100,100">(set: $memory to &quot;photo&quot;)
+[[声音-&gt;声音]]</tw-passagedata><tw-passagedata pid="24" name="照片" tags="" position="3900,725" size="100,100">(set: $memory to &quot;photo&quot;)
 
-“照片吧。”
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-我小声说。
+“照片吧。” 我小声说。
 
-“至少这样的话，就算以后不见了，也还能被人看见。”
+“至少这样的话，就算以后不见了，也还能被人看见。” 
 
-奕莎贝拉安静了一下。
+奕莎贝拉安静了一瞬。 远处刚好有烟花“砰”地一声炸开，绚烂的光影瞬间落进她清亮的眼睛里。
 
-远处刚好有烟花“砰”地一声炸开。
+周围的人群开始兴奋地抬头欢呼，快门声和欢笑声混成一片。 
 
-光一下子落进她眼睛里。
+可她并没有抬头，只是站在璀璨的灯影下，一眨不眨地看着我，像是在认真咀嚼这句话里的重量。 
 
-周围的人开始兴奋地抬头拍照，到处都是乱糟糟的笑声和快门声。
+半晌，她唇角弯起一个极淡的弧度，带了点莫名的意味：
 
-可奕莎贝拉却没有抬头。
+“可是，照片是不会动的呀。” 她低声说。 
 
-她只是站在灯下面，很认真地看着我。
+“而且……也碰不到。” 
 
-像在想什么。
+我被这句话噎了一下，大脑没转过弯来。
 
-过了两秒，她忽然很轻地笑了一下。
+只见奕莎贝拉把半张脸往上缩了缩，严严实实地埋进了外套领子里。 
 
-“可是照片不会动呀。”
+只剩下一双亮晶晶的眼睛。 
 
-她小声说。
+“不过……” 她的声音隔着织物传出来，闷闷的却带着笑意。 
 
-“也碰不到。”
+“如果是你的话。” 
 
-我一下子愣住了。
+“拍出来的照片，应该会很好看吧。” 
 
-奕莎贝拉却已经低下头，把半张脸埋进围巾里。
+我被她这冷不丁的一句直球砸中，整个人再一次呆在原地，完全不知道该怎么接话。
 
-只剩下一双亮亮的眼睛露在外面。
+慌乱之下，只好假装去研究脚底下踩着的雪。 
 
-“不过……”
+结果下一秒，手腕忽然一暖。 
 
-她声音轻轻的。
+奕莎贝拉已经笑着拉住了我，掌心的温度隔着衣料传了过来。 
 
-“如果是你的话。”
+“走啦，我们该回家了。” 
 
-“应该会拍得特别好看。”
+她微微晃了晃我的手，语气里透着一股狡黠的满足： “再不回去的话，今晚可真的要太晚了。”
 
-我一下子不知道该怎么接。
 
-只好低头假装去看地上的雪。
+[[前往奕莎贝拉的家-&gt;古堡]]
 
-结果下一秒，奕莎贝拉却忽然很开心地拉住了我的手腕。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="气味" tags="" position="3900,900" size="100,100">(set: $memory to &quot;smell&quot;)
 
-“快走。”
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-“再不回去的话，真的要很晚啦。”
-
-[[继续-&gt;古堡]]</tw-passagedata><tw-passagedata pid="27" name="气味" tags="" position="2475,300" size="100,100">(set: $memory to &quot;smell&quot;)
 
 “气味吧。”
 
 我小声说。
 
-“因为有时候闻到一个味道，就会忽然想起一个人。”
+“因为有时候只要闻到某种味道，就会毫无防备地想起某个人...或者某段情景。”
 
-奕莎贝拉一下子抬起头看我。
+“就像记忆闪回一样....”
 
-像忽然特别开心的小动物一样。
+奕莎贝拉眼睛骤然发亮。
 
-“对吧！”
-
-她几乎立刻接上。
-
-声音都轻快了起来。
+“对吧！” 她几乎是迫不及待地接话，语调里藏不住的雀跃：
 
 “我就知道你会选这个。”
 
-她往我这边凑近了一点。
+她一边说着一边朝我挨近了半步。
 
-围巾软乎乎蹭到了我的手背。
+“气味真的很神奇。”
 
-“味道真的很重要呀。”
+她悄悄放低了声音，带着点分享秘密般的认真：
 
-她小声说。
+“有时候哪怕闭上眼睛，也绝对不会认错。”
 
-“有时候闭上眼睛，也还是能认出来。”
+“而且，气味会留存很久，就像你说的，闻到某种熟悉的气味，会瞬间回到那个记忆深处的境遇。”
 
-说到这里的时候，她忽然又停住了。
+夜风恰好吹过，她弯起眼睛，夹杂着她身上的香气，丝丝缕缕地钻进我的鼻息。
 
-像意识到自己好像太兴奋了。
+奕莎贝拉似乎也察觉到了这股空气中的甜意，她轻轻地吸了吸鼻子，随后笑得眉眼弯弯。
 
-于是低下头，假装去咬纸杯边缘。
+“怎么办……”
 
-可过了两秒，她却还是没忍住，又偷偷抬头看我。
+她小声嘟囔着，“我好像已经彻底记住你的味道了。”
 
-“而且味道会留很久很久。”
 
-她轻轻说。
 
-“比照片还久。”
 
-风吹过来的时候，我忽然又闻到了她身上那种甜甜的草莓牛奶味。
+[[前往奕莎贝拉的家-&gt;古堡]]</tw-passagedata><tw-passagedata pid="26" name="声音" tags="" position="3900,1050" size="100,100">(set: $memory to &quot;voice&quot;)
 
-奕莎贝拉却像也闻到了什么一样，很轻地吸了吸鼻子。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-然后忽然弯起眼睛笑了。
-
-“怎么办呀。”
-
-“我现在已经开始记住你的味道了。”
-
-她说完之后，好像自己也有点不好意思。
-
-于是一下子把半张脸缩进围巾里。
-
-只露出亮亮的眼睛。
-
-像一只终于找到喜欢气味的小怪物。
-
-[[继续-&gt;古堡]]</tw-passagedata><tw-passagedata pid="28" name="声音" tags="" position="2475,475" size="100,100">(set: $memory to &quot;voice&quot;)
-
-“声音。”
+“声音吧。”
 
 我低头轻轻踢了踢地上的雪。
 
-“因为有时候就算已经很久没见了。”
+“声音无法复制，有时候就算已经很久没见了。”
 
-“只要再听见一次，就会一下子想起来。”
+“只要再听见一次，就会唤起很多回忆。”
 
-奕莎贝拉忽然安静了下来。
+奕莎贝拉听完，动作微微一滞。
 
-远处的圣诞音乐还在响。
+不远处的圣诞音乐依旧在热闹地回荡，游乐园各色耀眼的灯火将夜空映得恍如白昼。
 
-游乐园亮得乱糟糟的。
+可她看着我的时候，周遭的喧嚣仿佛瞬间褪色，眼里只剩下了我一个人。
 
-可她却像忽然只剩下我一个人在她眼前了一样。
+“嗯，声音确实很厉害。” 
 
-过了好几秒，她才很轻地“嗯”了一声。
+她轻声附和着，语气里带着点飘忽的怀念： “有时候哪怕连对方的模样都快记不清了，可只要听到那个声音，心还是会瞬间塌陷下去。” 
 
-“声音也很厉害。”
+夜风裹挟着凉意吹过，她安安静静地盯着地上的雪影看了片刻。
 
-她小声说。
+然后，毫无预兆地，轻巧地唤了一声我的名字： “$name。” 
 
-“有时候明明已经忘记长什么样子了。”
+声音近在咫尺，软乎乎地飘进耳廓，像是一根柔软的羽毛毫无防备地扫过心尖。 
 
-“可一听见声音，还是会立刻认出来。”
+我搭在身侧的手指猛地一颤，连呼吸都在那一秒乱了节拍。
 
-风轻轻吹过去。
+可奕莎贝拉却像完全没察觉到自己这一声带来了多大的冲击，依然微微歪着头，认真地思索着。
 
-奕莎贝拉低头看了一会儿地上的雪。
+“而且，声音特别好用。” 
 
-然后忽然很轻地叫了我一声。
+她弯起眼睛，眼底盛满了澄澈的光： “只要我呼唤你，我就知道你还在不在了。” 
 
-“$name。”
+说完，她狡黠地冲我笑道：
 
-她声音离得很近。
+“所以，以后如果我找不到你了，” 
 
-轻轻的。
+ “一定要记得回应我哦。”
 
-像羽毛碰了一下耳朵。
 
-我一下子连呼吸都乱掉了。
 
-奕莎贝拉却像完全没察觉一样，还在那里很认真地想。
+[[出发去奕莎贝拉的家-&gt;古堡]]</tw-passagedata><tw-passagedata pid="27" name="古堡" tags="" position="4075,900" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;christmas.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-“而且声音很方便。”
 
-她小声说。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-“只要一开口，就知道对方还在不在了。”
+夜色渐深，奕莎贝拉载着我驶离了喧嚣的游乐园。
 
-她说完之后，又忽然抬起头冲我笑了一下。
+车窗外的街景由繁华逐渐归于静谧，取而代之的是漫天翻滚的风雪。
 
-“所以以后如果我找不到你了。”
+我正对着起了一层薄雾的车窗出神，车子却在不知不觉中缓缓停了下来。
 
-“你要记得回应我哦。”
+我茫然地抬起头，在看清眼前景象的瞬间发出惊呼。
 
-[[继续-&gt;古堡]]</tw-passagedata><tw-passagedata pid="29" name="古堡" tags="" position="2650,300" size="100,100">晚上，奕莎贝拉带我回了她家。
+那竟是一座盘踞在夜色里的宏伟旧宅。
 
-离开游乐园之后，车窗外的灯慢慢变少了。
+尖耸的屋顶没入夜空，高大的复古窗棂透着昏黄的光，厚重的石墙上攀爬着枯萎的深色藤蔓，被一层新雪层层覆盖。
 
-雪却越下越大。
+大门正中央挂着精致的圣诞花环，暖融融的光从窗内流淌出来，像只存在于童话故事末尾的城堡。
 
-我本来还在低头看玻璃上的雾气。
+奕莎贝拉却像没事人一样，利落地推开车门，回过头朝我弯起眼眸：
 
-结果不知道过了多久，车忽然慢慢停了下来。
+“发什么呆呀，快点过来！”
 
-我抬起头。
+大团的雪花扑进她雪白的衣领里。
 
-一下子愣住了。
+她站在昏黄的路灯下，整个人被光晕镀上一层柔和的边缘，笑意盈盈的模样，像极了一只终于将心爱猎物叼回巢穴的小动物。
 
-眼前居然真的是一座很大的旧宅。
+我还未来得及细想，手腕已被她温热的掌心一把攥住，不由分说地拉进了漫天风雪里。
 
-尖尖的屋顶。
+鞋底踩在厚雪上发出“咯吱咯吱”的沉闷声响，刺骨的寒风刮得面颊生疼。
 
-很高很高的窗户。
+然而，伴随着沉重的木门被“吱呀”一声推开——
 
-墙壁被深色的藤蔓缠着，雪一点一点落在上面。
+一阵浓郁得的暖香，裹挟着烤面包与热牛奶的甜味，铺天盖地迎面而来。
 
-门口挂着很大的圣诞花环。
+门内温暖如春，仿佛是与世隔绝的另一个世界。
 
-暖黄色的灯从窗户里面透出来。
+巨大的壁炉里木柴燃烧得正旺，噼啪作响，沙发上厚重的羊毛毯蓬松柔软，角落里的圣诞树挂满流光溢彩的灯串，甚至连茶几上都整整齐齐地摆好了冒着热气的牛奶与盘装的糖果。
 
-安静得像故事书最后几页才会出现的地方。
+我站在玄关处，脚步蓦地顿住。
 
-奕莎贝拉却像完全没觉得哪里奇怪一样。
+伴随莫大的惊喜而来的则是一丝若有似无的恐慌。
 
-她一下子推开车门，回头冲我招手。
+这是幻境吗？
 
-“快点呀！”
+一个在无数个孤寂的长夜里，被反复描摹、构想过千万遍，只为了等待“我”踏入的、偏执而完美的幻境。
 
-雪一下子扑进她围巾里。
+正当我怔楞时，奕莎贝拉已经自然而然地蹲下身，将一双毛茸茸的棉拖鞋仔细摆放在我脚边。
 
-她站在灯下面，整个人亮晶晶的。
-
-像终于把什么特别喜欢的东西带回家的小动物。
-
-我还没反应过来，就已经被她拉着跑进了雪里。
-
-鞋底踩在雪上的声音“咯吱咯吱”响。
-
-风吹得人脸发冷。
-
-可门被推开的瞬间，一股很暖很甜的气息却忽然一下子扑了出来。
-
-里面暖和得像另一个世界。
-
-壁炉烧得很旺。
-
-沙发上提前铺好了厚厚的毛毯。
-
-圣诞树亮晶晶地闪着。
-
-甚至连热牛奶和糖果都已经摆好了。
-
-我站在门口没动。
-
-不知道为什么。
-
-总觉得这里不像“刚好有人住着的房子”。
-
-更像……
-
-一个已经提前想象过很多很多次“我会来”的地方。
-
-奕莎贝拉却已经弯下腰，把拖鞋放到我脚边。
-
-然后抬起头，很自然地冲我笑了一下。
+她抬起脸，清澈的眼眸里倒映着我的影子，笑得毫无阴霾：
 
 “欢迎回家。”
 
-我一下子愣住了。
+四个字，轻飘飘地砸在心尖，激起一层密密麻麻的涟漪。
 
-而奕莎贝拉自己好像也没意识到刚刚说了什么。
+她似乎并未察觉自己方才的话语里带着怎样越界的笃定，只是软糯的催促：
 
-只是很开心地拉住我的袖口。
+“外面的雪越来越大了。”
 
-“外面那么冷。”
-
-“进来嘛。”
-
-我低头看着门口暖黄色的灯。
-
-忽然有一种很奇怪的感觉。
-
-好像只要走进去。
-
-今晚就再也不会结束了。
-
-[[“这里只有你一个人住吗？”-&gt;一个人住]]
-[[“你家为什么这么安静？”-&gt;很安静]]
-[[还是不要问了-&gt;不问]]
+“走啦，快进来暖和暖和。”
 
 
-</tw-passagedata><tw-passagedata pid="30" name="一个人住" tags="" position="2800,200" size="100,100">我犹豫了一下，还是小声问：
+[[进入古堡。]]
+
+</tw-passagedata><tw-passagedata pid="28" name="一个人住" tags="+1" position="4400,800" size="100,100">(set: $willing to $willing + 1)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我犹豫了一下，还是小声问：
 
 “这里只有你一个人住吗？”
 
@@ -1900,11 +1656,12 @@ h1, h2, h3 {
 
 “怎么啦？”
 
-她站在暖黄色的灯下面，笑得特别漂亮。
+她站在暖黄色的灯下面，笑眯眯地看着我。
 
-“快进来呀。”
 
-[[继续-&gt;睡裙]]</tw-passagedata><tw-passagedata pid="31" name="很安静" tags="" position="2800,350" size="100,100">“你家……为什么这么安静呀？”
+[[继续-&gt;睡裙]]</tw-passagedata><tw-passagedata pid="29" name="很安静" tags="" position="4400,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+“你家……为什么这么安静呀？”
 
 我小声问。
 
@@ -1912,7 +1669,7 @@ h1, h2, h3 {
 
 听见这句话之后，她回过头看了我一眼。
 
-“因为我不喜欢太吵。”
+“我不喜欢太吵的环境。”
 
 她笑眯眯地说。
 
@@ -1958,7 +1715,11 @@ h1, h2, h3 {
 
 我的心脏又在不受控制地咚咚跳了。
 
-[[继续-&gt;睡裙]]</tw-passagedata><tw-passagedata pid="32" name="不问" tags="" position="2800,500" size="100,100">我最后还是什么都没有问。
+[[继续-&gt;睡裙]]</tw-passagedata><tw-passagedata pid="30" name="不问" tags="-1" position="4400,1100" size="100,100">(set: $willing to $willing - 1)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我最后还是什么都没有问。
 
 只是安安静静跟着她走了进去。
 
@@ -2016,690 +1777,548 @@ h1, h2, h3 {
 
 我忽然有点舍不得外面的世界了。
 
-[[继续-&gt;睡裙]]</tw-passagedata><tw-passagedata pid="33" name="睡裙" tags="" position="3025,325" size="100,100">奕莎贝拉忽然像想起什么一样，“啊”了一声。
+[[继续-&gt;睡裙]]</tw-passagedata><tw-passagedata pid="31" name="睡裙" tags="" position="4600,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-然后蹦蹦跳跳跑上了楼。
+奕莎贝拉像忽然想起什么，轻轻“呀”了一声，随即雀跃着奔上了楼。
 
-我一个人站在大厅里，下意识又看了一眼墙上的全家福。
+我独自立在大厅中央，鬼使神差地又瞥了一眼墙上那幅全家福。
 
-不知道为什么。
+照片里的她，与眼前人确实有几分微妙的错位。
 
-我总觉得照片里的奕莎贝拉和现在有一点不一样。
+究竟哪里不对？一时半会儿又说不出来。
 
-可具体哪里不一样，我又说不上来。
+头顶传来“啪嗒啪嗒”的碎步声，不过一会儿，奕莎贝拉便抱着一堆白花花的软物颠儿颠儿跑了回来。
 
-楼上传来“啪嗒啪嗒”的脚步声。
+“给你的。”
 
-很轻。
+不由分说，劈头盖脸塞进我怀里。
 
-像小动物在跑。
+我低头一瞧，是一条雪白的睡裙，还附着一双毛茸茸的厚袜。
 
-没过多久，奕莎贝拉又抱着一团白白软软的东西跑了下来。
+面料软绵绵的，浸着一股好闻的皂角香。
 
-“给你！”
+“……睡裙？” 我声音细得像蚊子哼。
 
-她一下子塞进我怀里。
+奕莎贝拉却落落大方地点了头。
 
-我低头一看，才发现居然是一条睡裙。
+“留宿的行头呀。”
 
-还有毛茸茸的袜子。
+说完自己也有些不好意思，把半张脸缩进宽大的毛衣袖口里，只露出一双亮晶晶的眼睛。
 
-裙子软软的，闻起来香香的。
+“挑了大半天呢。”
 
-像刚晒过太阳。
+她脚尖蹭着地毯，手指揪着裙角，小声补了一句：“还怕你不喜欢。”
 
-“……睡裙？”
+我赶忙道：“很喜欢！”
 
-我声音一下子变小了。
+奕莎贝拉刷地抬眼望过来，如释重负地笑开了。
 
-奕莎贝拉却特别自然地点点头。
+“那就好。”
 
-“因为要过夜呀。”
+她往前贴了半步，鼻尖几乎要撞上来。
 
-她说这句话的时候，自己也有点不好意思似的，把半张脸埋进了袖子里。
+利落地催促：“那换给我瞧瞧嘛。”
 
-“我挑了好久呢。”
+我抱着那堆织物钉在原地，两腿像灌了铅。
 
-她低头拽了拽裙摆。
+“房间里请。”
 
-“本来还担心你会不会不喜欢。”
+她纤白的手指往旋转楼梯上一引。
 
-我抱着那条裙子，忽然不知道该说什么。
+末了，又贴着我耳根补了一句：
 
-过了好几秒，才很小声地开口：
+“我就在楼下等你。”
 
-“……我很喜欢。”
+壁炉里松柴毕剥，金红的火舌舔着暗夜。
 
-奕莎贝拉一下子抬起头。
+我低头摩挲怀里的衣料，四面的温热层层裹上来，恍惚间像被拢进了一只暖融融的茧里。
 
-像松了口气一样笑起来。
 
-“太好啦。”
+[[去换衣服-&gt;换衣服]]
 
-她往前凑了一点。
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="32" name="换衣服" tags="" position="4750,950" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+&lt;img src=&quot;pig.jpg&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
 
-“那你快去换给我看看。”
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-我抱着睡裙站在原地，忽然有点不敢动。
+房间里暖烘烘的。
 
-“房间在楼上。”
+一下子就把门外的冰天雪地全挡在了外面。
 
-奕莎贝拉伸手指了一下。
+床头亮着一盏昏黄的小夜灯。
 
-然后又补了一句：
+厚重的丝绒窗帘拉得严严实实，连一丝缝隙都没有留。
 
-“我就在外面等你。”
+旁边的架子上乱糟糟地堆着很多东西：装满彩糖的玻璃罐、拍立得照片、散落的旧碟片，还有好几只褪了色的毛绒小猪。
 
-大厅里暖暖的。
+我展开睡裙，突然想起前些日子里总被她各种揉捏、量来量去的那些日常。
 
-壁炉烧得正旺。
+拿着衣服换上的时候，我整个人顿时红了脸。
 
-我低头看着怀里的睡裙，不知道为什么，忽然有一种自己正在慢慢被这个房子包起来的感觉。
+尺寸完美，十分合身。
 
-[[去换衣服-&gt;换衣服]]</tw-passagedata><tw-passagedata pid="34" name="换衣服" tags="" position="3175,325" size="100,100">房间里暖暖的。
+肩线和袖口分毫不差地贴着胳膊，可裙摆却短得离谱，堪堪遮过大腿根。
 
-一进去，外面的冷气一下子全都被关在了门外。
+只要稍微走动两步，裙摆便往上缩，让人总有一种一动就会走光的难堪。
 
-床头亮着一盏小灯。
+屋里的热气熏得我脸上直发烫，站在镜子前浑身都不自在。
 
-窗帘厚厚地垂下来。
+楼下隐约飘来断断续续的圣诞音乐，伴着壁炉里木柴偶尔爆开的“噼啪”声。
 
-书架和柜子上摆满了乱七八糟的小东西，玻璃糖罐、拍立得、旧电影碟片，还有几个已经有点掉色的小猪玩偶。
+我在镜子前局促地拉扯着过短的裙摆，最后还是磨磨蹭蹭地拉开门，赤着脚往楼下走去。
 
-床上提前放好了睡裙和毛毯。
 
-甚至连袜子都叠得整整齐齐。
+[[去楼下看电影-&gt;电影前]]
 
-我站在那里愣了两秒。
+&lt;/div&gt;
 
-最后还是慢慢把裙子换了下来。
 
-尺寸居然刚刚好。
+</tw-passagedata><tw-passagedata pid="33" name="电影前" tags="" position="4900,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-我一下子把脸转开了。
+楼下已经彻底变成了另一个隐秘的世界。 
 
-假装去整理袖口。
+大半的灯火都被熄灭，唯有角落里的圣诞树与壁炉交织出暖融融的昏黄光晕。
 
-外面隐约还能听见楼下的圣诞音乐。
+宽大的沙发上堆满了松软的毛毯与抱枕，茶几上静静摆着两杯冒着热气的牛奶、几罐彩糖，以及一张早已备好的旧光碟。
 
-还有壁炉偶尔轻轻响一下的声音。
+奕莎贝拉正蹲在放映机旁，侧着头认真研究着怎么把碟片塞进卡槽里。
 
-我在镜子前站了一会儿，最后还是轻轻打开了门，向楼下的客厅走去。
+她也换上了一身淡蓝色的丝绸睡裙。
 
+长发随意地散落肩头，褪去了白天的几分明艳，平添了洗尽铅华的乖顺与柔软。
 
-[[继续-&gt;电影前]]</tw-passagedata><tw-passagedata pid="35" name="电影前" tags="" position="3300,325" size="100,100">楼下已经彻底变成了另一种世界。
+“好啦！” 
 
-灯被关掉了大半。
+折腾了半天，她终于把电影调好，像只小动物似的一下子扑回沙发里。
 
-只有圣诞树和壁炉还亮着暖黄色的光。
+盖在膝头的毛毯滑落了一半，她也浑不在意，只是抱着抱枕往旁边挪了挪，腾出大片空位，然后拍了拍身旁的沙发垫： “快过来坐呀。” 
 
-沙发上堆满了软软的毛毯和抱枕，茶几上摆着热牛奶、糖果，还有已经提前准备好的光碟。
+我慢吞吞地挪过去坐下。
 
-奕莎贝拉蹲在放映机旁边，正低头认真研究怎么把碟片塞进去。
+鼻尖隐隐萦绕着一丝极淡的牛奶香气，却有些分不清究竟是她身上的，还是我自己的。
 
-她今天也换了睡裙。
+奕莎贝拉顺手抓起那条厚实的羊毛毯，哗啦一下将我们两个人的腿全数盖住。 
 
-是很柔软的白色。
+“今天看这个！” 
 
-头发散下来之后，比白天看起来更乖一点。
+她举起手里那张光碟，透着一股分享秘密的雀跃。
 
-“好啦！”
+我扫了一眼封面，不由得愣了一下： 《詹妮弗的肉体》。 
 
-奕莎贝拉终于把电影调好，开心地一下子扑回沙发里。
+“……你居然喜欢看这种电影？” 
 
-毛毯滑下来一半。
+奕莎贝拉立刻扭过头，理直气壮地眨了眨眼： “当然啦！
 
-她却完全没在意，只是抱着抱枕往旁边挪了挪。
+“这可是B级片诶。” 
 
-然后拍了拍身边空出来的位置。
+她抱着抱枕往沙发深处缩了缩，语气满是理所当然： “B级片怎么了？”
 
-“快点快点。”
+奕莎贝拉坦然看B级片，很难说不是种魅力。
 
-我慢慢坐过去的时候，闻到了一点很淡的牛奶味。
+刚开始的几分钟，我们还算老实地盯着屏幕。 
 
-不知道是她身上的。
+奕莎贝拉看到喜欢的桥段，会忍不住凑过来，软声软气地跟我咬耳朵：
 
-还是我身上的。
+“你看她这里，其实是死了。”
 
-奕莎贝拉一下子把毛毯整个盖到我们两个人腿上。
+话音刚落，她眼里竟泛起了一层薄薄的水雾，双眼噙泪的模样仿佛随时要哭出来。 
 
-“今天看这个！”
+此时屏幕恰好切到詹妮弗正在疯狂地啃食小镇上的男人。
 
-她特别开心地把光碟举起来。
+我下意识地微微蹙眉，压制着想要呕吐的冲动。 
 
-《詹妮弗的肉体》。
+可身旁的奕莎贝拉却已经兴奋起来，全然不见刚才伤感的样子：
 
-我愣了一下。
+“不过，我觉得她其实十分可怜。” 
 
-“……你会喜欢这种电影？”
+她小声嘀咕着，语气里甚至带了些微妙的共情：
 
-奕莎贝拉立刻转过头。
+“因为她只是……太饿了而已。” 
 
-“当然啦！”
+壁炉里的松柴适时地迸裂出一声轻响。 
 
-她抱着抱枕缩进沙发里，眼睛亮亮的。
+我坐在阴影里，看着她认真的侧脸，总觉得这句话听起来哪里怪怪的。
 
-“她超漂亮的。”
+房间内的最后一丝余光被剥夺，只剩下电脑与投影屏幕上冷冽的光影，一闪一闪地投射在我们脸上。 
 
-“而且会吃人欸。”
+影片播到中段时，我问她：
 
-她说最后一句的时候，居然还有点认真。
+“对于詹妮弗来说，‘吃’意味着什么呢？是复仇吗？此恨绵绵无绝期。”
 
-我一下子不知道该怎么接。
+奕莎贝拉转过身来，摸了摸我的脸蛋。
 
-结果奕莎贝拉却已经特别兴奋地继续往下说。
+随后搂着我的脖子，整个人几乎挂在我身上反问道：
 
-“不过我觉得她也有一点可怜。”
+”也许是爱欲呢？“
 
-“因为她其实只是太饿了。”
+电影里的尖叫声和骇人的音效还在音响里回荡， 可我的心跳声大得盖过了全世界。
 
-壁炉轻轻响了一下。
+我：
 
-我忽然觉得这句话哪里怪怪的。
-
-可电影已经开始了。
-
-房间一下子暗下来。
-
-只有屏幕的光一闪一闪地落在我们脸上。&lt;br&gt;&lt;br&gt;
-
-一开始我们还在认真看剧情。
-
-奕莎贝拉看到喜欢的场面，还会小声和我讲话。
-
-“你看她这里好漂亮。”
-
-“不要离开啊，不要离开。”
-
-“啊，她要开始吃人了——”
-
-结果下一秒，屏幕里忽然猛地跳出来一个人影。
-
-奕莎贝拉一下子被吓得抱住了我。
-
-我脑子“嗡”地空了一下。
-
-她整个人几乎直接扑进了我怀里。
-
-头发蹭在我脖子旁边。
-
-呼吸也是热的。
-
-电影里的尖叫声还在继续。
-
-可我已经完全不知道屏幕里演到哪里了。
-
-我
 
 [[回抱了她-&gt;回抱]]
+[[偷偷低头看她-&gt;偷看]]
 [[僵在那里没动-&gt;僵住]]
-[[偷偷低头看她-&gt;偷看]]</tw-passagedata><tw-passagedata pid="36" name="回抱" tags="" position="3450,200" size="100,100">(set: $willing to $willing + 1)
+
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="回抱" tags="+1" position="5075,800" size="100,100">(set: $willing to $willing + 1)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
 我几乎是下意识抱住了她。
 
-奕莎贝拉明显愣了一下。
+奕莎贝拉先是惊讶，随后极其受用般，极轻地笑出了声。 
 
-然后很轻地笑了。
+她没有立刻直起身体，反而顺势将脸颊埋得更深了些，安安静静地缩在我的胸口。
 
-她没有立刻松开。
+四周是电影里阴冷的音效和明灭的光影，可怀里的温度却格外滚烫。
 
-只是安安静静缩在我怀里。
+过了好一会儿，她才抬起眼睫，声音轻得像是一场呢喃： “原来……是这种感觉啊。” 
 
-过了好一会儿，才忽然小声说：
+温热的气息拂过肌肤，带着某种让人心悸的满足。 
 
-“原来是这种感觉啊。”
+我不愿破坏这份宁静和亲昵，奕莎贝拉也像是完全赖上了这里一样，不仅没有坐回原位的意思，反而将手臂收得更紧了些，彻彻底底地依偎在我身上，再也不肯松开了。
 
-她声音小小的。
 
-我一下子不知道该怎么接。
+[[接下来要怎么办呢？-&gt;午夜前]]
 
-偏偏奕莎贝拉却还靠在我身上。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="僵住" tags="-1" position="5075,1100" size="100,100">(set: $willing to $willing - 1)
 
-像已经完全不打算重新坐回去了。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-[[继续-&gt;午夜前]]</tw-passagedata><tw-passagedata pid="37" name="僵住" tags="" position="3450,350" size="100,100">我一下子僵在那里。
+我整个人瞬间僵硬在原地。
 
-手就停在半空。
+悬在半空的手臂不上不下，指尖堪堪停在离她后背只有几厘米的地方。
 
-明明只要轻轻往下一放，就可以抱住她。
+明明只要再往下落分毫，就能顺理成章地将她回抱入怀中。 
 
-可是我不敢。
+可我不敢。 
 
-我怕自己一抱上去，她就会知道我其实一直都很想这样。
+心底隐秘的怯懦像一张无形的网，拉扯着我。
 
-奕莎贝拉的脸埋在我肩膀旁边，头发蹭到我的下巴，有一点痒。
+我怕自己一旦真的抱上去，就会泄露那些藏在克制底下的、铺天盖地的.....
 
-她好像真的被吓到了，又好像只是趁机靠过来。
+也许我只是太喜欢以至于太害怕，又或许我是真的很害怕呢？
 
-我分不清。
+奕莎贝拉的脸依旧埋在我的肩膀旁，凌乱的发丝擦过我的下巴，带来一阵细细密密的痒。
 
-也不敢分清。
+她究竟是真的被电影里的画面吓到了，还是借着这个由头故意靠过来？ 
 
-过了好一会儿，她才慢慢抬起头。
+我无法分清，也根本不敢去深究。
 
-“你怎么不抱我呀？”
+时间在诡异的沉默中一秒秒流逝。
 
-她问得很轻。
+过了好一会儿，她才恋恋不舍地慢慢抬起头，那双清亮的眸子直勾勾地撞进我眼底。
 
-像是在撒娇。
+“你怎么……不抱我呢？” 
 
-又像是真的有点委屈。
+她微微撅起唇，声音软绵绵的，像是在撒娇，又夹杂着一丝几乎要溢出来的委屈。
 
-我张了张嘴，却什么都没说出来。
+我张了张嘴，喉咙像被堵住了一样，一个字也吐不出来。 
 
-奕莎贝拉看着我，忽然笑了一下。
+奕莎贝拉静静地凝视着我局促的模样，无奈又纵容地笑了一下。
 
-然后她拉过我的手，轻轻放到自己肩膀上。
+随后，她主动握住我的手腕，带着一丝不容抗拒的温柔，将那只僵硬的手缓缓拉过去，稳稳地放到了她纤细的肩膀上。
 
-“这样就好了。”
+“好啦……” 
 
-她说。
+她贴着我，声音轻柔道： “这样就好了。” 
 
-我感觉自己的手指一下子热起来。
+掌心贴着温热细腻的皮肤，那一瞬间，我的指尖像是被火烧到了一般，连带着整条手臂都滚烫得发麻。
 
-[[继续-&gt;午夜前]]</tw-passagedata><tw-passagedata pid="38" name="偷看" tags="" position="3450,500" size="100,100">我低下头偷偷看她。
 
-电影的光一闪一闪落在奕莎贝拉脸上。
+[[接下来要怎么办呢？-&gt;午夜前]]
 
-一下亮。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="偷看" tags="" position="5075,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-一下暗。
+我忍不住微微垂下视线，偷偷打量着怀里的人。 
 
-她整个人都缩在毛毯里面，只露出一点鼻尖和眼睛。
+投影屏幕上冷冽的光影一闪一闪，在奕莎贝拉的脸上交替着明暗。
 
-睫毛很长。
+一下亮。 一下暗。
 
-嘴唇也红红的。
+她整个人都裹在那条厚厚的毛毯里，只露出一截精致的鼻尖和黑白分明的眼睛。
 
-不知道为什么。
+她的睫毛长得像蝶翼般在眼睑下投出阴影，唇瓣被微弱的光衬得红润而柔软。
 
-我忽然觉得她漂亮得有点不像是真的。
+在这个忽明忽暗的瞬间。 
 
-就在这个时候，奕莎贝拉忽然抬起眼睛。
+我看着她，心头竟莫名漫上一丝恍惚，只觉得眼前这张近在咫尺的脸，精致得有些不像是真的。
 
-我们一下子对视上了。
+就在我有些出神时，奕莎贝拉像是察觉到了什么，毫无预兆地掀起眼帘。 
 
-我本来想立刻移开视线。
+两人的目光在昏暗的客厅里结结实实地撞了个正着。 
 
-可不知道为什么。
+我原本下意识地想要移开视线来掩饰眼底的窘迫。 
 
-最后居然没有。
+可不知是被那道目光蛊惑了，还是别的原因，我竟然硬生生地定在原地，久久没有动弹。 
+奕莎贝拉也没有说话。 
 
-奕莎贝拉也没有说话。
+她就那样安安静静地仰头注视着我，漆黑的瞳孔里完完整整地倒映着我的影子。
 
-她只是安安静静看着我。
+空气这一刻变得粘稠。 
 
-过了好几秒，忽然很轻地笑了一下。
+过了好几秒，她轻轻地笑出了声。 
 
-然后慢慢往我这边靠近了一点。
+随后，她顺着我的怀抱，像猫儿一样慢慢往我这边贴近了一点。
 
-“你刚刚是不是在偷看我呀？”
+“你刚刚……” 
 
-她声音轻轻的。
+她贴在我耳边，声音轻得像是刚化开的糖，带着洞悉一切的纵容与雀跃： “偷看我了吗？” 
 
-像已经知道答案了。
+温热的气息扑在颈侧，激起一阵隐秘的战栗。
 
-我一下子不知道该怎么回答。
+我张了张嘴，一时间竟不知道该怎么为自己辩解。
 
-奕莎贝拉却像也不在意。
+可奕莎贝拉似乎也并不在意我的答案。
 
-她只是把下巴轻轻靠到我肩膀旁边。
+她只是顺势将下巴轻轻搁在我的肩膀上，像是在确认一件无比安心的事般，满足地慢慢闭上了眼睛。 
 
-然后很满足一样，慢慢闭上了眼睛。
+电影里的光影依旧在毫无章法地闪烁，伴随着血腥、骇人的场面，刺耳的音效在耳边回荡。 
 
-电影里的声音还在继续。
+我彻底听不清屏幕里到底在演些什么了，唯有胸口相贴的温度，清晰无比。
 
-可我已经完全不知道演到哪里了。
 
-[[继续-&gt;午夜前]]</tw-passagedata><tw-passagedata pid="39" name="午夜前" tags="" position="3625,325" size="100,100">
-电影已经快放完了。
 
-壁炉里的火慢慢变小。
+[[接下来该怎么办？-&gt;午夜前]]</tw-passagedata><tw-passagedata pid="37" name="午夜前" tags="" position="5275,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-外面的雪还在下。
+电影快要演到尾声了。
 
-整个房间安静得只剩下电影里的声音，还有偶尔响起的圣诞歌。
+壁炉里的火舌渐次萎缩，投在墙上的光影摇晃不定。
 
-毛毯下面，我们的膝盖轻轻贴在一起。
+窗外的雪势未歇，将远处的圣诞歌声闷在厚重的风雪里。
 
-她抱着抱枕，下巴压在我肩膀旁边，头发软软地蹭着我脖子。
+房间里静得只剩胶片转动的轻响。
 
-屏幕里的光一闪一闪落在她脸上。
+毛毯底下，我们的膝盖轻轻地贴在一处。
 
-有时候很亮。
+她横抱着松软的抱枕，下颌随意地搭在我肩侧，长发如瀑，冰凉发丝若即若离地蹭过我的颈窝。
 
-有时候又暗下去。
+屏幕上的光忽明忽暗，将她半张脸切割在明灭的交界里。
 
-我忽然觉得这一切特别不真实。
+我看着她，心底毫无预兆地泛起一阵，四周分明真实得过分，可每一个细节都透着难以言喻的失真。
 
-像梦一样。
+指针无声无息地逼近午夜十二点。
 
-时钟慢慢走近十二点。
+奕莎贝拉忽然顿住。
 
-奕莎贝拉忽然抬起头。
+她扬起脸，安安静静地看着我，指尖温柔地摩挲着我的发丝。
 
-她安安静静看着我，用手轻轻摩挲着我的头发。
-
-我注意到她的瞳孔散的很大，几乎要占据整个眼球。
+我垂眸，撞进她那双大得诡异的瞳孔里，那黑色几乎吞噬了整个眼球，剔透而空洞，像两口没有底的深井。
 
 “如果我特别特别喜欢你。”
 
+她弯起眼睛，语气轻得像一缕随时会散的雾：
+
 “你会害怕吗？”
+
 
 [[不会-&gt;不会害怕]]
 [[有一点-&gt;有点害怕]]
-[[我不知道-&gt;不知道]]</tw-passagedata><tw-passagedata pid="40" name="不会害怕" tags="" position="3800,200" size="100,100">我轻轻摇了摇头。
+[[我不知道-&gt;不知道]]
 
-&quot;不会。&quot;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="不会害怕" tags="+1" position="5450,800" size="100,100">(set: $willing to $willing + 1)
 
-话出口之后，我忽然觉得，这个答案来得太快了。
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-快到我自己都没有反应过来。可已经说了出去。
+我轻轻摇了摇头。 “不会。” 
 
-说出去的话像一块石头扔进水里，沉下去，不会再回来了。
+话音落下的那一刻，连我自己都有些错愕。 
 
-奕莎贝拉的手停住了。
+这个回答来得太快了，就这样脱口而出。
 
-她就那样看着我。
+说出去的话就像一颗石子落入深潭，连水花都没溅起，便沉了下去再也收不回来了。
 
-不说话。
+奕莎贝拉抚在我脸侧的手蓦地停住了。 
 
-壁炉里的木柴轻轻爆了一声。屏幕的光慢慢从她脸上扫过去，亮一下，又暗下去。
+她静静地看着我，一言不发。 
 
-她的睫毛动了一下。
+壁炉里的松柴适时地迸裂出一声轻响，投影屏幕冷冽的光影从她脸上徐徐扫过。
 
-我看见她眼睛里有什么东西慢慢变了——不是高兴，比高兴更深一点的东西，更安静一点，更像某种被确认了的事。
+她的睫毛轻轻颤了颤。 
 
-像等了很久很久，最后等到了。
+奕莎贝拉的神情闪过一次比喜悦更深邃的狂热。
 
-我忽然有一点说不清楚的心慌。
+一种说不清道不明的心慌毫无预兆地爬上心头。
 
-不是后悔。就是忽然觉得，那两个字好像比我以为的更重一点。
+倒不是后悔，只是突然惊觉那句轻飘飘的“不会”，竟比我以为的要沉重得多。
 
-可奕莎贝拉低下头笑了。
+可奕莎贝拉却在此时低下头再次哧哧笑了起来。 
 
-很轻。藏不住的。
+怎么也藏不住眼角眉梢的雀跃。 
 
-她重新靠过来，把额头慢慢抵在我肩膀上。
+她重新挨了过来，将额头慢慢抵在我的肩膀上。
 
-毛毯带着轻轻动了一下。她的头发蹭过我脖子，痒痒的。
+膝头的毛毯随之滑落了一寸，她细软的发丝蹭过我的下巴，带来丝丝缕缕的痒感。
 
-呼吸落在我锁骨那里，热的。
+与此同时，她不安分的手顺着我的腰侧一路往上，隔着单薄的布料慢条斯理地摩挲着，另一只手则紧紧缠上了我的脖颈，指尖陷入我的发丝里。 
 
-我连手都不知道该放哪里。
+“……那真是太好了。” 
 
-僵在那里，什么都没做。
+她在我耳边呢喃，我恍惚间似乎能感受到她柔软的胸部贴了上来。 
 
-过了好一会儿。
-
-&quot;……那就好。&quot;
-
-她声音很轻。轻到我一开始没有确定自己有没有听见。
-
-可我听见了。
-
-我不知道为什么，那三个字落进来之后，我胸口忽然就软了一块。
-
-似乎什么东西被放下来了。像某种事情说定，从此之后，就是这样了。
-
-我慢慢抬起手，轻轻搭在了她背上。
-
-也没有说什么。
-
-壁炉里的火暗了一点。电影还在放。时钟还在走。
-
-窗外的雪，还在下。
+耳边只剩下她越来越近的喘息声，以及彼此失控的心跳。
 
 [[继续-&gt;kiss]]
-</tw-passagedata><tw-passagedata pid="41" name="有点害怕" tags="" position="3800,350" size="100,100">我沉默了一会儿。
+</tw-passagedata><tw-passagedata pid="39" name="有点害怕" tags="-1" position="5450,1100" size="100,100">(set: $willing to $willing - 1)
 
-最后还是很小声地说：
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-“……有一点。”
+我沉默了一会儿，指节在膝头微微收紧。
 
-奕莎贝拉忽然不说话了。
+最后，还是没能藏住心底的怯意，极小声地承认了： 
 
-她安安静静看着我。
+“……有一点。” 
 
-电影里的光落在她脸上。
+话音落下的瞬间，客厅里的空气陡然凝固。
 
-我忽然有点后悔自己刚刚为什么要那样说。
+奕莎贝拉脸上的笑意毫无预兆地收了起来。
 
-过了很久，奕莎贝拉才忽然笑了一下。
+她不再说话，只是安安静静地看着我，黑白分明的眸子里情绪翻涌。 
 
-“没关系呀。”
+投影屏幕上冷冽的光影从她脸上静静划过，衬得那张脸莫名有些让人心惊。 
 
-她声音还是软软的。
+几乎是同一秒，我便开始后悔了——我为什么要在这个时候露出怯弱？
 
-然后她很轻地伸出手。
+为什么要对她说“害怕”？ 
 
-一点一点握住了我的手指。
+可开弓没有回头箭， 时间在死寂中被拉得很长。
+
+就在我以为她会生气、或者露出别的情绪时，奕莎贝拉却忽然咧开嘴角，重新笑了笑。
+
+“没关系呀。” 真是让人头皮发麻的包容。
+
+紧接着，她慢慢地抬起手，用微凉的指尖一点一点穿过我的指缝，十指相扣，将我的手牢牢包裹在她的掌心里。 
 
 “我会轻一点的。”
 
-不知道为什么。
+她贴在我耳边，声音轻得像是一声纵容的叹息。
 
-我心里那点不安忽然变得更明显了。
+那一刻，心底原本隐蔽的不安非但没有消散，反而像藤蔓一般疯狂滋长，变得愈发清晰、沉重。 
 
-可我却还是没有松开她。
+可我却鬼使神差地，连一根手指都没有抽回，任由她这样死死握着。
 
-[[继续-&gt;kiss]]</tw-passagedata><tw-passagedata pid="42" name="不知道" tags="" position="3800,475" size="100,100">我张了张嘴。
 
-最后却还是小声说：
+
+[[继续-&gt;kiss]]</tw-passagedata><tw-passagedata pid="40" name="不知道" tags="" position="5450,950" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我张了张嘴。
+
+最后却还是有些泄气地吐出四个字：
 
 “……我不知道。”
 
-奕莎贝拉忽然笑了。
+话音刚落，奕莎贝拉便轻笑出声。
 
 像早就猜到我会这样回答一样。
 
-我忽然开始后悔。后悔自己刚刚为什么要说「我不知道」。
+我开始后悔。
 
-可已经太晚了，奕莎贝拉的眼睛在昏暗里亮得吓人，像玻璃珠。
+为什么要说“不知道”呢？
 
-「怎么还是不知道呀。」
+明明在这个暧昧的夜晚里，沉默或者顺从都比这句含糊不清的推拒要好得多。
+
+可已经太晚了，奕莎贝拉微微抬起眼帘，那双眼睛在昏暗中清凌凌地倒映着我的身影。
+
+剔透得像两颗淬了光的玻璃珠，一瞬不瞬地将我钉在原地。
+
+“怎么还是不知道呀。”
 
 
-[[继续-&gt;kiss]]</tw-passagedata><tw-passagedata pid="43" name="kiss" tags="" position="4000,325" size="100,100">而电影恰巧此时结束了。
+[[继续-&gt;kiss]]</tw-passagedata><tw-passagedata pid="41" name="kiss" tags="" position="5775,925" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-屏幕瞬间暗掉，房间里一下子变得特别安静。
+电影恰在此时落幕。
 
-只有壁炉里的火还在轻轻响。
+屏幕骤然熄灭，房间里陷入安静的暗影里，只留壁炉里的火舌在轻轻跳动。
 
-奕莎贝拉不知道什么时候已经把我圈进了毛毯和沙发之间。
+我任由她靠过来，心底泛起一阵毫无防备的眩晕。
 
-我整个人都被她的气息包住，壁炉里的火焰光忽明忽暗落在她脸上。
+她捧住我的脸，动作轻柔得像在对待什么易碎的珍宝。
 
-她的眼睛太亮了，像水晶，像人鱼，像...
+随之而来的吻落了下来。
 
-我不敢与她对视，手心也在直冒汗。
+她先是温温吞吞地碰了碰我，见我没有躲，她便顺理成章地贴得更近了一些。
 
-想挣脱动动身子，却发现根本没有余地。
+鼻尖几乎蹭着我的脸颊，厮磨着继续吻了下来。
 
-奕莎贝拉却仍在看着我。
+她的唇瓣很软，带着丝丝凉意，却把两个人的呼吸慢慢揉在了一起。
 
-安安静静的。
-
-像已经看了很久很久。
-
-然后她忽然伸出手。
-
-指尖轻轻按住我的下唇，慢慢摩挲。
-
-我一下子连呼吸都停住了。
-
-外面的月光照进来，我眼前甚至开始有点发晕。
-
-直到奕莎贝拉忽然闭上眼睛，慢慢朝我靠近。
-
-嘴唇贴上来的瞬间。
-
-我才终于重新回到现实。
-
-她先是很轻地碰了碰我。
-
-软软的。
-
-像试探一样。
-
-可过了两秒，她却没有离开。
-
-而是重新贴了上来。
-
-一点一点按住我。
-
-含住我。
-
-慢慢地亲。
-
-我整个人一下子晕乎乎的。
-
-奕莎贝拉的嘴唇很软，但没有温度，很冰冷。
-
-气息却甜得发腻。
-{
 (if: $willing &gt;= 3)[
 
-她吻得很慢。&lt;br&gt;&lt;br&gt;
+她吻得很慢。
 
-像终于得到了喜欢很久很久的东西。&lt;br&gt;&lt;br&gt;
+像终于得到了喜欢很久很久的东西。
 
+我脑子里晕乎乎的，连呼吸都忘记。
 
-舌尖轻轻碰过我的嘴唇时，我甚至已经开始舍不得躲开。&lt;br&gt;&lt;br&gt;
+等她的舌尖轻轻碰过来时，我下意识地软了腰，恨不得贴她更近一点。
 
+舌尖轻轻缠过我的嘴唇时，我已经开始舍不得躲开。
 
-奕莎贝拉抱着我，很轻地笑了一下。&lt;br&gt;&lt;br&gt;
+奕莎贝拉抱着我，胸腔里震出哧哧笑声。
 
+“你好乖。”
 
-“你好乖。”&lt;br&gt;&lt;br&gt;
+她声音小小的，贴着我的耳朵厮磨，耳朵也变得湿漉漉。
 
+接着一口咬到了我的下唇，又一点一点含住。
 
-她声音小小的。&lt;br&gt;&lt;br&gt;
+有一点点刺痛，空气里漫开淡淡的血腥味。
 
-
-像在哄人。&lt;br&gt;&lt;br&gt;
-
-
-她轻轻舔过我的下唇。&lt;br&gt;&lt;br&gt;
-
-
-又一点一点含住。&lt;br&gt;&lt;br&gt;
-
-
-甜得让人发晕。&lt;br&gt;&lt;br&gt;
-
-
-直到最后，她才很轻地咬了一下我的嘴唇。&lt;br&gt;&lt;br&gt;
-
-
-一点点痛，我尝到血腥味。&lt;br&gt;&lt;br&gt;
-
+任由她温热的唇瓣一点点描摹着，最后，她极轻地咬了一下我的下唇。
 
 ]
 (else-if: $willing &gt;= 1)[
 
-这个吻慢慢开始变深。&lt;br&gt;&lt;br&gt;
+奕莎贝拉抱我抱得很紧，手臂收拢得密不透风。
 
-奕莎贝拉抱我抱得很紧。&lt;br&gt;&lt;br&gt;
+铺天盖地的呼吸压下来，深得让我几乎喘不过气。
 
-像害怕我会逃走一样。&lt;br&gt;&lt;br&gt;
+她终于不再掩饰骨子里的急切，微凉的舌尖蛮横地顶开防线，寸寸舔过齿关，像一头终于撕开伪装、将猎物叼进巢穴的野兽。
 
-她的呼吸越来越乱。&lt;br&gt;&lt;br&gt;
+本能的惊慌让我下意识地想向后躲闪。
 
-舌尖一点一点顶开我的嘴唇的时候，我甚至开始有点喘不过气。&lt;br&gt;&lt;br&gt;
+可后颈瞬间被她温热的掌心扣住，那点力道不容抗拒地将我牢牢钉在原地。
 
-可她却还是很耐心地亲我。&lt;br&gt;&lt;br&gt;
+直到下唇传来清晰的刺痛，铁锈味的血丝漫开。
 
-一下。&lt;br&gt;&lt;br&gt;
+我受惊般地狠狠一颤，指尖下意识地揪紧了她的衣料。
 
-又一下。&lt;br&gt;&lt;br&gt;
+进攻的动作在这一刻戛然而止。
 
-像在安抚什么受惊的小动物。&lt;br&gt;&lt;br&gt;
+奕莎贝拉微微退开半寸，眼尾洇着一层湿漉漉的绯红，眸底翻涌着餍足过后近乎危险的幽光。
 
-直到她忽然轻轻咬了一下我的下唇。&lt;br&gt;&lt;br&gt;
+她俯下身，伸出小舌舔净那一抹血迹。
 
-我一下子颤了一下。&lt;br&gt;&lt;br&gt;
+贴着我的唇瓣呢喃：
 
-奕莎贝拉却立刻低下头。&lt;br&gt;&lt;br&gt;
-
-很轻地舔掉了那一点点血。&lt;br&gt;&lt;br&gt;
-
-“别怕呀。”&lt;br&gt;&lt;br&gt;
-
-她声音轻轻的。&lt;br&gt;&lt;br&gt;
-
-“我最喜欢你了。”&lt;br&gt;&lt;br&gt;
-
+“真甜啊。”
 ]
-
-(else:)[
-
-奕莎贝拉忽然抱紧了我。&lt;br&gt;&lt;br&gt;
-
-这个吻一下子变得很深。&lt;br&gt;&lt;br&gt;
-
-深到我几乎喘不过气。&lt;br&gt;&lt;br&gt;
-
-她像终于不想继续忍耐了一样。&lt;br&gt;&lt;br&gt;
-
-舌尖很急地顶开我的嘴唇。&lt;br&gt;&lt;br&gt;
-
-一点一点舔过去。&lt;br&gt;&lt;br&gt;
-
-像终于可以光明正大地品尝我。&lt;br&gt;&lt;br&gt;
-
-我下意识想往后躲一点。&lt;br&gt;&lt;br&gt;
-
-奕莎贝拉却立刻扣住了我的后颈。&lt;br&gt;&lt;br&gt;
-
-不让我逃开。&lt;br&gt;&lt;br&gt;
-
-直到下唇忽然传来明显的刺痛。&lt;br&gt;&lt;br&gt;
-
-我一下子颤了一下。&lt;br&gt;&lt;br&gt;
-
-奕莎贝拉却忽然笑了。&lt;br&gt;&lt;br&gt;
-
-眼睛湿漉漉的。&lt;br&gt;&lt;br&gt;
-
-像终于满足了一样。&lt;br&gt;&lt;br&gt;
-
-她低下头。&lt;br&gt;&lt;br&gt;
-
-一点一点舔掉那点血。&lt;br&gt;&lt;br&gt;
-
-“好甜。”&lt;br&gt;&lt;br&gt;
-]
-}
-奕莎贝拉的眼尾泛红，笑得又甜又餍足。
-
-声音轻得像耳语。
+奕莎贝拉的眼尾泛红，笑得餍足。
 
 “味道……刚刚好。”
 
 时钟“咔哒”一声跳到了十二点。
 
-外面的雪还在下。
+她的额头轻轻抵着我，彼此温热的呼吸交缠在方寸之间。
 
-奕莎贝拉额头轻轻抵着我。
+她深呼吸，声音融化在夜色里，如情人耳畔最温柔的叹息：
 
-过了很久，她才忽然笑了一下。
-
-声音轻得像耳语。
-
-“第七日了。”
-
-[[进入结局-&gt;结局开始]]</tw-passagedata><tw-passagedata pid="44" name="结局开始" tags="" position="4150,325" size="100,100">(if: $willing &gt;= 2)[
-[[进入：沉溺结局-&gt;沉溺结局（高 willing）]]
+(if: $willing &gt;= 3)[
+[[“第七日了。”-&gt;沉溺结局（高 willing）]]
 ]
 
-(else-if: $willing is 1)[
-[[进入：半梦结局-&gt;半梦结局]]
+(else-if: $willing &gt;= -3 and $willing &lt;= 2)[
+[[“第七日了。”-&gt;恐惧结局]]
 ]
 
-(else:)[
-[[进入：恐惧结局-&gt;恐惧结局]]
-]</tw-passagedata><tw-passagedata pid="45" name="沉溺结局（高 willing）" tags="" position="4250,125" size="100,100">星期日 0:00
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="沉溺结局（高 willing）" tags="" position="5925,725" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+星期日 0:00
 
 嘴唇被她反复含住、舔过，刚刚咬破的地方越来越烫，连舌尖都开始发麻。
 
@@ -2717,59 +2336,57 @@ h1, h2, h3 {
 
 不像在接吻。
 
-更像在啃食，在吃什么很珍贵的东西。
+更像在细致地分食，在品尝什么来之不易的珍宝。
 
 我后背忽然有点发冷。
 
 可奕莎贝拉却偏偏又温柔得过分。
 
-她发现我在发抖之后，甚至还低下头，很轻地蹭了蹭我的鼻尖。
+她察觉到我的战栗，甚至低下头，极其纵容地蹭了蹭我的鼻尖。
 
 “怎么啦？”
 
-她声音轻轻的。
+她嗓音黏腻。
 
 “不是说不害怕吗？”
 
 我张了张嘴。
 
-却发现自己已经有点说不出话了。
+却发现自己已经连一句完整的话也拼凑不出来了。
 
-奕莎贝拉却像终于满意了一样，低低笑了一声。
+奕莎贝拉却像终于餍足了一般，低低地笑了一声。
 
-然后重新低下头。
-
-一点一点舔掉我嘴唇上的血。
+然后重新覆上来，一点一点舔掉我唇角渗出的血迹。
 
 我脑子里“嗡”地响了一下。
 
-一种奇怪的眩晕感忽然顺着脊背慢慢爬上来。
+一种异样的、近乎失重般的眩晕感顺着脊椎节节攀升。
 
-“疼吗？” 她小声问，气息甜得发黏。
+她俯下身，贴着我的耳骨漫不经心地摩挲：“疼吗？”
 
-我本该点头。身体却先一步背叛了理智，微微仰起头，轻轻回吻了她一下。
+我本该推开她。可身体却先一步背叛了理智，不仅没有抗拒，反而不由自主地微微仰起头，生涩地回吻了她一下。
 
-很浅，很轻，却像点燃了什么。
+浅尝辄止，却像在干柴上点燃了一簇火苗。
 
-奕莎贝拉一下子笑了。不是温柔的笑，是那种终于确认、终于得手、近乎癫狂的开心。
+奕莎贝拉露出了笑容，尘埃落定、似猎物主动卸下防备后，近乎癫狂的、密不透风的喜悦。
 
 “真乖。”
 
-她小声说。
+她贴着我的唇齿呢喃。
 
-“这样就不用再去外面了。”
+“这样，就不用再去外面了。”
 
-我本来应该意识到不对劲的。
+我本该在这一刻清醒过来的。
 
-可不知道为什么。
+可不知为什么。
 
-我只是越来越困。
+我只觉得好困。
 
-越来越重。
+眼皮越来越重。
 
-像正一点一点陷进毛毯、沙发，还有她怀里。
+像正一点一点融化进毛毯、沙发，彻底陷进她密不透风的怀抱里。
 
-奕莎贝拉却还在继续亲我，或者说，啃咬。
+奕莎贝拉还在继续。与其说是亲吻，不如说是一种温柔而笃定的标记。
 
 嘴唇。
 
@@ -2777,19 +2394,26 @@ h1, h2, h3 {
 
 眼尾。
 
-最后重新停回我嘴边。
+最后，又慢条斯理地退回我唇边。
 
-很轻地笑了一下。
+她弯起眼睛，溢出一声长长的喟叹。
 
-“以后冬天也陪着我吧。”
+“以后的漫长冬夜，你可都得属于我了。”
 
-外面的雪一直在下。
+“$name。”
 
-白色的月光落在她肩膀上。
+窗外的雪一点一点落下来，寂静无声地将整个世界彻底埋葬在夜色里。
 
-我忽然觉得。
+惨白的月光洒在她光裸的肩膀上。
 
-自己好像真的已经回不去了。
+我恍惚地闭上眼，心里竟然没有一丝恐惧。
+
+只觉得——
+
+大概真的再也不用回去了。
+
+
+
 
 (if: $memory is &quot;photo&quot;)[
 [[奕莎贝拉把你含进了身体里-&gt;沉溺照片]]
@@ -2804,142 +2428,9 @@ h1, h2, h3 {
 ]
 
 
-</tw-passagedata><tw-passagedata pid="46" name="半梦结局" tags="" position="4425,400" size="100,100">星期日 0:00
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="恐惧结局" tags="" position="6000,975" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-
-整个古堡安静得像一幅画。
-
-安静得有点不对。只有她吮着我嘴唇的声音。
-
-我突然在这种安静中抽离，然后忽然意识到——从我进来到现在，我没有听见过任何声音。
-
-没有车。没有风声穿过缝隙。没有手机震动。没有任何从外面来的东西。
-
-只有壁炉。只有奕莎贝拉的呼吸。
-
-只有她。
-
-我忽然很想回家。
-
-这个念头冒出来的瞬间，我自己都愣住了。
-
-因为，这明明是奕莎贝拉，是她，令我心脏时时刻刻都处于一种持续的、慢性的、抽动的疼痛的奕莎贝拉。
-
-可现在这个抱着我的奕莎贝拉，却让我想起什么。
-
-想起什么呢。我想不起来。只是一种很旧的、很小时候的感觉，像走进一个房间，然后听见身后的门关上了。
-
-&quot;怎么了？&quot;
-
-奕莎贝拉抬起头看我，又吞了吞口水。
-
-声音还是轻的。
-
-甚至还带着一点刚刚接吻后的黏糊感。
-
-我张了张嘴。
-
-没有说话。
-
-因为我不知道从哪里说起。
-
-因为我一开口可能就要哭。
-
-因为我也不确定我在怕什么——我只是忽然很想哭，想回家，想给妈妈发一条消息，想听见任何一种从外面来的声音，哪怕只是风，哪怕只是雪落在玻璃上的那一点细碎的声音——
-
-奕莎贝拉凑近，轻轻舔了舔我被咬破的嘴唇。
-
-我疼得猛地缩了一下。
-
-&quot;对不起。&quot;
-
-她立刻把我抱住了。很紧。
-
-她声音闷在我耳边，轻轻的，甚至有点委屈——像什么东西积了很久很久，最后还是漫出来一点。
-
-&quot;可是我太开心了。&quot;
-
-我一句话都说不出来。
-
-我在想，她为什么会委屈。她在委屈什么呢。
-
-可我脑子越来越重，越来越重，那个念头沉到一半就找不到了，像石头沉进水里。
-
-奕莎贝拉重新靠回来。慢慢把我抱紧。
-
-&quot;不要怕我。&quot;她声音轻轻的。
-
-&quot;我不会伤害你的。&quot;
-
-我下意识抬头想看看时间。
-
-奕莎贝拉的手忽然伸过来，轻轻遮住了我的眼睛。
-
-&quot;不要看啦。&quot;
-
-她笑了一下。声音甜丝丝的。
-
-&quot;已经很晚了。&quot;
-
-她的掌心很凉。
-
-我眼前彻底暗下来。那点凉意从眼皮上渗进来，渗进太阳穴，渗进什么更深的地方。
-
-然后一种眩晕感忽然涌上来——似天旋地转，又好像溺水，我几乎无法呼吸。
-
-奕莎贝拉还在摸我的头发。
-
-很慢。很轻。很有耐心。
-
-&quot;没关系的。&quot;
-
-火光跳了最后一下，灭了。
-
-&quot;慢慢习惯就好了。&quot;
-
-黑暗里，她的声音还是那么温柔。
-
-我想说等一下。我想说我想回家。我想说我能不能先给妈妈打个电话。
-
-可那些话在嘴边转了一圈，最后都没有出来。因为我的眼睛闭着，她的手还在，她是甜的——
-
-我在想，习惯什么。
-
-习惯什么呢。
-
-可我已经想不下去了。
-
-我的眼前顿时漆黑一团。
-
-我已经开始分不清。
-
-现在让我发晕的到底是缺氧。
-
-还是她身上的味道。
-
-奕莎贝拉却还在继续亲我。
-
-我感觉湿湿的，不知是眼泪还是津液，也分不清这些究竟属于谁。
-
-恍惚间，我忽然有一种很奇怪的感觉。
-
-好像只要我现在闭上眼睛。
-
-再睁开的时候。
-
-外面的世界可能就已经彻底不见了。
-
-(if: $memory is &quot;photo&quot;)[
-[[圣诞夜之后-&gt;半梦照片]]
-]
-
-(if: $memory is &quot;smell&quot;)[
-[[圣诞夜之后-&gt;半梦气味]]
-]
-
-(if: $memory is &quot;voice&quot;)[
-[[圣诞夜之后-&gt;半梦声音]]
-]</tw-passagedata><tw-passagedata pid="47" name="恐惧结局" tags="" position="4300,600" size="100,100">星期日 0:00
+星期日 0:00
 
 我感到一阵皮肉绽开的疼痛，不止是嘴唇，还有放佛灵魂要被抽干的窒息。
 
@@ -2957,788 +2448,568 @@ h1, h2, h3 {
 
 像终于吃到了喜欢很久的蛋糕。直到下唇忽然传来一阵明显的刺痛。
 
-我猛地颤抖了一下，挣脱开了她的蚕食。
+我猛地颤了一下，
 
-看到奕莎贝拉的唇瓣微微肿起，湿湿的，月光的映衬下闪闪发亮。
 
-那是血液。
-
-她伸出舌头，舔掉了那一点点血。
-
-奕莎贝拉跪在我面前，忽然用双手捧住我的脸。把我的头微微往上抬了一点。我没有办法低头。没有办法往旁边看。只能看着她。
-
-像一个被人扶起来的洋娃娃。
-
-“现在也还是不知道吗。”她小声说。
-
-我忽然觉得后背发冷。
-
-第一次真正想离开这里。可已经没有力气了。
-
-我眼前越来越晕。
-
-壁炉。
-
-毛毯。
-
-月光。
-
-全都慢慢融化成模糊的颜色。最后只剩下奕莎贝拉。
-
-“没关系。”
-
-“很快就不会痛了。”
-
-不知道为什么。听见这句话的时候，我忽然有一种很奇怪的感觉。
-
-像她以前也这样抱过谁。也这样亲过谁。
-
-也这样，一点一点把谁留了下来。
-
-外面的雪越下越大。
-
-古堡安静得像已经很多年没有人离开过。
-
-(if: $memory is &quot;photo&quot;)[
-[[你被奕莎贝拉吃进了腹中-&gt;恐惧照片]]
+(if: $willing &lt;= -5)[
+[[挣脱开了她的蚕食。-&gt;逃跑结局]]
 ]
+(else:)[
+[[我开始后悔靠近她。-&gt;留下]]
+]</tw-passagedata><tw-passagedata pid="44" name="沉溺照片" tags="" position="6050,400" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-(if: $memory is &quot;smell&quot;)[
-[[你被奕莎贝拉吃进了腹中-&gt;恐惧气味]]
-]
+后来，这个冬天好像变成了一个没有尽头的循环。 
 
-(if: $memory is &quot;voice&quot;)[
-[[你被奕莎贝拉吃进了腹中-&gt;恐惧声音]]
-]</tw-passagedata><tw-passagedata pid="48" name="沉溺照片" tags="" position="4425,0" size="100,100">后来冬天好像一直没有结束。
+雪落了一场又一场，壁炉里的火也从未熄灭。
 
-雪下了很多很多次。
+我渐渐失去了对时间的感知，分不清自己究竟在这里被困了多久，也分不清外面究竟是何年何月。 
 
-壁炉也一直烧着。
+奕莎贝拉开始变得格外执着于一件事：给我拍照。
 
-我渐渐开始分不清，
-自己到底已经在这里待了多久。
+最初，她只是趁着我烤火时随手拍一张。
 
-再后来，奕莎贝拉开始特别喜欢给我拍照。
+后来，这种记录蔓延到了每一个稀疏平常的瞬间：清晨刚醒时凌乱的头发、吃早餐时沾了果酱的唇角、或是独自靠在冰冷窗棂前看雪的侧影。 
 
-起初只是壁炉旁边。
+她几乎每天都在按动快门。 
 
-后来是吃早餐的时候、刚睡醒的时候、靠在窗边看雪的时候。
+甚至在某个深夜，我迷迷糊糊地从睡梦中转醒，睁眼便撞进一片惨白的闪光灯里。 
 
-她几乎每天都会拍。
+奕莎贝拉正跪坐在床侧，手里举着刚吐出相纸的拍立得，眼里闪烁着恶作剧得逞般的兴奋。
 
-有时候半夜我迷迷糊糊醒过来，甚至会看见她跪坐在床边，举着拍立得，很轻地“咔嚓”一声。
+“这张也好可爱。” 
 
-闪光灯照得我眼前发白。
+她将脸颊贴在温热的相纸上，满足地笑弯了眼，像个捧着稀世珍宝的小女孩。
 
-奕莎贝拉却开心得不行。
+不知从什么时候起，古堡的每个角落都渗透了我的身影。 
 
-“这张也好可爱。”
+走廊斑驳的墙面上、雕花木柜的缝隙间、床头散落的旧书页里，甚至连那棵早已积了厚雪的圣诞树旁，都密密麻麻地摆满了照片。
 
-她小声说。
+照片里的我永远定格在最温柔的笑意里。 
 
-然后低下头，很珍惜地把照片抱进怀里。
+穿着宽大的睡裙，双颊带着健康的红晕，看起来像是被整个世界无条件纵容着的、最幸福的人。 
 
-后来我渐渐发现。
+日子变得像化不开的浓雾。 
 
-古堡里开始出现越来越多我的照片。
+每一天都毫无区别，同样的飞雪，同样的壁炉，同样的奕莎贝拉。
 
-墙上。
+可她却好像永远也拍不够。
 
-柜子里。
+常常在某个安静的午后，她会一个人坐在地毯上，把那些照片一张一张铺开，用指腹极尽温柔地摩挲着上面的每一个轮廓。
 
-床头。
+神情倒不是怀念，像在确认某种随时会碎掉的现实。 
 
-甚至连圣诞树旁边都摆着几张。
+直到某个深夜，万籁俱寂。 
 
-照片里的我永远都在笑。
+我被一阵极轻的说话声从睡梦中唤醒。
 
-穿着睡裙。
+声音从楼下传来，伴随着某种近乎呢喃的轻笑。 
 
-嘴唇红红的。
+我揉着惺忪的睡眼，赤脚踩在冰凉的地板上，悄无声息地摸到楼梯转角。 
 
-像一直都很幸福。
+空旷的大厅里，只有一盏壁灯昏黄。
 
-有时候我甚至会突然分不清。
+奕莎贝拉正独自站在老式座机前。
 
-自己到底已经在这里待了多久。
+她的一只手握着听筒，另一只手里，紧紧攥着一张刚刚洗出来、还带着余温的照片。 
 
-因为每天看起来都差不多。
+空气静得可怕。
 
-一样的雪。
+“嗯……” 
 
-一样的壁炉。
+她对着虚无的空气弯起唇角，声音轻得像是一场幻觉： “她最近很好呀。” 
 
-一样的奕莎贝拉。
+“今天还陪我看了电影呢。” 
 
-可奕莎贝拉却还是拍不够。
+我有些茫然地站在台阶上，今天是...星期几？
 
-她总会很认真地抱着那些照片，一张一张慢慢翻。
+奕莎贝拉恍然未觉。 
 
-像在确认我还在。
+她对着电话那头不知名的人，神色温柔。
 
-有一天晚上，我忽然听见她在楼下和谁说话。
+随后，她低下头，极其珍视地、极轻地在照片上我的眼角印下一个吻。
 
-声音很轻。
+“是的……” 
 
-像在笑。
+对着手里那个被复刻出来的“我”，她满足地笑出了声： 
 
-我下意识走到楼梯旁边。
+“大家都不用担心啦。”
 
-却只看见奕莎贝拉一个人站在电话旁边，怀里抱着刚拍好的照片。
 
-“嗯。”
 
-她轻轻说。
+—— END —— &lt;br&gt;&lt;br&gt;
 
-“她最近很好呀。”
+恭喜你获得了：
 
-“今天还陪我看电影了。”
+「沉溺-照片结局」
 
-我一下子愣住了。
 
-因为那天，我明明根本没有离开过古堡。
+[[奕莎贝拉的小纸条]]
 
-奕莎贝拉却像完全没察觉一样，低头很轻地亲了一下照片里的我。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="45" name="沉溺气味" tags="" position="6125,575" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-“这样大家就不会担心啦。”
+后来，这个冬天好像变成了一个没有尽头的季节。 
 
-她笑着说。&lt;br&gt;&lt;br&gt;
+雪落了一场又一场，壁炉里的火也从未熄灭。
 
-【END】&lt;br&gt;&lt;br&gt;
+我逐渐失去了时间的刻度，连自己究竟在这座古堡里待了多久，都变得模糊不清。
 
-[[奕莎贝拉的小纸条]]</tw-passagedata><tw-passagedata pid="49" name="沉溺气味" tags="" position="4425,125" size="100,100">后来冬天好像一直没有结束。
+再后来，我对奕莎贝拉身上的气味，产生了一种近乎本能的依恋。
 
-雪下了很多很多次。
+甜腻中透着森冷的味道，有时像深夜快要融化在空气里的冰棒，有时又像那些熟透了、散发着浓烈香气的禁忌果实。 
 
-壁炉也一直烧着。
+她极其热衷于将我圈在怀里入睡。 
 
-我渐渐开始分不清，
-自己到底已经在这里待了多久。
+每当夜深人静，她总是会将脸颊深深埋进我的颈窝，贪婪而缓慢地呼吸着，像是在确认一件世间绝无仅有的珍宝是否还存在。 
 
-再后来，我开始越来越习惯奕莎贝拉身上的味道。
+甚至在某些半梦半醒的深夜，我迷糊着睁开眼，竟会惊觉她正虔诚地垂着眸，用湿热的舌尖，一下又一下地安抚、舔舐着我锁骨上那处早已不再疼痛的淡红齿痕。 
 
-甜甜的。
+察觉到我醒来，她非但没有停下，反而弯起眼睛，露出一个满足而餍足的笑。
 
-凉凉的。
+“太好了……” 
 
-有时候像快融化掉的冰棒，有时候又很像熟透了的、过于香甜的水果。
+她贴着我的皮肤呢喃，声音里透着庆幸： “味道还在。” 
 
-她特别喜欢抱着我睡觉。
+不知从何时起，整座古堡的空气都被这种甜到发晕的气息彻底浸透。
 
-总会很轻地埋在我脖子旁边，一下一下慢慢呼吸。
+从厚重的羊毛地毯，到贴身的丝绸睡裙，再到枕头上散落的碎发和指尖的温度，无一不沾染上了这种独属于她的、挥之不去的气味。
 
-像在闻什么很珍贵的东西。
+起初，我偶尔还会觉得空气中的气味令人窒息。
 
-有时候我半夜醒过来。
+可日子久了，那股香气竟成了我赖以生存的空气，让我无可救药地沉沦、妥协，直到再也离不开。 
 
-甚至会发现她正低着头，安安静静舔我锁骨上那一点已经快消失的牙印。
+直到某一天傍晚，我独自站在空旷的窗前，望着外面的漫天风雪出神了片刻。 
 
-发现我醒了之后，她还会特别开心地冲我笑。
+奕莎贝拉推门而入的瞬间，脸色骤变。
 
-“太好了。”
+她几乎是跌撞着扑到我身前，双臂死死箍住我的腰，将脸埋进我的头发与颈侧，疯狂而贪婪地嗅闻着。
 
-“味道还在。”
+那不断颤抖的指尖，泄露了她骨子里的惊恐。
 
-她小声说。
+“……怎么味道变淡了？” 
 
-后来古堡里的空气也开始慢慢变得不对劲。
+她抬起眼，黑漆漆的眸子里水雾弥漫，委屈得像个随时会碎掉的瓷娃娃。 
 
-毛毯。
+那一刻，心脏深处不由自主地泛起一阵战栗，恐惧与隐秘的怜惜瞬间交织在一起。
 
-睡裙。
+可下一秒，她便像是重新找回了安全感般，更加用力地将我勒进怀里。
 
-枕头。
+她将面颊死死贴在我的肩膀上，闭上眼，开始极其虔诚地、一下又一下地做着深呼吸。
 
-甚至连我的头发和手指，都会带上一种甜得发晕的味道。
+像是一只执着的幼兽，用自己的气息一点点、寸寸失控地将我重新标记。
 
-我一开始还会觉得太甜了。
+把空气里属于外界的清冷气息全数剥离，再不容置疑地，重新染回她最熟悉、最偏爱的味道。 
 
-后来却渐渐开始离不开。
+从那以后，我便彻底失去了与外界相连的感知。 
 
-有一天，我只是一个人站在窗边待了一会儿。
+我的世界里再也没有了冬夜呼啸的冷风，也没有了雪松与泥土的气息。 
 
-奕莎贝拉回来之后却忽然变得很不安。
+放眼望去、呼吸所及之处，全都是奕莎贝拉。
 
-她抱着我，低下头反复闻我的脖子和头发，动作急得几乎有点发抖。
 
-“怎么味道变淡了？”
 
-她小声问。
+—— END ——&lt;br&gt;&lt;br&gt;
 
-眼睛湿漉漉的。
+恭喜你获得了：
 
-像快哭了一样。
+「沉溺-气味结局」
 
-我忽然有点害怕。
 
-可下一秒，奕莎贝拉却又重新抱紧了我。
+[[奕莎贝拉的小纸条]]
 
-很深很深地埋进我肩膀旁边。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="沉溺声音" tags="" position="6225,725" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-慢慢呼吸。
+后来，这个冬天好像变成了一个没有尽头的循环。 
 
-一下。
+雪落了一场又一场，壁炉里的火也从未熄灭。
 
-又一下。
+我逐渐失去了时间的刻度，连自己究竟在这座古堡里被困了多久，都变得模糊不清。
 
-像终于重新把什么东西染回自己喜欢的味道。
+奕莎贝拉开始变得格外执着于一件事：听我说话。 
 
-后来我渐渐发现。
+无论是深夜依偎着看老电影时、被她紧紧拥在怀里入眠的时刻，甚至是唇齿纠缠、呼吸初定的短暂间隙。 
 
-自己已经彻底闻不到冬天外面的空气了。
+她总会温顺地将脸颊贴在我的耳畔，用近乎呢喃的语调，一遍遍地央求： “再叫我一次名字嘛……” 
 
-只能闻见奕莎贝拉。&lt;br&gt;&lt;br&gt;
+起初，我还会因为这种毫无防备的亲昵而面红耳赤。
 
-【END】&lt;br&gt;&lt;br&gt;
+可日子久了，竟也成了一种无声的习惯。 
 
-[[奕莎贝拉的小纸条]]</tw-passagedata><tw-passagedata pid="50" name="沉溺声音" tags="" position="4425,275" size="100,100">后来冬天好像一直没有结束。
+她对我的声音有一种近乎病态的迷恋。 
 
-雪下了很多很多次。
+每次听到我呼唤她，她那双墨黑的眸子便会骤然亮起，盛满了失而复得般的狂喜，仿佛只要听到这个声音，就能彻底确认我是属于她的。 
 
-壁炉也一直烧着。
+甚至在某些半梦半醒的深夜，我迷糊着睁开眼，会发现她正安安静静地将耳朵贴在我的胸口，贪恋地倾听着我平缓的心跳与呼吸。 
 
-我渐渐开始分不清，
+察觉到我醒来，她便会像只寻求庇护的小兽般猛地抱紧我，声音里带着微不可察的颤抖：
+“太好了……” 
 
-自己到底已经在这里待了多久。
+她贴着我的皮肤，心有余悸地喃喃： “我还以为你……又不见了。” 
 
-奕莎贝拉越来越喜欢听我说话。
+可随着时间的推移，我却渐渐开始感到疲惫，变得越来越不愿意开口。 
 
-晚上看电影的时候。
+而奕莎贝拉却比从前更黏人了。
 
-抱着我睡觉的时候。
+只要我安静得稍久一些，她便会立刻丢下手里的东西，慌乱地从身后抱住我，扳过我的脸，直勾勾地审视着我。
 
-甚至接吻结束之后。
+“你今天怎么不讲话了？” 
 
-她都会很轻地贴在我耳边，小声说：
+她微微蹙起眉，长长的睫毛在眼睑下投出一片阴影，声音颤抖道： 
 
-“再叫我一次名字嘛。”
+“……是不是不喜欢我了？” 
 
-我一开始还会害羞。
+每当她露出这种惹人怜惜的委屈神情，所有的疲惫便瞬间溃不成军。
 
-后来却慢慢开始习惯。
+我会妥协地转过身，将她揉进怀里，耐下性子一遍遍地哄她：
 
-奕莎贝拉特别喜欢听我叫她。
+“没有……”
 
-每次听见的时候，她都会开心得眼睛亮起来。
+“最喜欢你了。” 
 
-像终于确认我真的属于她。
+只要听到这句话，奕莎贝拉就会瞬间阴转晴。 
 
-有时候半夜我迷迷糊糊醒过来。
+像讨到糖吃的小孩般弯起眼睛，满足地将脸埋进我颈窝，发出细碎而快乐的笑声。 
 
-甚至会发现奕莎贝拉正安安静静趴在我胸口，听我睡觉时的呼吸声。
+直到很久很久以后，当某个飘雪的午后再度陷入绝对的寂静时。
 
-发现我睁眼之后，她就会很开心地抱住我。
+我才发现自己竟然已经彻底记不清，上一次除了奕莎贝拉的声音之外，究竟是什么时候，和这个世界上的其他人说过话了。
 
-“太好了。”
 
-“我还以为你不见了。”
 
-她小声说。
 
-后来我渐渐开始不太想说话了。
+—— END —— &lt;br&gt;&lt;br&gt;
 
-可奕莎贝拉却越来越黏我。
+恭喜你获得了：
 
-只要我安静太久，她就会立刻抱住我。
+「沉溺-声音结局」
 
-很认真地看着我。
+[[奕莎贝拉的小纸条]]
 
-“你今天怎么不讲话呀？”
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="恐惧照片" tags="" position="6625,1125" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-她轻轻问。
+后来，古堡里的座钟好像走动地愈发缓慢。
 
-“是不是不喜欢我了？”
+有时候我一觉醒来，壁炉里的火居然还维持着昨夜熄灭前的亮度，连一簇跳动的火星都一模一样。
 
-她说这句话的时候，总会露出一点很委屈的表情。
+这里的指针仿佛从那个圣诞夜开始，就再没有真正往前走过。
 
-我最后只能重新抱住她，小声哄她。
+再后来，奕莎贝拉依然很喜欢给我拍照。
 
-“没有。”
-
-“最喜欢你了。”
-
-奕莎贝拉一下子开心起来。
-
-然后低下头，很满足地贴在我耳边笑。
-
-后来有一天。
-
-我忽然发现。
-
-自己已经想不起来——
-
-上一次和除了奕莎贝拉之外的人说话，是什么时候了。&lt;br&gt;&lt;br&gt;
-
-【END】&lt;br&gt;&lt;br&gt;
-
-[[奕莎贝拉的小纸条]]</tw-passagedata><tw-passagedata pid="51" name="半梦照片" tags="" position="4600,275" size="100,100">后来我经常会忽然发呆。
-
-有时候一抬头，
-窗外的雪居然已经停了又下、下了又停。
-
-可我却完全想不起来，
-时间到底过去了多久。
-
-再后来，奕莎贝拉还是很喜欢给我拍照。
-
-可我渐渐开始不喜欢闪光灯。
-
-每次快门响起的时候，我都会有一种很奇怪的感觉。
-
-像自己正在一点一点变薄。
-
-变轻。
-
-被压进那张小小的相纸里面。
-
-奕莎贝拉却特别开心。
-
-她会趴在床上，一张一张翻那些照片。
-
-有时候还会忽然抬起头问我：
-
-“你记得这是哪天拍的吗？”
-
-我张了张嘴。
-
-却发现自己已经有点想不起来了。
-
-后来有一天。
-
-我忽然发现。
-
-那些照片里的我，好像正在慢慢变得越来越像。
-
-一样的笑。
-
-一样的姿势。
-
-一样红红的嘴唇。
-
-像某种被精心保存起来的人偶。
-
-奕莎贝拉却还是很喜欢。
-
-晚上睡觉之前，她甚至会低下头，很轻地亲一下照片里的我。
-
-“这样你就不会消失了。”
-
-她小声说。
-
-可不知道为什么。
-
-那天夜里，我忽然开始害怕镜子。&lt;br&gt;&lt;br&gt;
-
-【END】&lt;br&gt;&lt;br&gt;
-
-
-[[奕莎贝拉还有话想对你说]]</tw-passagedata><tw-passagedata pid="52" name="半梦气味" tags="" position="4600,400" size="100,100">后来我经常会忽然发呆。
-
-有时候一抬头，
-窗外的雪居然已经停了又下、下了又停。
-
-可我却完全想不起来，
-时间到底过去了多久。
-
-再后来，我越来越习惯奕莎贝拉身上的味道。
-
-甜腻的。
-
-冰凉的。
-
-干燥的。
-
-像汽水，有时又很像快要燃尽的柴火。
-
-她特别喜欢抱着我睡觉。
-
-总会把脸埋在我脖子旁边，很轻很轻地呼吸。
-
-像在确认什么。
-
-有时候我半夜醒过来。
-
-会发现她正安安静静闻我的头发。
-
-发现我醒了之后，她还会特别开心地抱住我。
-
-“太好了。”
-
-“味道还在。”
-
-她小声说。
-
-我一开始还觉得有点奇怪。
-
-后来却慢慢习惯了。
-
-甚至有时候，只要离开她太久，我自己都会开始不安。
-
-我开始分不清。
-
-现在让我安心的到底是奕莎贝拉。
-
-还是她身上的味道。
-
-古堡里的毛毯、睡裙、枕头，甚至连空气，都慢慢变成了同一种，甜得发晕的焦香气味。
-
-有一天我站在窗边。
-
-忽然发现。
-
-自己已经想不起来冬天外面的空气闻起来是什么味道了。&lt;br&gt;&lt;br&gt;
-
-【END】&lt;br&gt;&lt;br&gt;
-
-[[奕莎贝拉还有话想对你说]]
-</tw-passagedata><tw-passagedata pid="53" name="半梦声音" tags="" position="4600,525" size="100,100">后来我经常会忽然发呆。
-
-有时候一抬头，
-
-窗外的雪居然已经停了又下、下了又停。
-
-可我却完全想不起来，
-
-时间到底过去了多久。
-
-再后来，奕莎贝拉越来越喜欢听我说话。
-
-她总会趴在我旁边，很认真地看着我。
-
-像连呼吸声都舍不得漏掉。
-
-“再说一句嘛。”
-
-她经常这样撒娇。
-
-我一开始还会觉得不好意思。
-
-后来却渐渐开始害怕安静。
-
-因为只要我不说话。
-
-奕莎贝拉就会一直看着我。
-
-很安静地看。
-
-久到我开始不自在。
-
-“你今天怎么这样安静？”
-
-她会轻轻抱住我。
-
-然后贴在我耳边，小声哄我：
-
-“再叫我一次名字好不好？”
-
-有时候我半夜迷迷糊糊醒过来。
-
-甚至会发现奕莎贝拉正趴在我旁边，安静地听我睡觉时的呼吸声。
-
-发现我睁眼之后，她还会特别开心地笑一下。
-
-“太好了。”
-
-“我还以为你不见了。”
-
-后来有一天。
-
-我忽然发现。
-
-自己已经很久没有和别人说过话了。
-
-除了奕莎贝拉。&lt;br&gt;&lt;br&gt;
-
-【END】&lt;br&gt;&lt;br&gt;
-
-
-[[奕莎贝拉还有话想对你说]]
-</tw-passagedata><tw-passagedata pid="54" name="恐惧照片" tags="" position="4550,675" size="100,100">后来古堡里的钟好像越来越慢了。
-
-有时候我一觉醒来，
-壁炉里的火居然还维持着昨晚一样的亮度。
-
-像这里的时间，
-从那个圣诞夜开始，
-就没有再真正往前走过。
-
-再后来，奕莎贝拉还是很喜欢给我拍照。
-
-只是和以前不一样。
+只是和以前在外面时不同了。
 
 她开始不允许我删掉任何一张。
 
-哪怕只是拍糊了、闭眼了、低头了，她也会立刻把相机抱回怀里，很认真地说：
+哪怕只是拍糊了、闭眼了，或是狼狈地低头躲闪，她也会立刻把相机护进怀里，用一种近乎虔诚的语气认真地说：
 
 “不可以。”
 
-她说这句话的时候，甚至有点像小孩子护食。
+她护着相机的样子，甚至有点像小孩子护食。
 
-我一开始只觉得可爱。
+我最初只觉得荒诞而孩子气，可日子久了，心底却慢慢爬上密密麻麻的不安。
 
-后来却慢慢开始不安。
+因为奕莎贝拉举起镜头的频率实在太高了。
 
-因为奕莎贝拉拍得越来越多了。
-
-早晨刚醒的时候。
-
-低头喝热牛奶的时候。
-
-甚至半夜迷迷糊糊睁开眼的时候。
+清晨刚醒、眼睫还带着水汽的时候；低头喝着温热牛奶的时候；甚至在半夜惊醒、神志不清地睁开眼时——
 
 “咔嚓。”
 
-闪光灯忽然亮起来。
+闪光灯总是在黑暗中突兀地亮起，刺得人双眼生疼。
 
-我被晃得睁不开眼。
-
-奕莎贝拉却坐在床边，很开心地低头看着刚拍好的照片。
+奕莎贝拉却总是坐在床边，借着微弱的光，欢喜地看着手里的相纸一点点显影。
 
 “太好了。”
 
-她小声说。
+她将那些纸片贴在心口，小声呢喃。
 
-“这样你就不会不见了。”
+“这样，你就永远不会不见了。”
 
-我后背忽然有点发冷。
+她说话时的神情认真得近乎残忍，让我无端地打了个寒颤。
 
-因为她说这句话的时候，表情认真得不像玩笑。
+直到有一天，我恍惚着在古堡里转了一圈，才惊觉这里的墙壁上已经密密麻麻地贴满了我的照片。
 
-后来有一天，我发现古堡里已经贴满了我的照片。
+走廊的墙面上。
 
-墙上。
+盘旋的楼梯旁。
 
-楼梯旁边。
+冰冷的壁炉上方。
 
-壁炉上面。
+甚至连每张餐桌的对面，都摆着一帧装在精致木框里的肖像。
 
-甚至连餐桌旁边都摆着。
+无论我走到古堡的哪个角落，都能迎面撞上“我”自己。
 
-不管我走到哪里。
+那些照片里的我，永远穿着同一条裙子，嘴角挂着毫无破绽的笑，脸颊带着虚假的红晕，像一具被抽干了灵魂、永不腐朽的精致玩偶。
 
-都能看见“我”。
+而奕莎贝拉就站在那成百上千个“我”的中央，怀里抱着那台吐出白光的拍立得，偏着头，冲我绽开一个甜腻而无辜的笑。
 
-那些照片里的我都在笑。
+“这样的话，就算你以后又想偷偷跑掉——”
 
-穿着睡裙。
+她朝我走近了一步，指尖轻轻抚过我冰冷的脸颊。
 
-脸红红的。
-
-像永远都不会离开。
-
-而奕莎贝拉站在那些照片中间，抱着新的拍立得，轻轻地冲我笑了一下。
-
-“这样就算你跑掉。”
-
-“我也还能看见你啦。”&lt;br&gt;&lt;br&gt;
-
-【END】&lt;br&gt;&lt;br&gt;
+“我也随时随地，都能找到你啦。”
 
 
-[[奕莎贝拉又轻轻捏了捏你的手]]</tw-passagedata><tw-passagedata pid="55" name="恐惧气味" tags="" position="4175,825" size="100,100">后来古堡里的钟好像越来越慢了。
+—— END ——
 
-有时候我一觉醒来，
-壁炉里的火居然还维持着昨晚一样的亮度。
+恭喜你获得了：
 
-像这里的时间，
-从那个圣诞夜开始，
-就没有再真正往前走过。
+「恐惧-照片结局」
 
-再后来，我越来越习惯奕莎贝拉身上的味道。
+[[奕莎贝拉又轻轻捏了捏你的手]]
 
-甜甜的。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="恐惧气味" tags="" position="6275,1350" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-像草莓融化之后留下的一点酸气，又混着牛奶沐浴露那种柔软到发腻的香。
+后来，古堡里的座钟走动地愈发缓慢。
 
-第一次闻到的时候，我还觉得很好闻。
+有时候我一觉醒来，壁炉里的火居然还维持着昨晚熄灭前的亮度。
 
-现在却开始有点分不清。
+这里的指针仿佛从那个圣诞夜开始，就再没有真正往前走过。
 
-那到底是奕莎贝拉的味道。
+再后来，我变得越来越熟悉奕莎贝拉身上的气味。
 
-还是我的味道。
+甜腻的。
 
-因为不知道从什么时候开始，我身上也慢慢变成了那样。
+像草莓融化后残留的一缕酸气，混着牛奶沐浴露那种柔软到发腻的香。
 
-头发。
+刚开始察觉时，我只觉得这味道并不讨厌。
 
-袖口。
+可日子久了，我却渐渐有些分不清。
 
-睡裙。
+那究竟是奕莎贝拉的气息，还是我自己的。
 
-甚至连嘴唇旁边，都一直残留着一点甜甜的气息。
+因为不知从何时起，我身上也浸透了一模一样的气味。
 
-有时候我洗完澡站在镜子前，甚至会突然恍惚一下。
+发丝间。
 
-像自己正在一点一点变成另一个奕莎贝拉。
+袖口上。
 
-可她却特别喜欢。
+洗得发白的睡裙里。
 
-她越来越喜欢抱着我。
+甚至连双唇开合之间，都终年不散地弥漫着这种温热的甜腥。
 
-越来越喜欢闻我。
+有时洗完澡站在水雾氤氲的镜子前，我看着镜中的自己，会猛地陷入一阵荒诞的恍惚。
 
-尤其是脖子和头发。
+我好像正在被这种味道同化，一点一点变成另一个奕莎贝拉。
 
-有时候接吻结束之后，她甚至不会立刻松开，只是很轻地贴在我旁边呼吸。
+可她却对这种重合狂热不已。
+
+她越发依恋我，恨不得时刻将我揉进怀里。
+
+尤其喜欢贪婪地嗅闻我的气味。
+
+颈侧。
+
+发顶。
+
+每一寸肌肤都不放过。
+
+有时漫长的亲吻结束后，她也迟迟不肯退开，只是贪婪地将脸埋在我颈窝里，任由温热的呼吸拂过皮肤。
 
 一下。
 
 又一下。
 
-像在确认什么。
+像在反刍着某种让人安心的毒药。
 
 “太好了。”
 
-她总会小声说。
+她总会在餍足后贴着我低喃。
 
 “还是这个味道。”
 
-有一天晚上，我半夜迷迷糊糊醒过来。
+直到某个深夜，我被一阵异样感惊醒，迷迷糊糊地睁开双眼。
 
-发现奕莎贝拉正蹲在床边。
+借着惨白的月光，我看见奕莎贝拉正无声地蹲在床边。
 
-怀里抱着我白天换下来的衣服。
+她怀里紧紧抱着我白天换下来、丢在脏衣篓里的睡裙。
 
-她低着头，很认真地闻着袖口，像完全没有察觉我已经醒了。
+她埋着头，神经质而专注地嗅着袖口，动作虔诚得像在举行某种仪式，全然没有察觉我已经醒来。
 
-月光落在她脸上。
+清辉洒在她苍白的侧脸上。
 
-她眼睛亮亮的。
+她眼底闪烁着某种病态的光芒，甚至流露出近乎幸福的满足。
 
-甚至有一点幸福。
+我的后背瞬间窜上一层密密麻麻的凉意。
 
-我后背忽然一阵发凉。
+可紧接着，奕莎贝拉像是终于从那件衣服上汲取够了安全感，满意地收紧双臂，将脸埋在布料里。
 
-可下一秒，奕莎贝拉却像终于闻够了一样，慢慢抱紧了那件衣服。
+她喉咙里溢出一声低低的、宛如恶魔般的笑语。
 
-然后很轻很轻地笑了。
+“这样，你就永远都不会变质了。”
 
-“这样你就不会变掉了。”
+那一瞬间，冰冷的现实如潮水般涌上心头。
 
-她小声说。
+我终于后知后觉地意识到她真正恐惧的，从来都不是我从古堡中逃跑。
 
-那一瞬间，我忽然意识到。
-
-她真正害怕的，好像从来都不是我离开。
-
-而是我有一天，会变得“不像现在这样喜欢她”。&lt;br&gt;&lt;br&gt;
+而是我总有一天，会不再像现在这样、心甘情愿地被她吞没。
 
 
-【END】&lt;br&gt;&lt;br&gt;
 
-[[奕莎贝拉又轻轻捏了捏你的手]]</tw-passagedata><tw-passagedata pid="56" name="恐惧声音" tags="" position="4375,800" size="100,100">后来古堡里的钟好像越来越慢了。
+—— END ——
 
-有时候我一觉醒来，
-壁炉里的火居然还维持着昨晚一样的亮度。
+恭喜你获得了：
 
-像这里的时间，
-从那个圣诞夜开始，
-就没有再真正往前走过。
+「恐惧-气味结局」
 
-再后来，后来奕莎贝拉越来越黏我。
+[[奕莎贝拉又轻轻捏了捏你的手]]
 
-她总喜欢让我叫她名字。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="恐惧声音" tags="" position="6450,1200" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+后来，古堡里的座钟好像越走越慢了。
+
+有时候我一觉醒来，壁炉里的火居然还维持着昨晚熄灭前的亮度，连一簇火苗的高度都分毫不差。
+
+这里的指针仿佛从那个圣诞夜开始，就再没有真正向前走过。
+
+再后来，奕莎贝拉变得越来越黏我。
+
+她总喜欢让我一遍又一遍地叫她的名字。
 
 看电影的时候。
 
-抱着我睡觉的时候。
+被她拥在怀里沉睡的时候。
 
-甚至接吻结束之后。
+甚至在那些漫长、潮湿的亲吻结束之后。
 
-她都会贴在我耳边，很轻地说：
+她都会寸步不离地贴着我的耳廓，固执地讨要一个回音：
 
 “再叫我一次嘛。”
 
-一开始我还会害羞。
+最初我还会羞怯，可日子久了，我却慢慢品出了一丝令人毛骨悚然的端倪。
 
-后来却慢慢发现。
+只要我沉默的时间稍微久了些，奕莎贝拉眼底的光就会肉眼可见地黯淡下去，随即陷入一种近乎病态的不安。
 
-只要我太久不说话，奕莎贝拉就会开始不安。
+她会一瞬不瞬地盯着我。
 
-她会一直看着我。
+安静地注视。
 
-很安静地看。
-
-久到我后背发麻。
+看久了，连空气里的温度都仿佛要凝固，逼得我后背爬满细密的冷汗。
 
 “你怎么不讲话呀？”
 
-她小声问。
+她凑过来，语气里夹杂着真切的委屈，像个随时会被世界抛弃的孩子。
 
-声音甚至有一点委屈。
+有一次，我只是走神发呆得太久，迟迟没有应声。
 
-有一次我只是发呆太久，没有回应她。
+奕莎贝拉却像是被触碰了什么逆鳞，猛地扑过来将我死死抱进怀里。
 
-奕莎贝拉却忽然一下子抱住了我。
+力气大得几乎勒碎我的骨头。
 
-抱得特别紧。
+“你刚刚……是不是差点就不见了？”
 
-“你刚刚是不是差点就不见了？”
+她贴在我胸口呢喃，尾音里竟带着一丝细微的发抖。
 
-她声音很轻。
+我僵在原地，一时间有些错愕。
 
-甚至有一点发抖。
+可下一秒，她已经将脸重新埋进我的颈窝，贪婪地汲取着我的体温，仿佛终于从某种无底的深渊里回了神。
 
-我一下子愣住了。
+“还好……”
 
-可奕莎贝拉却已经重新把脸埋进我肩膀旁边。
-
-像终于安心下来了一样。
-
-“还好。”
-
-她小声说。
+她长长地舒了一口气，满足得像一只餍足的猫。
 
 “我还能听见你。”
 
-后来我渐渐发现。
+从那以后，我发现她变得更加小心翼翼。
 
-奕莎贝拉睡觉的时候，甚至会一直贴着我的胸口。
+甚至在每一个相拥入眠的深夜，她都会把耳朵紧紧贴在我的胸口，固执地聆听着那一下又一下笨拙的心跳，以此来确认我的存在。
 
-像在听我的呼吸。
+直到某个半夜，我被一阵异样感惊醒，迷迷糊糊地睁开眼。
 
-有一天半夜，我迷迷糊糊醒过来。
+月光透过窄长的窗棂淌进来，正落在她苍白的脸上。
 
-发现她正安静地看着我。
+她没有睡。
 
-月光落在她脸上。
+她就那样睁大着眼睛，一眨不眨地盯着我，瞳孔深处透着某种错乱的执拗，像是一只在黑暗里守了整夜的兽。
 
-她眼睛亮亮的。
+见我醒来，她先是一愣，随即唇角绽开一个大大的、毫无阴霾的笑。
 
-像已经很久没有睡觉了。
-
-发现我睁眼之后，她忽然特别开心地笑了。
-
-然后低下头，很轻地亲了亲我。
+然后，她俯下身，温柔地吻了吻我的眼睑。
 
 “太好了。”
 
-“你还在。”&lt;br&gt;&lt;br&gt;
+她贴着我的唇瓣，发出了一声融化在夜色里的喟叹。
+
+“你还在。”
 
 
-【END 】&lt;br&gt;&lt;br&gt;
 
-[[奕莎贝拉又轻轻捏了捏你的手]]</tw-passagedata><tw-passagedata pid="57" name="奕莎贝拉的小纸条" tags="" position="4650,25" size="100,100">&lt;div style=&quot;display:flex; 
-justify-content:center; 
-align-items:center; 
-height:70vh; 
-text-align:center;
-flex-direction:column;&quot;&gt;
-谢谢你愿意陪我过圣诞夜。
+—— END ——
 
-壁炉还在燃烧，雪也还没有停下。
+恭喜你获得了：
 
-你离开之后，我还是会经常想起你的味道。
+「恐惧-声音结局」
 
-也会记得你第一次回吻我的时候。
+[[奕莎贝拉又轻轻捏了捏你的手]]
 
-不过没关系。
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="奕莎贝拉的小纸条" tags="" position="6425,550" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-真正喜欢上的东西，
+🍓 AFTERWORD / 作者后记
 
-本来就是会想永远留下来的。
+Thank u for playing ♡
 
+谢谢喜欢奕莎贝拉、喜欢张奕然的你。
+
+谢谢你愿意看见她身上：
+
+漂亮、危险、柔软、奇怪，又令人移不开视线的魅力。
+
+也希望我们永远拥有那份因坚定选择彼此而生的心动与勇气。
+
+
+🍓 RELATED WORK
+
+《奕莎贝拉惊魂夜》同时存在小说版。
+
+互动游戏更偏向“体验”与“选择”，
+很多更细腻、缓慢、甚至更痛苦的部分，
+在小说中则着墨更多
+
+如果你想看：
+🩸更多奕莎贝拉的挣扎
+🩸更完整的关系变化
+🩸更浓厚的少女惊悚与心理描写
+
+可以前往AO3阅读小说版。
+
+https://archiveofourown.org/works/84529331/chapters/223006066
+
+*小说版含有🔞内容，请酌情阅读。
+
+
+🍓 COPYRIGHT / 版权声明
+
+《奕莎贝拉惊魂夜》为非商业性质同人互动作品。
+
+本作仅用于个人创作交流与展示，不涉及任何商业用途。
+
+作品中的原创文本、页面设计、游戏结构等内容版权归作者所有，请勿擅自转载、修改或二次上传。
+
+取得创作者同意后方可转载、二传等，需标明出处。
+
+
+🍓 CONTACT
+
+策划/ 脚本/ coding：Maggie
+美术设计：Pindell
+
+如果想联系作者，合作，尝试做更多关于张奕然/奕莎贝拉的游戏，欢迎私信：
+
+Maggie：📕/ weibo：@Nipple25 
+
+pp：📕/dy：@Pindellmoon
+
+Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
+
+欢迎交流感想、截图、repo与游玩反馈。
+
+奕莎贝拉宇宙持续建设中......
+
+
+谢谢你愿意陪我过这个圣诞夜。 
+
+其实我很早就明白，真正喜欢上的东西，本来就是会想永远留下来的。
+
+外面的风雪那么大，别人怎么想我都不在乎。
+
+只要你留在这里，落在我怀里，这座古堡就永远是我们的春天。
 
 —— 奕莎贝拉
 
@@ -3750,13 +3021,72 @@ flex-direction:column;&quot;&gt;
 (goto: &quot;重新开始&quot;)
 
 ]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="奕莎贝拉还有话想对你说" tags="" position="5625,1675" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="奕莎贝拉还有话想对你说" tags="" position="4925,425" size="100,100">&lt;div style=&quot;display:flex; 
-justify-content:center; 
-align-items:center; 
-height:70vh; 
-text-align:center;
-flex-direction:column;&quot;&gt;
+🍓 AFTERWORD / 作者后记
+
+Thank u for playing ♡
+
+谢谢喜欢奕莎贝拉、喜欢张奕然的你。
+
+谢谢你愿意看见她身上：
+
+漂亮、危险、柔软、奇怪，又令人移不开视线的魅力。
+
+也希望我们永远拥有那份因坚定选择彼此而生的心动与勇气。
+
+
+🍓 RELATED WORK
+
+《奕莎贝拉惊魂夜》同时存在小说版。
+
+互动游戏更偏向“体验”与“选择”，
+很多更细腻、缓慢、甚至更痛苦的部分，
+在小说中则着墨更多
+
+如果你想看：
+🩸更多奕莎贝拉的挣扎
+🩸更完整的关系变化
+🩸更浓厚的少女惊悚与心理描写
+
+可以前往AO3阅读小说版。
+
+https://archiveofourown.org/works/84529331/chapters/223006066
+
+*小说版含有🔞内容，请酌情阅读。
+
+
+🍓 COPYRIGHT / 版权声明
+
+《奕莎贝拉惊魂夜》为非商业性质同人互动作品。
+
+本作仅用于个人创作交流与展示，不涉及任何商业用途。
+
+作品中的原创文本、页面设计、游戏结构等内容版权归作者所有，请勿擅自转载、修改或二次上传。
+
+取得创作者同意后方可转载、二传等，需标明出处。
+
+
+🍓 CONTACT
+
+策划/ 脚本/ coding：Maggie
+美术/ 页面设计：Pindell
+
+如果想联系作者，合作，尝试做更多游戏，欢迎私信：
+
+Maggie：📕/ weibo：@Nipple25 
+
+pp：📕/dy：@Pindellmoon
+
+Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
+
+欢迎交流感想、截图、repo与游玩反馈。
+
+奕莎贝拉宇宙持续建设中......
+
+
+
+
 如果还有机会的话，
 
 下次请早点来找我吧。
@@ -3772,10 +3102,8 @@ flex-direction:column;&quot;&gt;
 (goto: &quot;重新开始&quot;)
 
 ]
-
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="重新开始" tags="" position="200,500" size="100,100">(set: $marked to false)
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="重新开始" tags="" position="300,950" size="100,100">(set: $marked to false)
 (set: $willing to 0)
-(set: $like to 0)
 (set: $memory to &quot;&quot;)
 (set: $replay to true)
 
@@ -3783,7 +3111,9 @@ flex-direction:column;&quot;&gt;
 
 (goto: &quot;标题页二周目&quot;)
 
-</tw-passagedata><tw-passagedata pid="60" name="标题页二周目" tags="" position="350,500" size="100,100">&#39;&#39;奕莎贝拉惊魂夜&#39;&#39;
+</tw-passagedata><tw-passagedata pid="53" name="标题页二周目" tags="" position="450,1325" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+&#39;&#39;奕莎贝拉惊魂夜&#39;&#39;
 
 ……奇怪。
 
@@ -3791,12 +3121,75 @@ flex-direction:column;&quot;&gt;
 
 这一周好像已经发生过一次了。
 
-(text-colour:red)[[[重新打开日记-&gt;进入游戏]]]</tw-passagedata><tw-passagedata pid="61" name="奕莎贝拉又轻轻捏了捏你的手" tags="" position="4475,975" size="100,100">&lt;div style=&quot;display:flex;justify-content:center;align-items:center;height:70vh;text-align:center;flex-direction:column;&quot;&gt;
-其实那天你回吻我的时候，
+(text-colour:red)[[[重新打开日记-&gt;输入名字]]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="奕莎贝拉又轻轻捏了捏你的手" tags="" position="6550,1375" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+🍓 AFTERWORD / 作者后记
+
+Thank u for playing ♡
+
+谢谢喜欢奕莎贝拉、喜欢张奕然的你。
+
+谢谢你愿意看见她身上：
+
+漂亮、危险、柔软、奇怪，又令人移不开视线的魅力。
+
+也希望我们永远拥有那份因坚定选择彼此而生的心动与勇气。
+
+
+🍓 RELATED WORK
+
+《奕莎贝拉惊魂夜》同时存在小说版。
+
+互动游戏更偏向“体验”与“选择”，
+很多更细腻、缓慢、甚至更痛苦的部分，
+在小说中则着墨更多
+
+如果你想看：
+🩸更多奕莎贝拉的挣扎
+🩸更完整的关系变化
+🩸更浓厚的少女惊悚与心理描写
+
+可以前往AO3阅读小说版。
+
+https://archiveofourown.org/works/84529331/chapters/223006066
+
+*小说版含有🔞内容，请酌情阅读。
+
+
+🍓 COPYRIGHT / 版权声明
+
+《奕莎贝拉惊魂夜》为非商业性质同人互动作品。
+
+本作仅用于个人创作交流与展示，不涉及任何商业用途。
+
+作品中的原创文本、页面设计、游戏结构等内容版权归作者所有，请勿擅自转载、修改或二次上传。
+
+取得创作者同意后方可转载，需标明出处。
+
+
+🍓 CONTACT
+
+策划/ 脚本/ coding：Maggie
+美术设计：Pindell
+
+如果想联系作者，合作，尝试做更多关于张奕然/奕莎贝拉的游戏，欢迎私信：
+
+Maggie：📕/ weibo：@Nipple25 
+
+pp：📕/dy：@Pindellmoon
+
+Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
+
+欢迎交流感想、截图、repo与游玩反馈。
+
+奕莎贝拉宇宙持续建设中......
+
+
+你回吻我的时候，
 
 我真的特别特别开心。
-
-开心到差点没忍住。
 
 所以以后也不要讨厌我哦。
 
@@ -3811,6 +3204,2284 @@ flex-direction:column;&quot;&gt;
 
 ]
 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="留下" tags="" position="6300,1050" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+空气终于重新灌进肺里。
+
+我撑着地毯往后退了两步，抬头时，正好看见她伸出舌头，轻柔地舔掉了唇边沾着的那一点血迹。
+
+甚至带着一丝近乎珍视的虔诚。
+
+我的后背瞬间凉透。
+
+她刚才根本不是在亲吻我。
+
+奕莎贝拉仍旧跪坐在原地看着我，嘴唇湿漉漉的，眼睛在昏暗的烛火下幽光微闪。
+
+“……你跑什么？”
+
+她的字音咬得很慢，尾音拖得极细，倒像是在耐心地哄着一个不懂事的小孩。
+
+我没有回答，从地上弹起来转身就往玄关冲。
+
+壁炉里的火在身后噼啪作响，可迎面而来的走廊却越来越深、越来越暗。
+
+脚下的红色地毯软得像要陷进去，踩上去几乎听不到半点声音。
+
+我跑得太急，肩膀狠狠撞在冰冷的墙壁上，疼得骨头发麻，却根本不敢停下。
+
+后面一直有脚步声。
+
+不紧不慢。
+
+笃定了我无论如何也逃不掉。
+
+“$name。”
+
+奕莎贝拉在后面唤我。
+
+语调依旧黏黏糊糊的。
+
+“外面很冷欸。”
+
+我终于摸到了那扇大门，几乎是扑过去一把拽住了门把手。
+
+冰得刺骨。
+
+门被我狠狠拉开，暴风雪的呼啸瞬间灌了进来。
+
+可就在那一瞬间，我整个人僵在了原地。
+
+门外根本不是什么森林。
+
+依旧是那座古堡。
+
+长长的走廊，暗红的地毯，昏黄的壁灯，一路延伸进不见尽头的黑暗里。这里根本就没有出口。
+
+大脑在一瞬间陷入了一片空白。
+
+下一秒，身后忽然贴上来一具柔软却毫无温度的身体。
+
+奕莎贝拉从后面轻轻抱住了我，动作轻柔得像在对待一件失而复得的宝物。
+
+“抓到了！”
+
+她贴在我耳边，发出一声满足的轻笑。
+
+“怎么办呀……”
+
+她停顿了一下，语气像是在苦恼该怎么处理一件心爱的小玩意。
+
+“要是跑掉了的话——”
+
+“我要吃什么呢。”
+
+我拼命挣扎起来，可她抱得那么紧，紧到骨头生疼，却又小心翼翼地避开了所有会让我受伤的地方，仿佛怕把我碰坏了一般。
+
+“不要害怕。”
+
+她凑到我颈侧，轻轻摸了摸我的头发，声音低低的，像是在哄一个不肯睡觉的小孩。
+
+“马上就好了。”
+
+我却控制不住地浑身发抖。空气里的甜味越来越重——奶油、草莓，还有一股湿热发腥的铁锈味。
+
+恍惚了两秒，我才意识到，那根本不是奕莎贝拉身上的味道。
+
+温热的血正顺着我的下唇一点点往下流。那股甜腻的气息里，混着的是我自己的血。
+
+奕莎贝拉像是在空气中捕捉到了某种极度美妙的信号，忽然吸了一口气，眼睛慢慢弯成好看的月牙。
+
+“好甜呢。”
+
+她小声呢喃。
+
+我头皮发麻，下意识想再次挣开，可身体里的力气正伴随着鲜血一点点被抽干。
+
+奕莎贝拉侧过头，极温柔地亲了亲我的耳朵，像是在做最后的安抚。
+
+“其实，大家最后都会留在这里的。”
+
+她弯起眼睛笑起来。
+
+“你也一样。”
+
+眼前的视野越来越黑，壁炉的跳跃火光、长长的红地毯、摇晃的月光与窗外的残雪，全都在视野里支离破碎、褪成一片虚无。
+
+只有奕莎贝拉还离我很近。
+
+像要把我整个人连皮带骨一点不剩地吞进腹中。
+
+意识涣散的最后一瞬，我听见她满足地发出一声轻叹。
+
+像等了太久太久。
+
+“早点听话，不就好了吗。”
+
+(if: $memory is &quot;photo&quot;)[
+[[你被奕莎贝拉吃进了腹中-&gt;恐惧照片]]
+]
+
+(if: $memory is &quot;smell&quot;)[
+[[你被奕莎贝拉吃进了腹中-&gt;恐惧气味]]
+]
+
+(if: $memory is &quot;voice&quot;)[
+[[你被奕莎贝拉吃进了腹中-&gt;恐惧声音]]
+]
+
+
+
+</tw-passagedata><tw-passagedata pid="56" name="答应" tags="+1" position="850,1000" size="100,100">
+(set: $willing to $willing + 1)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我被撞得发懵，第一反应却是整理一下衣领。
+
+不能在喜欢的人面前狼狈，于是我装作轻松的样子点了点头。
+
+“好，好啊。”
+
+我的胃里突然一阵绞痛，仿佛有一群冰冷的蝴蝶正在里面疯狂扇动翅膀，撞击着我的五脏六腑。
+
+奕莎贝拉浮起甜美的笑容。
+
+“太好啦！”
+
+胃中的那只蝴蝶被这份笑容所震颤，堪堪安静了一些，化作一种粘稠的满足感。
+
+她抱了抱我，甩起书包，一蹦一跳地消失在走廊尽头。
+
+我蹲在原地，手死死按着胃口，靠在墙壁旁慢慢坐了下来咀嚼着刚才发生的一切。
+
+到了晚上，我在床上翻来覆去，怎么也睡不着。
+
+胃中的蝴蝶没有离开，一下一下地挠着我的心尖。
+
+我把脸埋进枕头里，脸颊发烫，只要闭上眼睛，就能闻到她身上那股香气，还能看到她笑着看我的样子。
+
+周末快点来吧。
+
+快点来吧，我想见她，想到胃都要疼死了。
+
+
+&lt;div class=&quot;phone-notice&quot;&gt;
+  📱 奕莎贝拉发来一条消息
+&lt;/div&gt;
+
+[[查看消息-&gt;短信01]]
+
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="57" name="逃跑结局" tags="" position="6000,1200" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+星期日 0:00
+
+我终于看清了那些温存底下的利齿。
+
+我狠狠推开了她。她踉跄了一步，显然没料到这具被她搂在怀里百依百顺的躯壳，竟敢生出这样的力气。
+
+壁炉里的桦木“啪”地炸开一簇火星，将草莓奶油的甜香熏得发焦，而这温热的腻味里，分明翻涌着一股潮湿温热的铁锈腥气。
+
+我扶着墙剧烈喘息，胸口疼得像要裂开，双唇火辣辣地发麻，舌尖还残留着方才惊惧中咬破的血腥味。
+
+奕莎贝拉却只是静静地站在原地看着我。
+
+她的一缕长发有些凌乱地贴在颊边，嘴唇湿漉漉的，脸色苍白得近乎透明。
+
+她看起来依然是那样美丽动人。
+
+她不是人类。
+
+那若隐若现的尖牙与血丝，分明是一个饿了太久的怪物，终于嗅到了食物致命的香气。
+
+我后背的冷汗瞬间结了冰。那些相拥、亲吻、呢喃与黏人的眼波……从来都不是因为爱。
+
+是一种捕猎前的温情。
+
+“……你怕我？”
+
+她轻声问，语调里竟透着一丝近乎委屈的茫然。
+
+我没有说话，只是死死盯着她，脚下一寸一寸往后退。
+
+她没有追过来。她只是站在原地，那双眼睛死死黏在我身上，像是不舍，又像是蓄谋已久的怨毒。
+
+屋内的空气死寂如铁，只有窗外狂乱的风雪在疯狂撕扯着窗棂。
+
+一个念头在脑海中炸开：再不走，就永远走不掉了。
+
+我猛地转身，用尽全身力气撞向大门。
+
+这一次，门开了。
+
+刺骨的寒风裹挟着暴雪劈头盖脸地砸下来，像一记耳光抽醒了我麻木的神经。
+
+我跌跌撞撞地扎进雪里，冰冷的空气瞬间撕裂了肺腑，连呼吸都带着浓重的血腥味。
+
+积雪深可没膝，我狼狈地摔倒，爬起，再摔倒，连回头看一眼的勇气都没有。
+
+身后没有脚步声。
+
+她没有追出来。
+
+可我依然在跑，拼命地向前跑，直到那座亮着诡异暖光的古堡彻底被风雪吞没，直至天地间只剩下我绝望的喘息。
+
+……
+
+我不知道自己究竟是怎样回到了家。
+
+高烧不退，足足烧了整整三天三夜。
+
+母亲忧心忡忡地问我是否着了凉，我张了张嘴，嗓子里却像塞满了滚烫的灰烬，一个字也吐不出来。
+
+我开始整晚整晚地做噩梦。
+
+梦里永远是挥之不去的漫天大雪，永远是那条没有尽头的、铺着红地毯的狭窄走廊。
+
+壁炉、奶油蛋糕、永无止境的旋转木马。
+
+然后，奕莎贝拉冰冷的呼吸会贴上我的耳廓，用黏腻的语调低语：
+
+“外面很冷欸……” （改）
+
+那场高烧缠绵了许久，即便清醒过来，游乐园与古堡的阴影也如附骨之疽。
+
+我精神几近崩溃，最终只能神经质般地央求父母带我转学。
+
+看着我入睡后因惊恐而发疯般的尖叫，他们终于连夜答应。
+
+我成功转入了一座陌生的城市，一所崭新的学校，重新编入新的人际关系网。
+
+生活似乎终于慢了下来，回到了它原本的轨道。
+
+我开始很少再梦见她，渐渐能够重新面不告色地吃下草莓蛋糕，甚至开始产生一种恍惚的错觉
+
+——或许，那个叫奕莎贝拉的女孩，从头到尾都只是我精神崩溃下的一场幻觉？
+
+
+
+(if: $memory is &quot;photo&quot;)[
+[[奕莎贝拉把你含进了身体里-&gt;逃跑照片]]
+]
+
+(if: $memory is &quot;smell&quot;)[
+[[奕莎贝拉把你含进了身体里-&gt;逃跑气味]]
+]
+
+(if: $memory is &quot;voice&quot;)[
+[[奕莎贝拉把你含进了身体里-&gt;逃跑声音]]
+]
+
+</tw-passagedata><tw-passagedata pid="58" name="逃跑照片" tags="" position="5700,1225" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我开始不再拍照。
+
+不再更新朋友圈。
+
+甚至连浴室里那面水雾氤氲的镜子，也被我用厚重的毛巾死死遮住，再也没有勇气直视。
+
+我以为只要将自己藏进人群的阴影里，那个名字、那个雪夜、那座吞噬过我的古堡，就会像风中残烛一样彻底熄灭。
+
+直到某天午后，阳光正好。
+
+新班级的班长笑吟吟地朝我跑来，不由分说地揽住我的肩膀：“别总是一副闷闷不乐的样子嘛，来，拍一张纪念一下！”
+
+我下意识地想要挣脱、想要拒绝，可那冰凉的塑料机身已经贴上了面颊。
+
+“咔嚓。”
+
+闪光灯亮起的刹那，世界被一片惨白刺得发白。
+
+拍立得吐出一张崭新的相纸。
+
+我们凑在一起，看着显影药水在空白的相纸上慢慢洇开、成型，勾勒出阳光下崭新的教学楼，以及我略显僵硬的笑脸。
+
+我刚松了一口气，紧接着，后背的寒意便如毒蛇般瞬间窜上头顶。
+
+在照片边缘、那片被阳光照耀的狭小角落里。
+
+不知何时，多出了一只苍白得近乎透明的手。
+
+那修剪整齐的指甲，那曾经无数次挽着我手臂的弧度——正极其轻柔、极其自然地，搭在我的肩膀上。
+
+空气仿佛在这一秒冻结。
+
+耳边隐约飘来一声极轻的叹息，带着化不开的草莓奶油香气，贴着我的耳廓幽幽响起：
+
+“抓到你了。”
+
+
+—— END ——
+
+
+恭喜你获得了：
+
+「逃跑-照片结局」
+
+
+
+[[奕莎贝拉又传了简讯给你]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="59" name="逃跑气味" tags="" position="5850,1350" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+直到某天放学。
+
+暮色四合，街边的路灯刚亮起昏黄的光，将长长的影子拖得支离破碎。
+
+我拐进巷口的一家便利店，随手拉开冰柜的玻璃门，冰凉的冷气扑面而来，我拿下一盒草莓牛奶。
+
+就在那扇玻璃门敞开、冷雾漫出的瞬间，一股极淡的香气毫无预兆地钻入鼻腔。
+
+那是草莓奶油的甜腻，混着一丝陈旧的防腐剂与冰雪的腥气。
+
+极轻。
+
+轻得就像有人正贴在我的耳廓上，吐出带着寒意的呼吸。
+
+我僵在原地，手里还举着那盒草莓牛奶，血液在这一秒尽数倒流。
+
+心脏在胸腔里疯狂地撞击，连指尖都开始发麻。我以为逃回了这座陌生的城市，以为换了学校、戒掉了照片，就能把那个噩梦彻底甩在身后。
+
+下一秒，身后传来了踩碎雪粒的“咯吱”声。
+
+一个清脆而熟悉的声音，带着几分慵懒的笑意，不紧不慢地在耳畔响起：
+
+“同学……你身上怎么也有一股这个味道？”
+
+……
+
+我浑身剧烈地一颤，连呼吸都停滞了。
+
+我不敢动，甚至不敢眨眼，只能透过手里那盒冰凉的牛奶，死死盯着眼前明亮的玻璃窗。
+
+窗玻璃的倒影里，除了我惨白的脸，正缓缓浮现出另一道纤细的身影。
+
+她就站在我斜后方半步的距离，穿着那条白色裙子，头顶上是珍珠发卡。
+
+她微微歪着头，嘴角扯开一个夸张而熟悉的弧度，正隔着玻璃，贪婪地注视着我。
+
+空气仿佛在此刻彻底凝固。
+
+耳边紧接着响起了她贴着后颈的低语：
+
+“抓到你了。”
+
+—— END ——
+
+恭喜你获得了：
+
+「逃跑-气味结局」
+
+[[奕莎贝拉又传了简讯给你]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="逃跑声音" tags="" position="6025,1450" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我开始变得极少说话。
+
+新学校里的人都觉得我有些古怪孤僻，像个离群索居的异类。
+
+可只有我自己心里清楚——我不是不想说，而是不敢。
+
+在这座看似平静的新城市里，我把声音当成了最危险的诱饵。
+
+我刻意压低嗓音，能用点头代替绝不开口，甚至连呼吸都放得缓慢。
+
+我以为只要像个哑巴一样活在阴影里，那个名字、那座古堡、那个声音，就再也找不到我。
+
+直到某天下午，闷热的课堂上，老师拿着名册开始破天荒地开始点名。
+
+教室里弥漫着粉笔灰和慵懒的夏意。
+
+前几个名字顺畅地掠过，直到老师的眉头忽然微微蹙起，停顿了半秒，接着用一种带着审视的语气，念出了那个本该被我尘封的名字。
+
+“……在吗？”
+
+空气仿佛在这一瞬间被抽干。全班数十双眼睛齐刷刷地落在我身上，带着好奇、疑惑与催促。
+
+我的喉咙像是塞满了滚烫的沙砾，死死咬着牙，一个字也吐不出来。
+
+时间被拉得无限漫长，我看着黑板上的粉笔字一点点模糊，最终在老师不耐烦的第二次催促下，不得不打破了连日来的死寂。
+
+我颤抖着，极其艰难地、近乎气音般挤出两个字：
+
+“……到。”
+
+声音在空旷寂静的教室里显得那么突兀。
+
+话音落下的那一秒钟，我浑身的血液瞬间冻结。
+
+紧接着，空寂的走廊外，骤然响起一声突兀的轻笑。
+
+那笑声脆生生的，带着少女特有的娇俏与恶趣味，在寂静的空气里直往人耳膜里钻。
+
+门外响起笃笃的敲门声。
+
+讲台上的老师微微一怔，拉开门走出去。
+
+隐约的交谈声后，老师重新转过身来，目光扫过讲台下死一般寂静的我，嘴角扯开一个温和的笑：
+
+“请大家安静，我们班今天……转来了一位新同学。”
+
+—— END ——
+
+恭喜你获得了：
+
+「逃跑-声音结局」
+
+[[奕莎贝拉又传了简讯给你]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="进入古堡。" tags="" position="4225,975" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+[[“这里只有你一个人住吗？”-&gt;一个人住]]
+[[“你家为什么这么安静？”-&gt;很安静]]
+[[还是不要问了-&gt;不问]]
+</tw-passagedata><tw-passagedata pid="62" name="作者的话" tags="" position="175,1300" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+🍓 AUTHOR&#39;S NOTES / 作者的话
+
+感谢你点开这个页面！Thank u for playing ♡
+
+Maggie：
+
+这个游戏最初始于作者迷恋奕莎贝拉穿着睡裙从镜头前奔跑来的场面，而后幻想着贝拉是喜欢邀请恋人来享受电影之夜的可爱女孩。
+
+她会兴奋地播放恐怖片，将毛茸茸的毛毯盖在两人身上，并在恐怖场面来临时惊声尖叫地抱住自己的恋人。又会在动情之时流下眼泪，向恋人寻求怀抱。
+
+由于原作《危险的关系》中对于奕莎贝拉的角色着墨较少，则为我们留下了更多的创作空间，在网络上对于贝拉的塑造与幻想是如此的丰富，核心也大多围绕在亲密关系上。
+
+也许，她就是这样的可爱迷人吧！
+
+老婆酱！我爱你！（破音）
+
+当然更要感谢的是domi这个灵魂纯粹、具有强烈性别跨越之美的孩子，感谢你的演绎，在性别议题热潮的当下，你依然真诚而勇敢地拥抱着“女性”这一概念，赋予了角色跨越表象的韧性与生命力。
+
+再次感谢大家，祝大家今晚都能梦见贝拉！
+
+pp：
+
+游戏故事本身的氛围和文字都对每一幅画的创作有着超级深刻的影响，能有机会用自己的作品，把如此这般的奕莎贝拉展现在大家面前真是太好了！
+
+绘制一些例如草莓大福的小物时，时常会有一种剧组道具师之感。把这些故事里的锚点一点点绘制出来，让它们从文字和想象里变得具体以及真实是一个很有意思也很幸福的过程。
+
+但也正如Maggie上面提到的，domi是这一切美好的源头。我曾无数次感叹，张奕然身上有一种独特的“人性美”。也正因如此，我才能在面对这样一个角色、一部作品的时候，总是有源源不断的灵感，想去展现更多的细节。
+
+最后，想要谢谢大家的喜欢，希望每一幅画都能让大家更好地沉浸在这个夜晚🤲🏻
+
+
+🍓 WORKS MENTIONED 作品提及与参考
+
+Film Reference：
+Jennifer&#39;s Body  (2009)
+Dir. Karyn Kusama. Written by Diablo Cody.
+Mentioned and watched by the characters in-game.
+
+Art Reference：
+1.刀叉：@leocostelloe ,instagram,2024/7/8, https://www.instagram.com/p/C9KuDjzoyDV/?igsi=aXhnaWc0amY4NnE1
+2.圣诞花环：
+@孢子甘蓝, https://xhslink.cn/o/3YTyYz3Log8 
+
+
+🍓 COPYRIGHT / 版权声明
+
+《奕莎贝拉惊魂夜》为非商业性质同人互动作品。
+
+本作仅用于个人创作交流与展示，不涉及任何商业用途。
+
+作品中的原创文本、页面设计、游戏结构等内容版权归作者所有，请勿擅自转载、修改或二次上传。
+
+取得创作者同意后方可转载、二传等。
+
+
+🍓 RELATED WORK
+
+《奕莎贝拉惊魂夜》同时存在小说版。
+
+互动游戏更偏向“体验”与“选择”，
+很多更细腻、缓慢、甚至更痛苦的部分，
+在小说中则着墨更多
+
+如果你想看：
+🩸更多奕莎贝拉的挣扎
+🩸更完整的关系变化
+🩸更浓厚的少女惊悚与心理描写
+
+可以前往AO3阅读小说版。
+
+https://archiveofourown.org/works/84529331/chapters/223006066
+
+注：小说版含有🔞内容，请酌情阅读。
+
+
+🍓 SPECIAL THANKS 特别致谢 
+
+首先感谢内测师们提出的宝贵建议，是你们的认真与细心将《奕莎贝拉惊魂夜》打磨地闪闪发亮！
+
+此外，在 Demo 上线之后，我们收到了一位画手为《奕莎贝拉惊魂夜》创作的三幅同人画作。
+
+看到她用自己的画笔赋予贝拉别样的生命力，我们既惊喜又感动。因此，我们决定将这三幅作品正式收录进正片游戏里，作为制作组的一份小小回礼。
+
+谢谢你喜欢这个故事，也谢谢你让贝拉在这个世界的纸面上落脚。希望未来，你还能遇见更多让你心动、想要提笔记录的角色与故事！
+
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;bella.jpg&quot; style=&quot;width: 150%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+
+——《奕莎贝拉惊魂夜》制作组
+
+
+🍓 CONTACT
+
+策划/ 脚本/ coding：Maggie
+美术/ 页面设计：Pindell
+
+如果想联系作者，合作，尝试做更多关于张奕然/奕莎贝拉的游戏，欢迎私信：
+
+Maggie：📕/ weibo：@Nipple25 
+
+pp：📕/dy：@Pindellmoon
+
+Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
+
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="游玩警告" tags="" position="300,1125" size="100,100"># ⚠ 游玩提醒 ⚠
+
+&lt;!-- 使用 font-size 调整字体大小 --&gt;
+&lt;span style=&quot;font-size: 1.5em; font-weight: bold;&quot;&gt;不建议15岁以下儿童游玩&lt;/span&gt;
+
+&lt;span style=&quot;font-size: 0.8em;&quot;&gt;
+《奕莎贝拉惊魂夜》包含：
+
+♡ 轻微心理惊悚
+
+♡ 怪谈元素
+
+♡ 轻度恐怖描写
+
+♡ 不健康的迷恋
+
+♡ 非常健康的恋爱（大概）
+
+♡ 一位美丽、迷人的小姐
+
+本游戏推荐：
+
+√ 喜欢怪谈的人
+
+√ 喜欢少女漫画的人
+
+√ 喜欢恐怖故事的人
+
+√ 喜欢奕莎贝拉的人
+
+本游戏不推荐：
+
+✗ 半夜两点独自在被窝里游玩的人
+
+✗ 容易把游戏当真的人
+
+✗ 被奕莎贝拉盯着看三秒就脸红的人
+
+如果你已经准备好了——
+&lt;/span&gt;
+
+[[请进入游戏-&gt;输入名字]]</tw-passagedata><tw-passagedata pid="64" name="短信01" tags="phone" position="975,1125" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+奕莎贝拉：
+
+$name，睡了吗？
+  
+绣球花，玫瑰花和百合花，你更喜欢哪一个？
+
+
+我犹豫了片刻，最终选择：
+
+
+[[绣球花-&gt;绣球花]]
+
+[[玫瑰花-&gt;玫瑰花]]
+
+[[百合花-&gt;百合花]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="绣球花" tags="" position="1150,925" size="100,100">(set: $memory to &quot;绣球花&quot;)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+最后我选择了绣球花。
+
+
+奕莎贝拉又发来消息：
+
+绣球花啊……在花朵枯萎的时候，颜色会变得很像坏死组织呢。
+
+不过我很喜欢这种过程，晚安。
+
+
+我进入了梦乡，期待着[[星期二]] 的到来。</tw-passagedata><tw-passagedata pid="66" name="玫瑰花" tags="" position="1150,1125" size="100,100">(set: $memory to &quot;玫瑰花&quot;)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我最后选择了玫瑰花。
+
+
+奕莎贝拉：
+
+玫瑰吗？真是好选择，虽然美丽，但茎上都是刺。
+
+如果不小心捏碎了，汁液会把手指染得像血一样。
+
+
+我进入了梦乡，期待着[[星期二]] 的到来。</tw-passagedata><tw-passagedata pid="67" name="百合花" tags="" position="1150,1300" size="100,100">(set: $memory to &quot;百合花&quot;)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我最后选了百合花。
+
+奕莎贝拉：
+
+百合？我特别喜欢它的味道，香气浓郁。
+
+但那种气味在封闭的房间里闻久了，会让人头晕……直到窒息。待久了，人就什么都不想了。
+
+不过选的真好，晚安！
+
+
+我进入了梦乡，期待着[[星期二]] 的到来。</tw-passagedata><tw-passagedata pid="68" name="调查线星期五" tags="" position="2450,1300" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 70%;&quot;&gt;
+    &lt;img src=&quot;friresearch.jpg&quot; style=&quot;width: 70%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+星期五 档案室
+
+天还没亮我就摸进了新教学楼的行政区。
+
+这里的走廊铺着厚重的地毯，静得连一根针掉在地上都能听见。
+
+教务资料室的门锁是那种老式的十字暗锁，我用从校外买来简易开锁片，蹑手蹑脚地试了好几次，直到“咔哒”一声轻响，才把门轻轻拧开。
+
+里面没有陈年的霉味，反而弥漫着一股类似福尔马林或者消毒水的味道。
+
+我蹑手蹑脚地挪到高大的金属档案柜前，指尖止不住地颤抖。
+
+为了不引人注意，我没敢开手电，只是借着窗外惨淡的晨光，在那排分类严密的文件夹里翻找着。
+
+指尖在一排整齐的标签上划过，我终于停在了一个没有任何外露标记的、厚重的抽屉前。
+
+用备用夹缝里的钥匙撬开后，我找到了那个薄薄的、边缘甚至带着微温的文件夹。
+
+【学生档案：奕莎贝拉】
+
+我屏住呼吸，颤抖着翻开第一页。
+
+(link-replace: &quot;▶ 点击这里翻开档案&quot;)[
+
+  &lt;div style=&quot;text-align: center; width: 100%;&quot;&gt;
+  &lt;img src=&quot;fakedoc.jpg&quot; style=&quot;max-width: 1000px; width: 100%; display: block; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+]
+
+没有我预想中任何诡异的描述。
+
+照片上，她笑容明媚而温和，像任何一个普通的高中女孩。
+
+住址写着城市里的高档社区，课外活动和教师评价也都是清一色的丰富，转学记录里清清楚楚写着她在各地的优秀成绩。
+
+这看起来……就是一份再普通不过、甚至精修得挑不出半点毛病的档案。
+
+“太正常了。” 我喃喃自语，甚至感到一阵荒谬。
+
+难道是我多心了？她只是个普通女生，那瓶沐浴露也真的只是无害的礼物？
+
+我感到一阵脱力，刚想合上文件夹，身后忽然传来一声——
+
+“你在找什么呀？”
+
+我心脏猛地一缩，猛地回头。
+
+奕莎贝拉不知何时出现在了资料室门口。
+
+她靠在门框上，双手环胸，静静地看着我。
+
+她今天穿着白裙子，像是一朵毫无杂质的百合，可此时那双眼睛里却没有任何温度。
+
+“这里很冷的，对吧？”
+
+她缓步走过来，离我越来越近，最后停在我身前。
+
+她微微低下头，在空气里那股冷清的消毒水味中，极其明显地皱了皱眉。
+
+她俯下身，鼻尖几乎贴到我的脖颈处，重重地嗅了一下。
+
+空气安静得可怕。
+
+“没有那种味道。”
+
+她抬起头，手指轻轻抚摸过我的锁骨，眼神里透着一股被欺骗后的失落，让她看起来甚至无辜有余。
+
+“我送你的‘牛奶’……你没有用吗？”
+
+她的指甲轻轻勾住我的衣领，动作温柔得仿佛是在爱抚，但我却感觉到皮肤下的肌肉在不受控制地战栗。
+
+“那个一定要用的。” 她凑在我耳边，语气不容置喙。
+
+我浑身冷汗直冒，僵硬地点点头，机械地发出声音：
+
+“……好，我回去就用。”
+
+她这才满意地笑了一下，又恢复了平时那种粘人的甜腻模样，亲昵地推了我一把。
+
+“真乖。”
+
+我这才注意到，她趁机在我怀里塞进了一张精美的卡片。
+
+(if: $memory is &quot;绣球花_1&quot;)[
+[[看看是什么-&gt;邀请函绣球1]]
+]
+
+(if: $memory is &quot;玫瑰花_1&quot;)[
+[[看看是什么-&gt;邀请函玫瑰1]]
+]
+
+(if: $memory is &quot;百合花_1&quot;)[
+[[看看是什么-&gt;邀请函百合1]]
+]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="市图书馆" tags="" position="3100,1150" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+市图书馆
+
+放学后，我几乎是马不停蹄地飞奔到了市图书馆。
+
+这里的地下报刊室存放着大量不入流的旧报纸和无人问津的历史资料。
+
+管理员替我开了灯，我却不得不捂住鼻息。
+
+空气里弥漫着陈旧纸浆发酵后的气味，潮湿得像个废弃的停尸间。
+
+我翻遍了过去二十年的微缩胶片，那些关于“学校失踪案”的报道少得可怜。
+
+要么是语焉不详的“转学”，要么是被编辑刻意压缩、寥寥几行的豆腐块新闻。
+
+一无所获的我烦躁地叹了口气，随手翻开了旁边一叠本市历届的高中毕业纪念册。
+
+今年是二〇二六年。我从去年的开始往前推。
+
+二〇二五。
+
+二〇二四。
+
+二〇二三。
+
+……
+
+一本，两本，三本。
+
+枯燥的翻找让我的手指有些发酸，直到我顺手抽出二〇一六的那一本。
+
+翻开合影页的瞬间......这是谁？
+
+毕业照最后一排的最右边，穿着当时流行的小西装制服，齐耳波波头，微微侧着脸，正对着镜头扬起唇角。
+
+……
+
+奕莎贝拉。
+
+我有些错愕地屏住呼吸，在心里疯狂找借口安慰自己：只是长得像罢了，这世界上长得相似的人多的是。
+
+可那双眼睛、挺翘的鼻尖，还有嘴角毫无破绽的弧度……
+
+我指尖发颤，猛地把那本纪念册展开放平在桌上，又急切地往前翻。
+
+二〇一五。
+
+没有。
+
+二〇一四。
+
+没有。
+
+……
+
+我一连气往前翻了十年，直到翻开二〇〇六的那一本。
+
+泛黄的纸页上，照片风格已经变成了千禧年代特有的质感。
+
+她穿着当时流行的复古大翻领制服，留着那个年代标志性的碎发刘海。
+
+可那张脸，赫然还是她。
+
+我心头狂跳，几乎是颤抖着继续往前翻，直接抽出了一九九六的纪念册。
+
+九十年代的纸张粗糙许多，黑白与彩色交织。
+
+照片里的她，换上了那个年代风靡的港风长发，穿着宽大的经典水手服制服，正冲着镜头浅笑。
+
+制服变了，发型变了，时代审美的滤镜也变了。
+
+但那张脸，却像一个精密的模具，分毫不差地嵌在不同年代的合影里。
+
+我猛地一咬牙，又抽出一九八六。
+
+那是斑驳发黄的黑白照片，颗粒感极重，所有人都在那个年代特有的高发胶盘发和夸张垫肩衬衫下显得模糊不清。
+
+而她，穿着八十年代复古的立领衬衫，长发整齐地束在脑后。
+
+我慢慢把这几本跨越三十年的毕业册一字排开，死死盯着桌上。
+
+一九八六。
+一九九六。
+二〇〇六。
+二〇一六。
+
+四个不同的年代。
+
+四套完全符合时代潮流的制服，四款截然不同的复古发型。
+
+她就像一个行走的时代切片，极其完美、毫无破绽地把自己“揉碎”进每一个十年里。
+
+她们隔着漫长的时间长河，对着镜头展露出超越岁月的诡异笑容，也像是在隔空看着我。
+
+我双腿发软，立刻掏出手机，想要拍照保留证据。
+
+镜头对准桌面。
+
+“咔嚓。”
+
+我低头查看屏幕。
+
+呼吸在瞬间彻底停滞了。
+
+照片中，最后一排的最右侧空空如也。
+
+奕莎贝拉，不见了。
+
+我猛地抬起头，揉了揉眼睛——她明明还好好地躺在纸质的毕业册里，冲我微笑着。
+
+我又慌乱地按了一次快门。
+
+还是没有。
+
+每一张照片，只要通过电子镜头捕捉，就永远缺了同一个人。
+
+可只要我放下手机，她就安安静静地站在那儿，仿佛从未离开。
+
+我后背瞬间渗出一层冷汗，脑子里轰的一声——
+
+“同学。”
+
+身后毫无预兆地响起一个声音。
+
+我吓得浑身一哆嗦，差点把手机直接甩出去。
+
+图书馆管理员不知道什么时候站在了我身后。
+
+“图书馆里不能拍照哦。”
+
+她瞥了一眼我桌上摊开的旧书册，又顺着我惊恐失措的视线落向桌面。
+
+“同学，有什么问题吗？”
+
+我张了张干涩的嘴唇，声音抖得不成样子。
+
+“这里……”
+
+我颤抖着指向最后一排。
+
+“这个女生……”
+
+管理员微微皱起眉，俯下身低头看了一眼。
+
+“女生？”
+
+她顺手把毕业册往自己那边拨了拨，仔细辨认着。
+
+“最后一排这里没人啊。”
+
+我怔住了。
+
+她自顾自地翻到另外一本。
+
+“这里也是空的。”
+
+又翻开再一本。
+
+“这本也没有啊。”
+
+管理员直起腰，用一种关切又怪异的眼神打量着我。
+
+“同学，是不是最近学习压力太大了，产生幻觉了？”
+
+我一句话也说不出来，双耳轰鸣。
+
+等我僵硬地低下头再看——毕业照里的奕莎贝拉依旧站在老地方，冲我静静地微笑。
+
+口袋里的手机突然震动起来。
+
+【奕莎贝拉】
+
+「找到想找的东西了吗？♡」
+
+紧接着，屏幕上又弹出了第二条。
+
+「明天记得来哦，我会一直等你。」
+
+我死死盯着那行字，刺骨的冰凉从脊椎一路窜上头顶。
+
+我快速收拾好东西，逃也似地走出了图书馆。
+
+市中心的街道上霓虹闪烁，喧嚣的人潮川流不息，我知道自己已经无路可逃。
+
+深吸了一口气，我裹紧了外套，朝着家的方向走去。
+
+整理好心情，迎接明天的赴约。
+
+
+
+
+[[准备赴约-&gt;调查线游乐园]]
+
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="调查线游乐园" tags="" position="3100,1325" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;sat.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+星期六 游乐园
+
+我醒得很早。
+
+昨夜几乎未合眼。
+
+梦里翻来覆去都是那些发黄的毕业册，纸页在眼前哗啦啦地翻过，每一张照片的最后一排，都站着同一个毫无变化的女孩。
+
+醒来的时候，窗外天还没亮。
+
+我站在镜子前，看着自己苍白的脸色，在犹豫间，还是涂了些显气色的唇膏。
+
+至少……别让她看出我的异样。
+
+当我赶到时，奕莎贝拉已经站在游乐园的门廊下了。
+
+她今天穿着一件毛茸茸的白色短外套，下搭一条蓬松的白色短裙，踩着一双长靴，修长的双腿就这样毫无遮挡地露在冬日冰冷的空气里。
+
+她正低头踢着脚边的小石子，精致得像百货商场的橱窗里最精美的洋娃娃。
+
+听见我的脚步声，她立刻抬起头，朝我绽开一个毫无阴霾的笑。
+
+“你来啦！”
+
+她笑着跑过来，熟练地挽住我的手臂。
+
+尽管隔着衣服，可当她挽上来的那一刻，我却敏锐地感觉到——她的身体冷得像一块冰，甚至没有一丝属于活人的体温。
+
+我身体轻轻僵了一下。
+
+她却像什么都没察觉一样，歪着脑袋凑过来打量我。
+
+“怎么啦？从刚才开始就一直在发呆。”
+
+我摇摇头，强压下喉咙里的干涩。
+
+“没什么。”
+
+其实我肚子里压着太多话想问。
+
+那些跨越三十年的毕业照。
+
+图书馆里永远拍不出来的空白。
+
+还有永远知晓我行踪的短信。
+
+可话到了嘴边，看着她那张温和无辜的脸，却一句也说不出口。
+
+她还是和平时一样，甚至比平时笑得更开心。
+
+仿佛这几天所有让我夜不能寐、几近崩溃的恐惧，都只是我一个人无中生有的胡思乱想。
+
+游乐园里到处都是圣诞装饰。
+
+巨型的圣诞树挂满彩灯，广播循环播放着欢快的节日旋律，小孩子举着气球从我们身边欢笑着跑过。
+
+空气里飘着焦糖、爆米花和热可可的甜香。
+
+我忽然想起昨天在地下阅览室里闻到的、那股令人窒息的陈旧纸浆味。
+
+甜腻与腐朽交织在一起，胃里一阵翻江倒海。
+
+“怎么了，脸色这么难看，你冷吗？”
+
+奕莎贝拉停下脚步，眼眸里写满了担忧。
+
+她摸摸我的脸，动作自然地替我仔细整理了一下围巾。
+
+那双眼睛倒映着游乐园璀璨的彩灯，干净得仿佛没有任何秘密。
+
+可我却不敢再直视她。
+
+她拉着我的手，走到巨幅的游乐园导览图前，将决定权毫无保留地交给了我。
+
+“开心一点啦，今天难得出来玩。”
+
+她笑眯眯地眨了眨眼。
+
+“你想先玩哪个呢？”
+
+我的目光慢慢从地图上扫过。
+
+远处，巨大的摩天轮在灰白的冬日天幕下缓缓转动。
+
+不远处的鬼屋藏在阴影里，透着股莫名的压抑。
+
+而旋转木马在音乐声中一圈又一圈，机械地重复着永不停歇的轨迹。
+
+
+[[去摩天轮，那里在半空中无法逃跑-&gt;摩天轮1]]
+[[去鬼屋，那里或许藏着真相的影子-&gt;鬼屋1]]
+[[去旋转木马，那是循环开始的地方-&gt;旋转木马1]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="摩天轮1" tags="" position="3275,1300" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+封闭的车厢在缓缓上升，隔绝了外界的风声，只剩下齿轮在脚底下发出单调而沉闷的咬合声
+
+月光投下的光亮所折射出的阴影恰好裁切过她秀挺的鼻梁，隐去了半张脸的神情。
+
+她漫不经心地把玩着那张烫金的入场券，修剪圆润的指甲在冰凉的铁艺护栏上叩击出清脆的节拍。
+
+我侧过头看着她，喉咙发紧，忍不住低声试探：
+
+“奕莎贝拉，我们这样翘课出来玩，你家里人……真的不担心吗？”
+
+她手里把玩的动作骤然一顿。
+
+随后，她抬起眼睫，冲我露出一个堪称乖巧的笑：“他们很忙的。”
+
+“而且放心吧，” 
+
+她语调温软，“今晚他们也不会回来的……所以，不用担心被抓包，也不用尴尬。”
+
+话音落下的瞬间，头顶冷白色的轿厢顶灯刺破阴影。
+
+在那种毫无温度的光线里，她漆黑的瞳孔深处，极快地掠过了一闪而逝的、犹如镜面反光般的金属冷芒。
+
+可下一秒，她又笑盈盈地倾身向前。
+
+温热的气息混着她身上标志性的淡淡甜香，铺天盖地压了过来。
+
+她几乎贴上了我的耳廓，声音低得诱哄：
+
+“你在紧张什么呀？”
+
+她看着我，声音软绵绵的，像是在开玩笑：
+
+“四周都被锁死了，这么高的天上，就算你想跑……也无处可去哦。”
+
+
+
+那语气像极了情人间的耳语，可四周翻涌的空气却陡然沉降，压得我耳膜隐隐发鸣。
+
+她什么也没承认，却又把所有的暧昧与危险，连骨带肉地摊开在悬空的铁笼里。
+
+
+
+[[我想要离开这里了。-&gt;去往古堡]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="72" name="鬼屋1" tags="" position="3275,1450" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+鬼屋里那些烟雾机器喷得太卖力了，吸进去全是劣质香精混着潮湿地毯的霉味，闷得人太阳穴突突跳。
+
+奕莎贝拉走在前面，几步之外就只剩个轮廓，浅色裙摆在一明一灭的紫光灯里忽隐忽现，像一只游在浑水里的鱼。
+
+鬼屋的主题是《旧校舍的停尸间》。
+
+“这里的布景，你不觉得很熟悉吗？”
+
+我试探性地问她，想在这死寂的氛围里找回一点主动权。
+
+语毕，一根断手突然横档着突脸到我眼前。
+
+“啊——！”我尖叫着后退，腿瞬间软了。
+
+奕莎贝拉反应极快，几乎是瞬间撞进我怀里，拦腰把我死死兜住。
+
+下一秒，那只断手就被她干脆利落地“喀嚓”一声拽了下来。
+
+“真碍事，吓坏你了。” 她把那只断肢抓在手里晃了晃，语气竟带着一丝嫌弃。
+
+“这种劣质货一点也不走心。我以前见过真的，那内脏滑腻腻的触感，颜色可比这鲜艳多了。”
+
+她侧过头。
+
+昏黄的门灯将她的面孔劈作明暗两半。
+
+在光影晃动的刹那，她唇角上扬的弧度骤然拓宽，很快变成撕裂到耳边的血盆大口。
+
+我全身的血液瞬间结冰，大脑一片空白。
+
+周围游客传来的尖叫与打闹声萦绕在肌肉与皮相之下，到底是人类欢笑时该有的滞涩与温度，还是被强行撑开的、冰冷的精密躯壳。
+
+她似乎察觉到了我的僵硬，瞬间又变戏法似的敛起嘴角，把模型随手一扔，重新贴在我肩膀上软软地蹭着。
+
+“好啦好啦，这里除了我，又不真的会有别的东西，对吧？”
+
+她仰着脸，眼睛弯弯地看着我，“怕的话，我保护你嘛？”
+
+她贴得极近，那股浓郁的沐浴露味像绳子一样死死缠着我。
+
+我感受着她那毫无温度的肩膀，根本分不清她现在到底是在安抚我，还是在享受看我被吓到魂飞魄散的恶趣味。
+
+
+
+[[我想要离开这里了。-&gt;去往古堡]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="旋转木马1" tags="" position="3275,1175" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+游乐园的灯光在夜色里晃得人眼晕。
+
+旋转木马的机械声沉闷而单调，像是一颗迟缓又固执的心脏在跳动。
+
+她坐在我身侧的那匹马上。
+
+木马随着节奏起伏，她的动作太标准了，连脊背挺直的弧度都跟木马的起伏保持着一种诡异的同步，就像是被固定在上面的零件。
+
+“我特别喜欢这个。”
+
+她轻声说。木马转过半圈，灯光打在她脸上，把她那双眼睛照得通亮。
+
+“不停地转，不停地重复……多好啊。”
+
+她侧过头看着我。在木马再次陷入阴影的瞬间，我注意到她的眼睛并没有随着光线的暗淡而调节焦距，反而睁得很大，死死地盯着我，没有眨动。
+
+“只要旋转，时间就不用向前走。” 
+
+她用指尖轻轻划过木马的脖颈，与其说是在触碰木马，不如是在确认某种刻度，“如果能一直待在这个循环里，我们就永远不用面对那些……”
+
+她顿住了。
+
+木马转到了明亮处，她瞬间换上了明媚的笑容，可眼底却沉得像一潭死水。
+
+“……那些会变质的东西，对吧？”
+
+她的话音刚落，木马正好经过那个发出刺耳吱呀声的支撑轴。
+
+在那一瞬间，我听见了一些不该出现的声音。
+
+细碎的、骨骼挤压的脆响，仿佛她的身体在配合着旋转的节奏，进行着极其细微的位移。
+
+她似乎察觉到了我的视线，却完全没有避讳。
+
+她把那只冰凉的手搭在我膝盖上，指尖顺着布料一点点向上爬，像是某种无声的捕猎。
+
+“你看，我也在不停地旋转。”
+
+她贴近我的耳畔，呼吸里没有热气，只有浓得化不开的牛奶防腐剂味，像一层薄膜，要把我紧紧裹住。
+
+“你还要数吗？如果我再转一百圈，你是不是就能发现……我其实早就不是之前的那个我了？”
+
+木马在减速。
+
+八音盒的变调音律化作金属的哀鸣，整个游乐园随着这节奏，缓缓坠向深渊。
+
+音乐骤停。木马静止在原地，灯光凝固了，将她割裂成截然不同的两半。
+
+一半笼在惨白的暖光里，另一半则溺死在死寂的阴影中。
+
+她伸出一只手，指尖离我的膝盖还有一寸远。
+
+“再转一圈。” 她说，“就一圈。”
+
+阴影中，她的双眼泛起菌丝般的荧光，如细碎的根须从眼眶深处蔓延，迅速爬满了整片眼白。
+
+我听见风停了。
+
+风停以后，整个旋转木马的底座开始发出细碎的噼啪声，像干透的骨头在夜里自己裂开。
+
+[[我想要离开这里了。-&gt;去往古堡]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="去往古堡" tags="" position="3550,1300" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;christmas.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+在游乐园里漫无目的地耗着毫无意义，今晚的目的地本就是她的家。
+
+为了不引起怀疑，我主动凑近了她一点，放软了语调晃了晃她的袖子：
+
+“好啦，转得有点头晕……今晚不是说好要去你家看电影吗？什么时候走呀？”
+
+奕莎贝拉显然很受用这套，亲昵地反手挽住我的胳膊：
+
+“那就听你的，现在就走。”
+
+车子驶入深林。道路越来越窄，两旁只剩积雪压弯的枯藤。
+
+当车头的光束扫过尽头时，一座孤零零的陈年旧古堡赫然撞入眼帘。
+
+尖顶参差，窄窗如眼，在雪夜里透着诡谲的暖光。
+
+车刚一停下，她便迫不及待地拉开车门。
+
+“快来。”
+
+雪地里只留下一串急促的脚印，她站在昏黄的门灯下回头看我。
+
+我表面上顺从地被她半拖半拽地来到橡木门前，暗地里却飞快地扫视着周围的环境，计算着潜入和搜查的退路。
+
+浓郁得发腻的奶香混合着腐旧的气息从门缝里渗出，冷汗浸透了我的掌心。
+
+奕莎贝拉的指尖搭在门把上，笑意天真：
+
+“进来吧。”
+
+[[我深呼吸，跟着她走了进去。]]
+
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="75" name="看奕莎贝拉" tags="+1" position="2025,925" size="100,100">(set: $willing to $willing + 1)
+(set: $memory to $memory + &quot;_2&quot;)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我抬起头。
+
+她一直看着我，目光里那种毫无保留的期待，让我一瞬间把所有的胡思乱想都抛到了脑后。
+
+“喜欢吗？”她轻声问。
+
+我有些发怔地点了点头。
+
+她像是松了一口气似地笑了起来，眼眉弯成很好看的弧度。
+
+&quot;我整整准备了一个晚上！&quot;
+
+她伸手替我将洗脸时弄湿的一缕碎发轻轻捋到耳后。
+
+&quot;这是沐浴露，以后每天晚上都要用喔。&quot;
+
+她凑近了一点，声音软绵绵的，像是在低声呢喃：
+
+“这样……不管走到哪里，只要闻到这个味道，我就能一下子找到你了。”
+
+那一瞬间，空气里仿佛都化开了那股浓郁得过分的牛奶香，丝丝缕缕地往皮肤里渗，像要把我整个人从里到外彻底腌透。
+
+晚上回家以后，我站在洗手台前，借着昏黄的灯光，一遍又一遍地摩挲着那个没有商标的雪白瓶子。
+
+最终还是慢慢转动了瓶子的开口。
+
+我[[试试看吧-&gt;用了]]。
+
+我[[还是以后再说-&gt;没用]]。
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="76" name="看瓶子" tags="-1" position="2025,1300" size="100,100">(set: $willing to $willing - 1)
+(set: $memory to $memory + &quot;_1&quot;)
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我把瓶子拿到眼前。
+
+瓶身通体雪白，拿在手里沉甸甸的，透着一股毫无瑕疵的塑料质感。
+
+我下意识翻转过瓶身，上面光滑一片，没有半个多余的字。
+
+我微微蹙眉，凑近了仔细端详，瓶身上既没有印刻成分表，也没有任何生产日期。
+
+连最普通、最基础的条形码都找不到。
+
+“你在看什么？”
+
+带有轻微质问的声音毫无预兆地在耳边响起。
+
+我吓了一跳，猛地抬起头。
+
+她不知道什么时候已经悄无声息地贴到了我面前。
+
+方寸间，她跟着我的视线一齐转向了我那只死死攥着白色瓶子的手。
+
+她伸出葱白的手指触到瓶身，极其自然地将那个没有标签的瓶子轻轻转了回去。
+
+空无一物的瓶子正面，重新严丝合缝地朝向了我。
+
+她弯起唇角，冲我笑了笑。
+
+“不用看啦。”
+
+见我还是有些发怔，她轻轻嘟了下嘴，像是很介意我的反应：
+
+“是沐浴露啦，很好用的。”
+
+空气里弥漫起挥之不去的牛奶味，连一呼一吸间都被浸透彻底。
+
+……
+
+晚上回家以后，我站在洗手台前，冰冷的水流冲刷着双手，可脑子里却全是白天那一幕。
+
+我看着台面上静静立着的这份“礼物”，心底的疑虑像野草一样疯长。
+
+犹豫了很久，我最终还是伸出手，慢慢拧开了瓶口，任由那股浓稠的香气在狭小的浴室里弥漫开来。
+
+我[[用了沐浴露-&gt;用了]]。
+
+我[[只是闻了闻-&gt;没用]]。
+ 
+ 
+ &lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="邀请函绣球1" tags="" position="2800,1050" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我翻开一看，是一张精美无比的‘邀请函’，上面画着绣球花。
+
+&lt;center&gt;
+
+&lt;img src=&quot;hydrangea1.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
+
+邀请函上写着：
+
+ISABELLA
+INVITES
+
+MY LOVE
+
+TO
+A DINNER FOR TWO
+
+ISABELLA MANOR
+FRIDAY,25th OF DECEMBER 6:30PM
+
+DRESS CODE: EVENING ATTIRE 
+
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）18:30
+
+Dress Code：请穿上最漂亮的礼服♡
+
+(if: $willing is -4)[
+[[继续调查-&gt;市图书馆]]
+]
+
+(else:)[
+[[星期六-&gt;星期六]]
+]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="78" name="邀请函绣球2" tags="" position="2575,1425" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我翻开一看，是一张精美无比的‘邀请函’，上面画着绣球花。
+
+&lt;center&gt;
+
+&lt;img src=&quot;hydrangea2.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
+
+邀请函上写着：
+
+ISABELLA
+INVITES
+
+MY LOVE
+
+TO
+A DINNER FOR TWO
+
+ISABELLA MANOR
+FRIDAY,25th OF DECEMBER 6:30PM
+
+DRESS CODE: EVENING ATTIRE 
+
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）18:30
+
+Dress Code：请穿上最漂亮的礼服♡
+
+[[星期六请快些到来吧-&gt;星期六]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="79" name="邀请函玫瑰1" tags="" position="2725,925" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我翻开一看，是一张精美无比的‘邀请函’，上面画着玫瑰花。
+
+&lt;center&gt;
+
+&lt;img src=&quot;rose1.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
+
+邀请函上写着：
+
+ISABELLA
+INVITES
+
+MY LOVE
+
+TO
+A DINNER FOR TWO
+
+ISABELLA MANOR
+FRIDAY,25th OF DECEMBER 6:30PM
+
+DRESS CODE: EVENING ATTIRE 
+
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）18:30
+
+Dress Code：请穿上最漂亮的礼服♡
+
+(if: $willing is -4)[
+[[继续调查-&gt;市图书馆]]
+]
+
+(else:)[
+[[星期六会发生什么呢？-&gt;星期六]]
+]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="邀请函玫瑰2" tags="" position="2750,1325" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我翻开一看，是一张精美无比的‘邀请函’，上面画着玫瑰花。
+
+&lt;center&gt;
+
+&lt;img src=&quot;rose2.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
+
+邀请函上写着：
+
+ISABELLA
+INVITES
+
+MY LOVE
+
+TO
+A DINNER FOR TWO
+
+ISABELLA MANOR
+FRIDAY,25th OF DECEMBER 6:30PM
+
+DRESS CODE: EVENING ATTIRE 
+
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）18:30
+
+Dress Code：请穿上最漂亮的礼服♡
+
+[[星期六请快些到来吧-&gt;星期六]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="邀请函百合1" tags="" position="2575,800" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我翻开一看，是一张精美无比的‘邀请函’，上面画着百合花。
+
+&lt;center&gt;
+
+&lt;img src=&quot;lily1.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
+
+邀请函上写着：
+
+ISABELLA
+INVITES
+
+MY LOVE
+
+TO
+A DINNER FOR TWO
+
+ISABELLA MANOR
+FRIDAY,25th OF DECEMBER 6:30PM
+
+DRESS CODE: EVENING ATTIRE 
+
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）18:30
+
+Dress Code：请穿上最漂亮的礼服♡
+
+
+(if: $willing is -4)[
+[[继续调查-&gt;市图书馆]]
+]
+
+(else:)[
+[[星期六会发生什么呢？-&gt;星期六]]
+]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="邀请函百合2" tags="" position="2775,1175" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我翻开一看，是一张精美无比的‘邀请函’，上面画着百合花。
+
+&lt;center&gt;
+
+&lt;img src=&quot;lily2.jpeg&quot; style=&quot;width: 100%; max-width: 600px;&quot;&gt;
+
+&lt;/center&gt;
+
+邀请函上写着：
+
+ISABELLA
+INVITES
+
+MY LOVE
+
+TO
+A DINNER FOR TWO
+
+ISABELLA MANOR
+FRIDAY,25th OF DECEMBER 6:30PM
+
+DRESS CODE: EVENING ATTIRE 
+
+
+奕莎贝拉
+
+邀请
+
+最亲爱的你
+
+参加我们的
+
+二人晚餐
+
+地点：奕莎贝拉庄园
+
+时间：12月25日（星期五）18:30
+
+Dress Code：请穿上最漂亮的礼服♡
+
+[[星期六请快些到来吧-&gt;星期六]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="我深呼吸，跟着她走了进去。" tags="" position="3750,1300" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+踏进古堡，挑高的门厅空旷而冷清。
+
+回廊深邃，除了我们的脚步声，听不到半点多余的人气。
+
+我环视着幽暗的四周，暗自警惕。
+
+[[“只有你一个人住吗？”-&gt;只有一个人住]]
+[[“你家好安静啊。”-&gt;家很安静]]
+[[但还是什么都没有问-&gt;什么不问]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="只有一个人住" tags="" position="3975,1175" size="100,100">
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+“你家只有你一个人住吗？”
+
+我拿眼角量着她。
+
+奕莎贝拉正替我解围巾的手，冷不防停在了半空。
+
+空气静了两秒。她再抬起眼时，笑意已经重新漾了上来：
+
+“怎么会。以前还有哥哥姐姐呀。”
+
+我心里咯噔一声：“诶？”
+
+她已趿着鞋往里走，背影轻俏：
+
+“哥哥叫王全，已经工作了。姐姐叫瑞贝卡，眼下在疗养院。”
+
+顺理成章，全无破绽，倒像市井里扯闲白。
+
+“所以现在嘛，家里就剩我一个咯。”
+
+我顺着她的话头，往暗影绰绰的走廊深处暼去。
+
+那条过道长得见不到头。墙壁阴恻恻的，错落着几张发黄的旧照片，在暗影里像一双双冷眼旁观的眼睛。
+
+
+[[继续-&gt;进入调查]]
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="85" name="家很安静" tags="" position="3975,1350" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+“你家……好安静啊。”
+
+我清了清嗓子，划破了古堡里的寂静。
+
+奕莎贝拉抱着我的围巾在前头引路。
+
+听到我这样感叹，她脚下一顿，侧过半张脸：“嗯...我不喜欢太吵闹的环境。”
+
+说出来的话都飘荡在空空荡荡的大厅里，连回音都被吸入进虚空中。
+
+壁炉里松柴烧得哔剥作响，角落的圣诞树也缀满了晶亮的灯串。
+
+我的目光不由自主地往墙角一扫。
+
+光影交错间，悬着一幅有些旧的全家福。
+
+三个人，面孔清秀。
+
+当中是个戴眼镜的斯文男生。左手边立着个穿白裙的长发女孩，黑发齐胸，眼眉低垂。
+
+至于右手边那个穿着蓝色开衫、白裙子的女孩。
+
+几乎和奕莎贝拉一模一样。
+
+只不过照片里的她，透着股还没长开的稚气，像个幻影。
+
+[[继续-&gt;进入调查]]
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="86" name="什么不问" tags="" position="3975,1525" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+喉头滚了滚，我把所有的疑问尽数咽了回去。
+
+只是安安静静地跟在她的身侧，跨进了这栋房门。
+
+屋内静得发奇，与外头仿佛是两个世界。
+
+客厅里的壁炉烧得正旺。
+
+暖黄的灯火淌过每一寸地毯，把大厅熏得软绵绵的。
+
+窗边的圣诞树挂满了亮晶晶的彩灯，长沙发上早早叠好了厚实的毛毯。
+
+甚至连冒着热气的牛奶和一碟子糖果都分门别类地摆得妥妥帖帖。
+
+……周到极了。
+
+奕莎贝拉却浑然不觉有异，雀跃着跑去拧开角落里的一盏小夜灯。
+
+“快来呀！”
+
+她回过头，冲我弯起眉眼。
+
+我顺从地往里踱步，目光不经意间扫过玄关旁的白墙。那里密密麻麻挂满了旧照片。
+
+其中嵌着一幅发旧的全家福，上面是三张年轻的面孔。
+
+当中是个斯文的眼镜男生。
+
+左边站着个长发垂胸的淡粉色长裙女孩，笑容温和。
+
+至于立在最右边的那个……穿着蓝色开衫和白裙，发顶还别着一只白色发卡。
+
+……同如今的奕莎贝拉如出一辙，连眼底的笑影都一模一样。
+
+[[继续-&gt;进入调查]]
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="87" name="进入调查" tags="" position="4200,1350" size="100,100">
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+她把我领进了她的房间，装饰风格是典型的公主房。
+
+“换上这个吧，专门为你准备的呢。”
+
+她递给我一套干净的睡裙。
+
+临出门前，她弯起眼睛笑了笑：“我先去楼下弄些看电影吃喝，你换好了就直接下来吧。”
+
+我顺手接过来换上，布料柔软，裁剪贴合......
+
+仿佛这衣服是量着我的骨头缝制的一样。
+
+我头皮发麻，惊悚感顺着脊椎直往上窜。
+
+但我很快逼自己冷静下来。既然已经落入虎穴，害怕无济于事。
+
+趁着她离开房间的间隙，我立刻借着窗外的月光开始搜查，不放过任何一个角落。
+
+很快，我在抽屉深处摸出了一个沉甸甸的、带密码锁的金属盒子。
+
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;boxclosed.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+
+[[尝试打开-&gt;尝试打开]]
+
+&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="88" name="尝试打开" tags="" position="4400,1350" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;boxclosed.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+(if: $error is true)[密码错误，请重新输入。 奕莎贝拉...是在秋天出生的吗？]
+(set: $error to false)
+我拨动着锁扣...(请输入4位密码)：
+(input-box: bind $password_input)
+(link: &quot;确认&quot;)[
+  (if: $password_input is &quot;0915&quot;)[
+    (goto: &quot;打开盒子&quot;)
+  ](else:)[
+    (set: $error to true)
+    (goto: &quot;尝试打开&quot;)
+  ]
+]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="89" name="打开盒子" tags="" position="4550,1350" size="100,100">&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+    &lt;img src=&quot;boxopen.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+木盒的锁扣发出“咔哒”一声轻响。
+
+里面没有我想象中的危险物品，只有一沓用回形针仔细夹在一起的纸张。
+
+泛黄的边缘，散发着陈旧的纸浆味。
+
+我有些疑惑地抽出来，借着昏暗的光线展开。
+
+(link-replace: &quot;▶ 点击这里翻开学籍报告&quot;)[
+
+  &lt;div style=&quot;text-align: center; width: 100%;&quot;&gt;
+  &lt;img src=&quot;truedoc.jpg&quot; style=&quot;max-width: 1000px; width: 100%; display: block; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+]
+
+档案的右边是一份盖着校徽的学生学籍记录，左边则是一份附带的综合医院医疗记录摘要。
+
+照片上的人正是我熟悉得不能再熟悉的奕莎贝拉。
+
+这才是真的学籍报告。
+
+学籍编号是诡异的“000-NULL”，而入学年份那一栏，赫然写着2026年9月。
+
+但在下方的转学记录里，却露出了令人头皮发麻的空白：
+
+2026年9月：本校入学。
+
+2016年9月：（内容被涂黑）中学（档案遗失，备注：该校已撤销）。
+
+2006年9月：（内容被涂黑）中学（档案遗失，备注：该校已撤销）。
+
+1996年9月：（内容被涂黑）中学（档案遗失，备注：该校已撤销）。
+
+每隔整整十年，学校就会更换，而上一所学校便会彻底从人间蒸发。
+
+我呼吸一滞，慌忙将视线移向旁边那张泛黄的医院报告。
+
+患者姓名：奕莎贝拉。
+
+而在【既往病史】那一栏里，赫然写着：心源性猝死（可重复）、心脏骤停、病因不明。
+
+电心检测记录的图表上，#01是正常的窦性心律，#02是空颤，到了#03——是一条代表着死亡的心电静止。
+
+旁边的医务备注写着：“患者恢复意识情况无法以现有医学理论解释，建议持续观察。未经许可，请勿向患者本人讨论本报告内容。”
+
+我猛地倒吸了一口凉气，手里的纸张差一点散落在地。
+
+视线再往回落到学籍表右下角的【教师评价】上：“模范学生。礼貌、安静、学习能力出色。是本校最好的学生之一。”
+
+而在旁边的违纪记录里，还用红字触目惊心地标注着：
+
+“——2026/10/12 在教学楼废弃区私自焚烧不明物体。”
+
+“处分：口头警告。因其辩称在进行艺术创作，且提交了完美的创作计划书，不予深究。”
+
+空气仿佛在这一刻彻底死寂。
+
+我看着手里那些整整齐齐的记录，她在这个世界上活了多久？
+
+而她每一次“死掉”之后，又是靠什么在这个冰冷的古堡里，将自己一次次拼凑回来的？
+
+在官方档案的最底下，还压着几张褪色的旧照片。
+
+我颤抖着抽出来翻看。
+
+(link-replace: &quot;▶ 点击这里翻开照片&quot;)[
+
+  &lt;div style=&quot;text-align: center; width: 100%;&quot;&gt;
+  &lt;img src=&quot;photo.jpg&quot; style=&quot;max-width: 1000px; width: 100%; display: block; margin: 0 auto;&quot;&gt;
+&lt;/div&gt;
+]
+
+雪景、老式游乐园、街道……每一张照片上，都是同一张脸。
+
+而在不同的照片里，奕莎贝拉身边分别依偎着几个穿着不同的女孩。
+
+她们神情亲密，脸部却被涂了黑。
+
+与我之前在市图书馆微缩胶片和毕业册里看到的面孔......
+
+右上角还夹着一张便签。
+
+上面用清秀的字迹，写着：
+
+星期一，她接受了我的邀请。
+
+星期二，她吃掉了草莓大福。
+
+星期三，她收下了沐浴露。
+
+
+[[门外响起了敲门声-&gt;去看电影]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="90" name="去看电影" tags="" position="4725,1350" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+“找到喜欢的东西了吗？”
+
+我猛地回过头，只见奕莎贝拉不知什么时候已经站在我身后。
+
+她歪着头，眼底噙着一抹无辜而玩味的笑意，仿佛早就看穿了我所有的翻找与惊恐。
+
+可她并没有发怒，只是自然而然地收走了我手里那些散落的纸张，像对待一个贪玩的孩子般牵起我的手，拉着我下了楼。
+
+客厅里温暖如春。
+
+沙发上早就铺好了厚厚的羊毛毯，茶几上摆满了精致的糖果、温热的牛奶，还有新鲜的草莓大福。
+
+她把我按在沙发里，细心地为我裹好毯子，随后将一盘老旧的录像带塞进了放映机里。
+
+电影开始播放。
+
+噪点在斑驳的光影里无声地闪烁。
+
+
+
+
+[[电影开始播放。]] 
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="91" name="电影开始播放。" tags="" position="4925,1350" size="100,100">
+&lt;center&gt;
+&lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
+&lt;img src=&quot;dv.jpg&quot; style=&quot;width: 120%; height: auto;&quot;&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+
+&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+
+奕莎贝拉家里用的是一台老式放映机，可以听到老旧机械单调的运转声在空气里一下一下地敲击着。
+
+她将毛毯一层层裹紧在我身上，密不透风。
+
+可我看着看着，眉头便不由自主地蹙紧。
+
+这算哪门子电影。
+
+画面晃晃悠悠，分明是一截劣质的家用DV录像。
+
+镜头后面似乎藏着一双眼睛，始终狂热而专注地追逐着另一个女孩的身影。
+
+影像里记录着两个女孩的故事。
+
+她们在旋转木马前笑得见牙不见眼；在熙熙攘攘的小吃摊旁，挤在一块儿分吃同一块草莓蛋糕；又钻进昏暗逼仄的放映厅，看一场漫长得让人打发时间的爱情片。
+
+那身衣服，那副场景，甚至连空气里弥漫的甜腻气息……
+
+看着看着，我后背的汗毛一根根竖了起来。
+
+这分明就是我这几天来，一桩桩、一件件亲身经历过的旧事重演。
+
+身旁暗影里，奕莎贝拉的声音幽幽飘来：
+
+“这部电影我看了好多次。”
+
+“每次看到这里我都会流泪。”
+
+我僵硬地转过头，借着荧幕忽明忽暗的光，看见她正淌着眼泪，可嘴角却咧到一个夸张的角度度，挂着灿烂无比的笑容。
+
+似为她们感到无限的心碎与虔诚。
+
+“因为她们实在是太可爱了。”
+
+DV镜头剧烈摇晃了一下，伴随着一声闷响，显然是掌机的女孩在情动至极时失手将机器摔在了地上。
+
+画面跌落在地，歪歪斜斜地向上仰着。
+
+而在那方寸的镜头里，两个女孩正滚烫地纠缠在一起。
+
+从湿热的亲吻，到呼吸凌乱地剥开衣物、解开扣子……那份几近失控的爱意浓烈得几乎要烧起来。
+
+可就在气氛攀升至最炽热的瞬间，画面中的女孩毫无预兆地张开嘴——
+
+在黏稠的血肉模糊中，赫然是一口咬下去的撕扯与吞噬。
+
+温热的爱欲在下一秒化作最原始的血腥分食。
+
+紧接着，重物倒地，镜头被一只沾满鲜血的手缓缓扶正。
+
+那个一直隐在镜头后、从未露过正脸的掌机女孩，终于在这个血淋淋的结局里，转过头来对上了镜头。
+
+那是屏幕里的一张脸。
+
+我惊骇欲绝地猛回头，想要去看身边的奕莎贝拉。
+
+而正坐在我身侧的她，也恰好在这个时候，转过了头。
+
+荧幕上的面孔，与眼前这张脸，一模一样。
+
+她带着满身的香气，微微倾过身子，眼底闪烁着湿漉漉的依恋与狂热，朝我轻轻凑了过来，仿佛要像录像里那样，落下一个温柔而致命的吻。
+
+[[推开她-&gt;逃出古堡]]
+
+&lt;/div&gt;
+
+
+</tw-passagedata><tw-passagedata pid="92" name="调查-解脱" tags="" position="5150,1475" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+我奋力跑出古堡。
+
+那场逃离像是一场漫长的溺水。我用尽最后一丝力气推开她，在那栋陈旧古堡的阴影里夺路而狂。
+
+雪夜的寒风灌进肺腑，我跌跌撞撞地穿过森林，穿过游乐园，像个被抽干灵魂的躯壳。
+
+直到锁上家门，拉严窗帘，在发抖的被窝里蜷缩成一团，才算勉强捡回了一条命。
+
+我以为我死里逃生了。
+
+第一周，贝拉并没有来学校；而第二周，班主任说她病休；到了第三周，学校正式通报奕莎贝拉办理了退学。
+
+那个总是穿着白裙子、挽着我手臂的少女，仿佛在人群中蒸发了。
+
+直到第四周的清晨，一则当地新闻轰动了整个校园。
+
+电视屏幕上，警方拉起了警戒线，镜头扫过那栋阴森陈旧的古堡。
+
+主持人用冰冷的语调播报着：
+
+“……据警方通报，失踪多日的少女奕某被发现在家中身亡，法医初步鉴定为因长期身体衰竭导致的多器官衰竭，现场无打斗痕迹。这已经是本市近几十年来的又一起……”
+
+办公室里，人们唏嘘着议论着，都在感叹镇子上的古老诅咒终究还是应验了——又有一个年轻的少女生命无声无息地凋零在了这里。
+
+我呆呆地站在走廊阴影里，脸色惨白，耳边嗡嗡作响。
+
+放学时，班主任叫住了我，将一本被仔细压平的信封递到我手里。
+
+“这是奕莎贝拉退学前托我转交给你的……说是之前没能送出去的邀请函。”
+
+班主任叹了口气，“老师也不知道你们什么时候走得这么近，去看看她吧，怪可怜的。”
+
+我机械地接过来，指尖冰凉。
+
+回到空无一人的房间，我颤抖着拆开信封。
+
+那是一张精美却透着陈旧气息的邀请函，是我收到的那一张。
+
+我缓缓翻过背面。
+
+上面是她熟悉而清秀的字迹，却歪歪扭扭，透着濒死般的虚弱：
+
+“抱歉。这次没有等到你。”
+
+窗外下起了大雪，寒风呼啸。
+
+我死死攥着那张纸，所有的侥幸与理智在这一刻化作了冰冷的绝望。
+
+世人都以为是恶魔的诅咒带走了她。
+
+在那个漫长的平安夜里，她放下了刀刃，然后独自坐在空无一人的古堡里，任由饥饿和孤独将她吞噬。
+
+我，在那场名为“平安夜”的邀约里，终究是脱逃了。
+
+
+
+[[多年之后。]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="调查-吞噬" tags="" position="5150,1725" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+今日新闻。
+
+本市又有一名女高中生失踪。
+
+警方提醒广大市民，近期请注意夜间出行安全，切勿前往城郊旧林及废弃古堡附近。目前，搜救工作正在紧急进行中……
+
+电视屏幕在空旷的客厅里闪烁着幽蓝的光。
+
+窗外，大雪依旧下个不停，将通往古堡的所有脚印掩埋得干干净净。
+
+
+
+[[……-&gt;奕莎贝拉视角]]
+
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="逃出古堡" tags="" position="4925,1575" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+惊恐的尖叫卡在喉咙里，伴随着剧烈的推搡，我拼尽全力将她一把推开。
+
+“砰！”
+
+茶几上的零食散落一地，马克杯碎成四溅的瓷片。
+
+我以为会迎来狂怒，或者彻底撕破脸皮的狰狞。
+
+可跌坐在地上的奕莎贝拉，却只是顺着力道微微晃了一下。
+
+她只是坐在那里，膝盖上还盖着那条温暖的毛毯。
+
+她慢慢抬起头，看向我的眼眶红得彻底，苍白的脸上满是无措与茫然。
+
+那双眼睛里，没有怪物的暴虐，也没有捕猎成功的得意。
+
+只有浓得化不开的、铺天盖地的孤独。
+
+“……我真的很喜欢你。”
+
+她喃喃开口，声音沙哑，哀求道。
+
+“为什么……你不能为我留下来呢？”
+
+“难道这几天所有的开心，都是假的吗？外面那么冷，那么黑……只有这里，只有我，才是真正属于你的啊……”
+
+她像个被全世界抛弃的孩子，此刻却缩在阴影里，卑微得令人发指。
+
+那句质问像一根细密的针，狠狠扎进我心里。
+
+我不敢看向她的眼睛，于是慌乱地转过身，跌跌撞撞地拉开大门，逃出了古堡。
+
+冰冷的夜风像刀子一样刮在脸上，夹杂着鹅毛般的大雪，将我瞬间拉回现实。
+
+我深一脚浅一脚地逃进远处的树林里。
+
+树枝刮破了衣角和皮肤，寒冷刺骨。可在狂奔的喘息间，脑海里却不受控制地闪回的瞬间——
+
+是在教室大扫除时，她一边哼着歌，一边突然转过头冲我展颜微笑的侧脸；
+
+是在放学后，她递给我草莓大福时亮晶晶的眼睛；
+
+甚至是在舞台剧的彩排里，她穿着王子的制服问我，美丽的公主，你叫什么名字的模样。
+
+跨越了三十年、一百年，在无尽的黑暗与饥饿里不断死去又复活，换过无数个名字，看过来来往往的女孩，却依旧游荡与漂浮。
+
+奕莎贝拉是一个被时间遗忘、永远在孤独中挨饿的怪物。
+
+风雪呼啸着灌进耳腔。
+
+我停下了脚步，回头望向风雪中那座隐约可见的古堡轮廓。
+
+理智告诉我，应该头也不回地逃跑，去过回那个安全却平凡的人生。
+
+可内心深处那个声音却在疯狂地叫嚣——
+
+要回去吗？
+
+去面对一个注定危险、却又荒凉得让人落泪的拥抱。
+
+
+[[我回到古堡。-&gt;调查-吞噬]]
+
+
+[[我头也不回地逃离了这里。-&gt;调查-解脱]]</tw-passagedata><tw-passagedata pid="95" name="多年之后。" tags="" position="5425,1500" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+在这个星期内，广播里数次播报着本市的新闻：
+
+“……本年度失踪案最终确认告破，随着相关人员的不幸离世，小镇居民悬着的心终于放下。困扰了数十年的‘十年诅咒’，终究还是应验在了今年……”
+
+外界都在唏嘘，以为是恶魔的诅咒如期带走了又一个年轻的生命。
+
+……
+
+日子像流水一样滑过。
+
+我顺利毕业，离开了这个常年下雪的小镇。
+
+长大，工作，融进庞大而喧嚣的人群。
+
+我努力过着普通人的人生，试着把那个疯狂、血腥又带着甜腻香气的雪夜，连同那个名字一起埋进岁月的底层。
+
+时间一年年过去。
+
+正如新闻所说，在接下来的岁月里，小镇再也没有发生过任何诡异的失踪案。
+
+那个每隔十年收割一次生命的魔咒，真的随着她的离去，永远消失了。
+
+很多很多年以后。
+
+因为一次偶然的出差，我重新回到了这座记忆中的小镇。
+
+杂草丛生的小路尽头，那座陈旧的古堡早已被废弃，木质的门窗在风中摇摇欲坠。
+
+我鬼使神差地推开门走了进去。
+
+屋里一片死寂，蛛网密布，曾经摆满零食和毛毯的客厅如今空空如也，只剩下厚厚的灰尘。
+
+走到最里面，那台老式的放映机静静地伫立在角落里。
+
+镜头朝向一面早已斑驳的墙壁。
+
+没有人在看，也没有影像在播放。
+
+只有窗外的雪落下来，无声无息地覆盖了这片废墟。
+
+—— END ——
+
+恭喜你获得了：
+
+「调查-解脱结局」
+
+[[奕莎贝拉还有话想对你说]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="奕莎贝拉视角" tags="" position="5400,1750" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+古堡深处的阴影里。
+
+奕莎贝拉赤着脚踩在冰冷的地毯上，指尖还沾着温热的血迹，可眼底却溢满了前所未有的满足与滚烫的爱意。
+
+她轻轻抚摸着胸口那颗重新有力跳动的心脏，望着窗外漫天的飞雪，满足地弯起眼睛。
+
+
+「她又活下来了。」
+
+
+—— END ——
+
+恭喜你获得了：
+
+「调查-吞噬结局」
+
+[[奕莎贝拉还有话想对你说]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="奕莎贝拉又传了简讯给你" tags="" position="5700,1525" size="100,100">&lt;div style=&quot;font-size: 85%;&quot;&gt;
+
+🍓 AFTERWORD / 作者后记
+
+Thank u for playing ♡
+
+谢谢喜欢奕莎贝拉、喜欢张奕然的你。
+
+谢谢你愿意看见她身上：
+
+漂亮、危险、柔软、奇怪，又令人移不开视线的魅力。
+
+也希望我们永远拥有那份因坚定选择彼此而生的心动与勇气。
+
+
+🍓 RELATED WORK
+
+《奕莎贝拉惊魂夜》同时存在小说版。
+
+互动游戏更偏向“体验”与“选择”，
+很多更细腻、缓慢、甚至更痛苦的部分，
+在小说中则着墨更多
+
+如果你想看：
+🩸更多奕莎贝拉的挣扎
+🩸更完整的关系变化
+🩸更浓厚的少女惊悚与心理描写
+
+可以前往AO3阅读小说版。
+
+https://archiveofourown.org/works/84529331/chapters/223006066
+
+*小说版含有🔞内容，请酌情阅读。
+
+
+🍓 COPYRIGHT / 版权声明
+
+《奕莎贝拉惊魂夜》为非商业性质同人互动作品。
+
+本作仅用于个人创作交流与展示，不涉及任何商业用途。
+
+作品中的原创文本、页面设计、游戏结构等内容版权归作者所有，请勿擅自转载、修改或二次上传。
+
+🍓 CONTACT
+
+策划/ 脚本/ coding：Maggie
+美术/ 页面设计：Pindell
+
+如果想联系作者，合作，尝试做更多关于张奕然/奕莎贝拉的游戏，欢迎私信：
+
+Maggie：📕/ weibo：@Nipple25 
+
+pp：📕/dy：@Pindellmoon
+
+Email：majiyang1@gmail.com（Maggie）/ wpindellw@gmail.com（pp)
+
+欢迎交流感想、截图、repo与游玩反馈。
+
+奕莎贝拉宇宙持续建设中......
+
+
+去吧，请尽情奔向天涯海角吧。
+
+无论你去哪里，
+
+路的尽头也只有我，
+
+我们最后总会相逢的。
+
+—— 奕莎贝拉
+
+
+(link: &quot;再一次打开日记&quot;)[
+
+(forget-undos:)
+
+(goto: &quot;重新开始&quot;)
+
+]
 
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
