@@ -9,93 +9,67 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 奕莎贝拉惊魂夜 final mobile.</tw-noscript></noscript></tw-story>
-<tw-storydata name="奕莎贝拉惊魂夜 final mobile" startnode="6" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="1a3941db-cf1e-4418-8044-9c56e5882624" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-link, .enchantlink {
-  color: darkred !important;
+<tw-storydata name="奕莎贝拉惊魂夜 final mobile" startnode="6" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="1a3941db-cf1e-4418-8044-9c56e5882624" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ==============================================
+   1. 基础链接颜色设置（全局生效）
+============================================== */
+tw-link, .enchantlink {
+    color: darkred !important;
 }
 
 tw-link:hover, .enchantlink:hover {
-  color: red !important;
+    color: red !important;
 }
 
-/* 如果有被访问过的链接也想变色，加这一句 */
 tw-link:visited {
-  color: darkred !important;
+    color: darkred !important;
 }
 
-
-/* 只有带有 top-align 标签的页面才会执行这个顶部对齐 */
+/* ==============================================
+   2. 顶部对齐标签控制
+============================================== */
 tw-passage[tags~="top-align"] {
     vertical-align: top !important;
     margin-top: 0 !important;
-    padding-top: 10px; /* 这里你可以调整距离顶部的距离，比如 0 或 10px */
+    padding-top: 10px;
 }
-/* 针对手机端小屏幕的优化 */
-@media screen and (max-width: 768px) {
-    /* 调整整个游戏区域在手机上的边距，防止字贴着手机屏幕边缘 */
-    tw-story {
-        font-size: 17px !important; /* 让手机上的字稍微大一点点，看得更清楚 */
-        line-height: 1.6 !important;
-        padding: 15px !important;   /* 留出安全的四周留白 */
-        max-width: 100% !important; /* 宽度撑满手机屏幕 */
-    }
 
-    /* 让 Harlowe 的链接选项在手机上更好点，增加上下间距防误触 */
-    tw-link, .link {
-        display: inline-block;
-        margin: 6px 0 !important;
-        padding: 4px 2px;
-    }
-}
+/* ==============================================
+   3. 手机端整体阅读体验优化（无丑陋方块版）
+============================================== */
 @media screen and (max-width: 768px) {
+    /* 强制使用高品质明朝/宋体，拉大行距，彻底杜绝拥挤 */
     tw-story {
-        /* 终极高兼容性衬线组合：从苹果官方宋体，到日系明朝体（全字库极其完美），再到通用衬线 */
         font-family: "Hiragino Mincho ProN", "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", "Times New Roman", serif !important;
-        
-        line-height: 2.0 !important;
         font-size: 18px !important;
-        padding: 25px 20px !important;
+        line-height: 1.8 !important;
+        padding: 20px 18px !important;
+        max-width: 100% !important;
     }
 
-    tw-passage {
-        margin-bottom: 2.5em !important;
-    }
-
-    tw-link, .link {
-        display: block !important;
-        margin: 15px 0 !important;
-        padding: 12px 15px !important;
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 4px;
-        text-align: center;
-    }
-    
-    input {
-        font-size: 20px !important;
-        font-family: inherit !important;
-        padding: 10px !important;
-        text-align: center;
-    }
-}
-
-/* 针对手机端的排版优化，增加呼吸感 */
-@media screen and (max-width: 768px) {
-    tw-story {
-        /* 核心代码：调整行高，推荐值在 1.6 到 1.8 之间，字越多行距要越宽 */
-        line-height: 1.8 !important; 
-        
-        /* 调整段落间距，让段落之间有明显的分隔 */
-        margin-bottom: 1.5em !important; 
-    }
-    
-    /* 稍微调大字号，配合宽行距，保护眼睛 */
+    /* 优化段落间距与字号 */
     tw-passage {
         font-size: 17px !important;
+        margin-bottom: 2em !important;
     }
 
-    /* 针对图片和正文的间距调整，防止图片贴着文字 */
+    /* 让链接选项保持原本的自然文字形态，只稍微增加上下间距防误触，绝对不加任何难看的方块！ */
+    tw-link, .link {
+        display: inline-block !important;
+        margin: 8px 2px !important;
+        padding: 2px 0 !important;
+    }
+
+    /* 手机端图片间距 */
     tw-image {
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* 手机端输入框优化 */
+    input {
+        font-size: 18px !important;
+        font-family: inherit !important;
+        padding: 8px !important;
     }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
 $(document).ready(function() {
@@ -781,9 +755,7 @@ $(document).ready(function() {
 
 她嘟了嘟嘴巴，带着一点撒娇似的鼻音。
 
-“也、也不是……”
-
-我慌里慌张道。
+我慌里慌张道：“也、也不是……”
 
 奕莎贝拉垂下眼，轻轻地“哦”了一声。
 
@@ -799,13 +771,13 @@ $(document).ready(function() {
 
 她轻轻舔了一下嘴唇。
 
-“……好，我去。”
+我深吸一口气：“……好，我去。” 
 
-我小声说。兴许是鬼迷心窍，我倏地忘记刚才自己为何要迟疑。
-
+兴许是鬼迷心窍，我倏地忘记刚才自己为何要迟疑。
+ 
 奕莎贝拉顿时眉开眼笑，“太好啦！”
 
-那神情倒像终于等到了一个早已知道的答案。
+神情倒像终于等到了一个早已知道的答案。
 
 她抱了抱我，背起书包，裙摆一晃一晃地消失在了走廊尽头。
 
