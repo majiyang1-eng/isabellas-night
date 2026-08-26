@@ -73,24 +73,7 @@ tw-passage[tags~="top-align"] {
     }
 }
 
-/* 针对手机小屏幕的优化 (屏幕宽度小于 768px 时生效) */
-@media screen and (max-width: 768px) {
-    
-    /* 核心代码：强制所有插图在手机上最大只能占满屏幕宽度的 90% */
-    /* 这会让你的小钥匙、小木盒瞬间变大，但绝不会撑破屏幕 */
-    tw-story tw-image {
-        max-width: 90% !important; 
-        height: auto !important;  /* 保持图片原本的宽高比，不拉伸变形 */
-        display: block;           /* 让图片独占一行，方便居中 */
-        margin: 30px auto !important; /* 给图片上下留出 30px 的呼吸空间，并自动居中 */
-    }
-
-    /* 如果你之前的代码里用了 <center> 标签包住图片，这个可以确保它真正居中 */
-    tw-story center {
-        text-align: center;
-        display: block;
-    }
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">// Harlowe 手机自适应视口自动注入
 $(document).ready(function() {
     if (!$("meta[name='viewport']").length) {
         $('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">').appendTo('head');
@@ -5001,7 +4984,7 @@ Dress Code：请穿上最漂亮的礼服♡
 
 &lt;center&gt;
 &lt;div style=&quot;display: flex; justify-content: center; width: 100%;&quot;&gt;
-    &lt;img src=&quot;boxclosed.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
+    &lt;img src=&quot;boxclosephone.jpg&quot; style=&quot;width: 100%; height: auto;&quot;&gt;
 &lt;/div&gt;
 &lt;/center&gt;
 
